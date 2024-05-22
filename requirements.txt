@@ -11,5 +11,6 @@ joblib
 types-PyYAML
 Flask
 Flask-Cors
+imbalanced-learn
 #-e .
 
