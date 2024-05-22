@@ -1,0 +1,96 @@
+[2024-05-23 00:44:08,559: INFO:common: yaml file: /Users/kanayojustice/Documents/Data_scientist_projects/AutoPredict/config/config.yaml loaded successfully]
+[2024-05-23 00:44:08,561: INFO:common: yaml file: /Users/kanayojustice/Documents/Data_scientist_projects/AutoPredict/params.yaml loaded successfully]
+[2024-05-23 00:44:08,607: INFO:common: yaml file: /Users/kanayojustice/Documents/Data_scientist_projects/AutoPredict/schema.yaml loaded successfully]
+[2024-05-23 00:44:08,611: INFO:common: created directory at: artifacts]
+[2024-05-23 00:44:08,613: INFO:common: created directory at: artifacts/data_ingestion]
+[2024-05-23 00:44:15,102: INFO:1347631616: artifacts/data_ingestion/income_cleaned_data.zip Download! with the following info: 
+Connection: close
+Content-Length: 1952735
+Cache-Control: max-age=300
+Content-Security-Policy: default-src 'none'; style-src 'unsafe-inline'; sandbox
+Content-Type: application/zip
+ETag: "9dcc43c4be27a92f997ff62396609f38e4b236e502cc2377489ebfb0f94e4330"
+Strict-Transport-Security: max-age=31536000
+X-Content-Type-Options: nosniff
+X-Frame-Options: deny
+X-XSS-Protection: 1; mode=block
+X-GitHub-Request-Id: 5CC6:08B9:2FF672:3A8BFE:664E8348
+Accept-Ranges: bytes
+Date: Wed, 22 May 2024 23:44:09 GMT
+Via: 1.1 varnish
+X-Served-By: cache-lhr7374-LHR
+X-Cache: MISS
+X-Cache-Hits: 0
+X-Timer: S1716421449.440339,VS0,VE162
+Vary: Authorization,Accept-Encoding,Origin
+Access-Control-Allow-Origin: *
+Cross-Origin-Resource-Policy: cross-origin
+X-Fastly-Request-ID: fae92ee7ea20dded4a0312c1e46ce84b46f67b8c
+Expires: Wed, 22 May 2024 23:49:09 GMT
+Source-Age: 0
+
+]
+[2024-05-23 00:45:55,485: INFO:common: yaml file: /Users/kanayojustice/Documents/Data_scientist_projects/AutoPredict/config/config.yaml loaded successfully]
+[2024-05-23 00:45:55,489: INFO:common: yaml file: /Users/kanayojustice/Documents/Data_scientist_projects/AutoPredict/params.yaml loaded successfully]
+[2024-05-23 00:45:55,536: INFO:common: yaml file: /Users/kanayojustice/Documents/Data_scientist_projects/AutoPredict/schema.yaml loaded successfully]
+[2024-05-23 00:45:55,541: INFO:common: created directory at: artifacts]
+[2024-05-23 00:45:55,543: INFO:common: created directory at: artifacts/data_ingestion]
+[2024-05-23 00:45:57,337: INFO:1347631616: artifacts/data_ingestion/Autopredict_cleaned_data.zip Download! with the following info: 
+Connection: close
+Content-Length: 1952735
+Cache-Control: max-age=300
+Content-Security-Policy: default-src 'none'; style-src 'unsafe-inline'; sandbox
+Content-Type: application/zip
+ETag: "9dcc43c4be27a92f997ff62396609f38e4b236e502cc2377489ebfb0f94e4330"
+Strict-Transport-Security: max-age=31536000
+X-Content-Type-Options: nosniff
+X-Frame-Options: deny
+X-XSS-Protection: 1; mode=block
+X-GitHub-Request-Id: 5CC6:08B9:2FF672:3A8BFE:664E8348
+Accept-Ranges: bytes
+Date: Wed, 22 May 2024 23:45:56 GMT
+Via: 1.1 varnish
+X-Served-By: cache-lhr7342-LHR
+X-Cache: HIT
+X-Cache-Hits: 0
+X-Timer: S1716421557.551660,VS0,VE1
+Vary: Authorization,Accept-Encoding,Origin
+Access-Control-Allow-Origin: *
+Cross-Origin-Resource-Policy: cross-origin
+X-Fastly-Request-ID: 80542be6985f2d4e58a984fc6e08bff7973042ea
+Expires: Wed, 22 May 2024 23:50:56 GMT
+Source-Age: 107
+
+]
+[2024-05-23 00:46:25,853: INFO:common: yaml file: /Users/kanayojustice/Documents/Data_scientist_projects/AutoPredict/config/config.yaml loaded successfully]
+[2024-05-23 00:46:25,857: INFO:common: yaml file: /Users/kanayojustice/Documents/Data_scientist_projects/AutoPredict/params.yaml loaded successfully]
+[2024-05-23 00:46:25,911: INFO:common: yaml file: /Users/kanayojustice/Documents/Data_scientist_projects/AutoPredict/schema.yaml loaded successfully]
+[2024-05-23 00:46:25,916: INFO:common: created directory at: artifacts]
+[2024-05-23 00:46:25,917: INFO:common: created directory at: artifacts/data_ingestion]
+[2024-05-23 00:46:31,487: INFO:1347631616: artifacts/data_ingestion/Autopredict_cleaned_data.zip Download! with the following info: 
+Connection: close
+Content-Length: 1952735
+Cache-Control: max-age=300
+Content-Security-Policy: default-src 'none'; style-src 'unsafe-inline'; sandbox
+Content-Type: application/zip
+ETag: "9dcc43c4be27a92f997ff62396609f38e4b236e502cc2377489ebfb0f94e4330"
+Strict-Transport-Security: max-age=31536000
+X-Content-Type-Options: nosniff
+X-Frame-Options: deny
+X-XSS-Protection: 1; mode=block
+X-GitHub-Request-Id: 5CC6:08B9:2FF672:3A8BFE:664E8348
+Accept-Ranges: bytes
+Date: Wed, 22 May 2024 23:46:28 GMT
+Via: 1.1 varnish
+X-Served-By: cache-lhr7365-LHR
+X-Cache: HIT
+X-Cache-Hits: 1
+X-Timer: S1716421589.740178,VS0,VE3
+Vary: Authorization,Accept-Encoding,Origin
+Access-Control-Allow-Origin: *
+Cross-Origin-Resource-Policy: cross-origin
+X-Fastly-Request-ID: 5400f9d9a93748360ef7c5892a08f27fc26e64dc
+Expires: Wed, 22 May 2024 23:51:28 GMT
+Source-Age: 139
+
+]
