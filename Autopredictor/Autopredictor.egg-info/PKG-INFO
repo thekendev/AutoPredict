@@ -1,0 +1,27 @@
+Metadata-Version: 2.1
+Name: Autopredictor
+Version: 0.1.0
+Summary: A small python package for ml app
+Home-page: https://github.com/thekendev/End-to-End-Automotive-predictor-ML-project
+Author: thekendev
+Author-email: theken.dev@gmail.com
+Project-URL: Bug Tracker, https://github.com/thekendev/End-to-End-Automotive-predictor-ML-project/issues
+Description-Content-Type: text/markdown
+License-File: LICENSE
+
+# AutoPredict
+End to End Predictive Maintenance for Automotive Components: Leveraging Historical Car Data to Forecast Maintenance Needs and Failures.
+
+
+
+### Project workflows
+
+- Update config.yaml
+- Update schema.yaml
+- Update params.yaml
+- Update the entity
+- Update the configuration manager in src config
+- Update the components
+- Update the pipeline
+- Update the main.py
+- Update the app.py
