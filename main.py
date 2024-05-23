@@ -1,6 +1,6 @@
 from Autopredictor.src.logging import logger
 from Autopredictor.src.pipeline.stage_01_data_ingestion import DataIngestionTrainingPipeline
-# from Autopredictor.src.pipeline.stage_02_data_validation import DataValidationTrainingPipeline
+from Autopredictor.src.pipeline.stage_02_data_validation import DataValidationTrainingPipeline
 # from Autopredictor.src.pipeline.stage_03_data_transformation import DataTransformationTrainingPipeline
 # from Autopredictor.src.pipeline.stage_04_model_trainer import ModelTrainerTrainingPipeline
 # from Autopredictor.src.pipeline.stage_05_model_evaluation import ModelEvaluationTrainingPipeline
@@ -11,6 +11,18 @@ try:
         obj = DataIngestionTrainingPipeline()
         obj.main()
         logger.info(f">>>> stage {STAGE_NAME} completed <<<<<")
+except Exception as e:
+        logger.exception(e)
+        raise e
+
+
+
+STAGE_NAME = "Data validation stage"
+try:
+        logger.info(f">>>>>> stage {STAGE_NAME} started <<<<<<")
+        obj = DataValidationTrainingPipeline()
+        obj.main()
+        logger.info(f">>>>>> stage {STAGE_NAME} completed <<<<<<\n\nx==========x")
 except Exception as e:
         logger.exception(e)
         raise e

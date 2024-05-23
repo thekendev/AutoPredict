@@ -86,3 +86,118 @@ Source-Age: 0
 [2024-05-23 19:34:31,786: INFO:common: yaml file: /Users/kanayojustice/Documents/Data_scientist_projects/AutoPredict/schema.yaml loaded successfully]
 [2024-05-23 19:34:31,788: INFO:common: created directory at: artifacts]
 [2024-05-23 19:34:31,789: INFO:common: created directory at: artifacts/data_validation]
+[2024-05-23 19:44:13,714: INFO:main: >>>> stage Data ingestion stage started <<<<<]
+[2024-05-23 19:44:13,716: INFO:common: yaml file: /Users/kanayojustice/Documents/Data_scientist_projects/AutoPredict/config/config.yaml loaded successfully]
+[2024-05-23 19:44:13,717: INFO:common: yaml file: /Users/kanayojustice/Documents/Data_scientist_projects/AutoPredict/params.yaml loaded successfully]
+[2024-05-23 19:44:13,748: INFO:common: yaml file: /Users/kanayojustice/Documents/Data_scientist_projects/AutoPredict/schema.yaml loaded successfully]
+[2024-05-23 19:44:13,750: INFO:common: created directory at: artifacts]
+[2024-05-23 19:44:13,750: INFO:common: created directory at: artifacts/data_ingestion]
+[2024-05-23 19:44:18,036: INFO:data_ingestion: artifacts/data_ingestion/autopredict_cleaned_data.zip Download! with the following info: 
+Connection: close
+Content-Length: 1945315
+Cache-Control: max-age=300
+Content-Security-Policy: default-src 'none'; style-src 'unsafe-inline'; sandbox
+Content-Type: application/zip
+ETag: "b160506c17ea84ccc04e5b384952e3f307ac7aa5a12e2f509c92fd114a7bbbf6"
+Strict-Transport-Security: max-age=31536000
+X-Content-Type-Options: nosniff
+X-Frame-Options: deny
+X-XSS-Protection: 1; mode=block
+X-GitHub-Request-Id: FD40:4B629:327DF4:3DA4BB:664F8C2A
+Accept-Ranges: bytes
+Date: Thu, 23 May 2024 18:44:15 GMT
+Via: 1.1 varnish
+X-Served-By: cache-lcy-eglc8600080-LCY
+X-Cache: HIT
+X-Cache-Hits: 0
+X-Timer: S1716489855.875868,VS0,VE146
+Vary: Authorization,Accept-Encoding,Origin
+Access-Control-Allow-Origin: *
+Cross-Origin-Resource-Policy: cross-origin
+X-Fastly-Request-ID: e6e40554795e23c2fa05095e62bc285f6285fd99
+Expires: Thu, 23 May 2024 18:49:15 GMT
+Source-Age: 0
+
+]
+[2024-05-23 19:44:18,165: INFO:main: >>>> stage Data ingestion stage completed <<<<<]
+[2024-05-23 19:44:18,165: INFO:main: >>>> stage Data validation stage started <<<<<]
+[2024-05-23 19:44:18,168: INFO:common: yaml file: /Users/kanayojustice/Documents/Data_scientist_projects/AutoPredict/config/config.yaml loaded successfully]
+[2024-05-23 19:44:18,168: INFO:common: yaml file: /Users/kanayojustice/Documents/Data_scientist_projects/AutoPredict/params.yaml loaded successfully]
+[2024-05-23 19:44:18,201: INFO:common: yaml file: /Users/kanayojustice/Documents/Data_scientist_projects/AutoPredict/schema.yaml loaded successfully]
+[2024-05-23 19:44:18,202: INFO:common: created directory at: artifacts]
+[2024-05-23 19:44:18,203: INFO:common: created directory at: artifacts/data_validation]
+[2024-05-23 19:44:18,203: ERROR:main: 'DataValidation' object has no attribute 'download_file']
+Traceback (most recent call last):
+  File "main.py", line 24, in <module>
+    obj.main()
+  File "/Users/kanayojustice/Documents/Data_scientist_projects/AutoPredict/Autopredictor/src/pipeline/stage_02_data_validation.py", line 17, in main
+    data_validation.download_file()
+AttributeError: 'DataValidation' object has no attribute 'download_file'
+[2024-05-23 19:49:06,204: INFO:main: >>>> stage Data ingestion stage started <<<<<]
+[2024-05-23 19:49:06,206: INFO:common: yaml file: /Users/kanayojustice/Documents/Data_scientist_projects/AutoPredict/config/config.yaml loaded successfully]
+[2024-05-23 19:49:06,207: INFO:common: yaml file: /Users/kanayojustice/Documents/Data_scientist_projects/AutoPredict/params.yaml loaded successfully]
+[2024-05-23 19:49:06,239: INFO:common: yaml file: /Users/kanayojustice/Documents/Data_scientist_projects/AutoPredict/schema.yaml loaded successfully]
+[2024-05-23 19:49:06,240: INFO:common: created directory at: artifacts]
+[2024-05-23 19:49:06,240: INFO:common: created directory at: artifacts/data_ingestion]
+[2024-05-23 19:49:06,240: INFO:data_ingestion: file already exists of size: ~ 1900 KB]
+[2024-05-23 19:49:06,365: INFO:main: >>>> stage Data ingestion stage completed <<<<<]
+[2024-05-23 19:49:06,365: INFO:main: >>>>>> stage Data validation stage started <<<<<<]
+[2024-05-23 19:49:06,367: INFO:common: yaml file: /Users/kanayojustice/Documents/Data_scientist_projects/AutoPredict/config/config.yaml loaded successfully]
+[2024-05-23 19:49:06,368: INFO:common: yaml file: /Users/kanayojustice/Documents/Data_scientist_projects/AutoPredict/params.yaml loaded successfully]
+[2024-05-23 19:49:06,400: INFO:common: yaml file: /Users/kanayojustice/Documents/Data_scientist_projects/AutoPredict/schema.yaml loaded successfully]
+[2024-05-23 19:49:06,401: INFO:common: created directory at: artifacts]
+[2024-05-23 19:49:06,401: INFO:common: created directory at: artifacts/data_validation]
+[2024-05-23 19:49:06,401: ERROR:main: name 'pd' is not defined]
+Traceback (most recent call last):
+  File "main.py", line 24, in <module>
+    obj.main()
+  File "/Users/kanayojustice/Documents/Data_scientist_projects/AutoPredict/Autopredictor/src/pipeline/stage_02_data_validation.py", line 19, in main
+    data_validation.validate_all_columns()
+  File "/Users/kanayojustice/Documents/Data_scientist_projects/AutoPredict/Autopredictor/src/components/data_validation.py", line 41, in validate_all_columns
+    raise e
+  File "/Users/kanayojustice/Documents/Data_scientist_projects/AutoPredict/Autopredictor/src/components/data_validation.py", line 22, in validate_all_columns
+    data = pd.read_csv(self.config.unzip_data_dir)
+NameError: name 'pd' is not defined
+[2024-05-23 19:50:33,283: INFO:main: >>>> stage Data ingestion stage started <<<<<]
+[2024-05-23 19:50:33,286: INFO:common: yaml file: /Users/kanayojustice/Documents/Data_scientist_projects/AutoPredict/config/config.yaml loaded successfully]
+[2024-05-23 19:50:33,286: INFO:common: yaml file: /Users/kanayojustice/Documents/Data_scientist_projects/AutoPredict/params.yaml loaded successfully]
+[2024-05-23 19:50:33,319: INFO:common: yaml file: /Users/kanayojustice/Documents/Data_scientist_projects/AutoPredict/schema.yaml loaded successfully]
+[2024-05-23 19:50:33,320: INFO:common: created directory at: artifacts]
+[2024-05-23 19:50:33,320: INFO:common: created directory at: artifacts/data_ingestion]
+[2024-05-23 19:50:38,410: INFO:data_ingestion: artifacts/data_ingestion/autopredict_cleaned_data.zip Download! with the following info: 
+Connection: close
+Content-Length: 1945315
+Cache-Control: max-age=300
+Content-Security-Policy: default-src 'none'; style-src 'unsafe-inline'; sandbox
+Content-Type: application/zip
+ETag: "b160506c17ea84ccc04e5b384952e3f307ac7aa5a12e2f509c92fd114a7bbbf6"
+Strict-Transport-Security: max-age=31536000
+X-Content-Type-Options: nosniff
+X-Frame-Options: deny
+X-XSS-Protection: 1; mode=block
+X-GitHub-Request-Id: FD40:4B629:327DF4:3DA4BB:664F8C2A
+Accept-Ranges: bytes
+Date: Thu, 23 May 2024 18:50:34 GMT
+Via: 1.1 varnish
+X-Served-By: cache-lcy-eglc8600027-LCY
+X-Cache: HIT
+X-Cache-Hits: 0
+X-Timer: S1716490234.295378,VS0,VE151
+Vary: Authorization,Accept-Encoding,Origin
+Access-Control-Allow-Origin: *
+Cross-Origin-Resource-Policy: cross-origin
+X-Fastly-Request-ID: c4abe38a4cc06467c1fdc368f98c1b042d6d63c8
+Expires: Thu, 23 May 2024 18:55:34 GMT
+Source-Age: 0
+
+]
+[2024-05-23 19:50:38,546: INFO:main: >>>> stage Data ingestion stage completed <<<<<]
+[2024-05-23 19:50:38,546: INFO:main: >>>>>> stage Data validation stage started <<<<<<]
+[2024-05-23 19:50:38,548: INFO:common: yaml file: /Users/kanayojustice/Documents/Data_scientist_projects/AutoPredict/config/config.yaml loaded successfully]
+[2024-05-23 19:50:38,548: INFO:common: yaml file: /Users/kanayojustice/Documents/Data_scientist_projects/AutoPredict/params.yaml loaded successfully]
+[2024-05-23 19:50:38,582: INFO:common: yaml file: /Users/kanayojustice/Documents/Data_scientist_projects/AutoPredict/schema.yaml loaded successfully]
+[2024-05-23 19:50:38,584: INFO:common: created directory at: artifacts]
+[2024-05-23 19:50:38,584: INFO:common: created directory at: artifacts/data_validation]
+[2024-05-23 19:50:40,334: INFO:main: >>>>>> stage Data validation stage completed <<<<<<
+
+x==========x]
