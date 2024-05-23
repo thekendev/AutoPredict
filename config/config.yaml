@@ -3,5 +3,10 @@ artifacts_root: artifacts
 data_ingestion:
   root_dir: artifacts/data_ingestion
   source_URL: https://github.com/thekendev/Public_data/raw/main/auto_pred_cleaned_data.csv.zip
-  Local_data_file: artifacts/data_ingestion/Autopredict_cleaned_data.zip
+  Local_data_file: artifacts/data_ingestion/autopredict_cleaned_data.zip
   unzip_dir: artifacts/data_ingestion
+
+data_validation:
+  root_dir: artifacts/data_validation
+  unzip_data_dir: artifacts/data_ingestion/auto_pred_cleaned_data.csv
+  STATUS_FILE: artifacts/data_validation/status.txt

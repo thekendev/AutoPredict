@@ -1,4 +1,4 @@
-==> 2024-05-22 06:44:17 <==
+==> 2024-05-23 14:41:45 <==
 # cmd: /opt/miniconda3/bin/conda create -p venv python==3.8 -y
 # conda version: 24.1.2
 +defaults/osx-64::ca-certificates-2024.3.11-hecd8cb5_0

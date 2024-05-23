@@ -1,223 +1,222 @@
 COLUMNS:
-year: int64
-price: int64
-mileage: int64
-tax: int64
-mpg: float64
-engineSize: float64
-model_ 1 Series: int64
-model_ 2 Series: int64
-model_ 3 Series: int64
-model_ 4 Series: int64
-model_ 5 Series: int64
-model_ 6 Series: int64
-model_ 7 Series: int64
-model_ 8 Series: int64
-model_ A Class: int64
-model_ A1: int64
-model_ A2: int64
-model_ A3: int64
-model_ A4: int64
-model_ A5: int64
-model_ A6: int64
-model_ A7: int64
-model_ A8: int64
-model_ Accent: int64
-model_ Adam: int64
-model_ Agila: int64
-model_ Amarok: int64
-model_ Amica: int64
-model_ Ampera: int64
-model_ Antara: int64
-model_ Arteon: int64
-model_ Astra: int64
-model_ Auris: int64
-model_ Avensis: int64
-model_ Aygo: int64
-model_ B Class: int64
-model_ B-MAX: int64
-model_ Beetle: int64
-model_ C Class: int64
-model_ C-HR: int64
-model_ C-MAX: int64
-model_ CC: int64
-model_ CL Class: int64
-model_ CLA Class: int64
-model_ CLC Class: int64
-model_ CLK: int64
-model_ CLS Class: int64
-model_ Caddy: int64
-model_ Caddy Life: int64
-model_ Caddy Maxi: int64
-model_ Caddy Maxi Life: int64
-model_ California: int64
-model_ Camry: int64
-model_ Caravelle: int64
-model_ Cascada: int64
-model_ Citigo: int64
-model_ Combo Life: int64
-model_ Corolla: int64
-model_ Corsa: int64
-model_ Crossland X: int64
-model_ E Class: int64
-model_ EcoSport: int64
-model_ Edge: int64
-model_ Eos: int64
-model_ Escort: int64
-model_ Fabia: int64
-model_ Fiesta: int64
-model_ Focus: int64
-model_ Fox: int64
-model_ Fusion: int64
-model_ G Class: int64
-model_ GL Class: int64
-model_ GLA Class: int64
-model_ GLB Class: int64
-model_ GLC Class: int64
-model_ GLE Class: int64
-model_ GLS Class: int64
-model_ GT86: int64
-model_ GTC: int64
-model_ Galaxy: int64
-model_ Getz: int64
-model_ Golf: int64
-model_ Golf SV: int64
-model_ Grand C-MAX: int64
-model_ Grand Tourneo Connect: int64
-model_ Grandland X: int64
-model_ Hilux: int64
-model_ I10: int64
-model_ I20: int64
-model_ I30: int64
-model_ I40: int64
-model_ I800: int64
-model_ IQ: int64
-model_ IX20: int64
-model_ IX35: int64
-model_ Insignia: int64
-model_ Ioniq: int64
-model_ Jetta: int64
-model_ KA: int64
-model_ Ka+: int64
-model_ Kadjar: int64
-model_ Kamiq: int64
-model_ Karoq: int64
-model_ Kodiaq: int64
-model_ Kona: int64
-model_ Kuga: int64
-model_ Land Cruiser: int64
-model_ M Class: int64
-model_ M2: int64
-model_ M3: int64
-model_ M4: int64
-model_ M5: int64
-model_ M6: int64
-model_ Meriva: int64
-model_ Mokka: int64
-model_ Mokka X: int64
-model_ Mondeo: int64
-model_ Mustang: int64
-model_ Octavia: int64
-model_ PROACE VERSO: int64
-model_ Passat: int64
-model_ Polo: int64
-model_ Prius: int64
-model_ Puma: int64
-model_ Q2: int64
-model_ Q3: int64
-model_ Q5: int64
-model_ Q7: int64
-model_ Q8: int64
-model_ R Class: int64
-model_ R8: int64
-model_ RAV4: int64
-model_ RS3: int64
-model_ RS4: int64
-model_ RS5: int64
-model_ RS6: int64
-model_ RS7: int64
-model_ Ranger: int64
-model_ Rapid: int64
-model_ Roomster: int64
-model_ S Class: int64
-model_ S-MAX: int64
-model_ S3: int64
-model_ S4: int64
-model_ S5: int64
-model_ S8: int64
-model_ SL CLASS: int64
-model_ SLK: int64
-model_ SQ5: int64
-model_ SQ7: int64
-model_ Santa Fe: int64
-model_ Scala: int64
-model_ Scirocco: int64
-model_ Sharan: int64
-model_ Shuttle: int64
-model_ Streetka: int64
-model_ Superb: int64
-model_ Supra: int64
-model_ T-Cross: int64
-model_ T-Roc: int64
-model_ TT: int64
-model_ Terracan: int64
-model_ Tigra: int64
-model_ Tiguan: int64
-model_ Tiguan Allspace: int64
-model_ Touareg: int64
-model_ Touran: int64
-model_ Tourneo Connect: int64
-model_ Tourneo Custom: int64
-model_ Transit Tourneo: int64
-model_ Tucson: int64
-model_ Up: int64
-model_ Urban Cruiser: int64
-model_ V Class: int64
-model_ Vectra: int64
-model_ Veloster: int64
-model_ Verso: int64
-model_ Verso-S: int64
-model_ Viva: int64
-model_ Vivaro: int64
-model_ X-CLASS: int64
-model_ X1: int64
-model_ X2: int64
-model_ X3: int64
-model_ X4: int64
-model_ X5: int64
-model_ X6: int64
-model_ X7: int64
-model_ Yaris: int64
-model_ Yeti: int64
-model_ Yeti Outdoor: int64
-model_ Z3: int64
-model_ Z4: int64
-model_ Zafira: int64
-model_ Zafira Tourer: int64
-model_ i3: int64
-model_ i8: int64
-model_180: int64
-model_200: int64
-model_220: int64
-model_230: int64
-model_E Class: int64
-transmission_Automatic: int64
-transmission_Manual: int64
-transmission_Other: int64
-transmission_Semi-Auto: int64
-fuelType_Diesel: int64
-fuelType_Electric: int64
-fuelType_Hybrid: int64
-fuelType_Other: int64
-fuelType_Petrol: int64
-Manufacturer_Audi: int64
-Manufacturer_BMW: int64
-Manufacturer_ford: int64
-Manufacturer_hyundi: int64
-Manufacturer_merc: int64
-Manufacturer_skoda: int64
-Manufacturer_toyota: int64
-Manufacturer_vauxhall: int64
-Manufacturer_volkswagen: int64
+  year: int64
+  price: int64
+  mileage: int64
+  tax: int64
+  mpg: float64
+  enginesize: float64
+  model_1series: int64
+  model_2series: int64
+  model_3series: int64
+  model_4series: int64
+  model_5series: int64
+  model_6series: int64
+  model_7series: int64
+  model_8series: int64
+  model_aclass: int64
+  model_a1: int64
+  model_a2: int64
+  model_a3: int64
+  model_a4: int64
+  model_a5: int64
+  model_a6: int64
+  model_a7: int64
+  model_a8: int64
+  model_accent: int64
+  model_adam: int64
+  model_agila: int64
+  model_amarok: int64
+  model_amica: int64
+  model_ampera: int64
+  model_antara: int64
+  model_arteon: int64
+  model_astra: int64
+  model_auris: int64
+  model_avensis: int64
+  model_aygo: int64
+  model_bclass: int64
+  model_b-max: int64
+  model_beetle: int64
+  model_cclass: int64
+  model_c-hr: int64
+  model_c-max: int64
+  model_cc: int64
+  model_clclass: int64
+  model_claclass: int64
+  model_clcclass: int64
+  model_clk: int64
+  model_clsclass: int64
+  model_caddy: int64
+  model_caddylife: int64
+  model_caddymaxi: int64
+  model_caddymaxilife: int64
+  model_california: int64
+  model_camry: int64
+  model_caravelle: int64
+  model_cascada: int64
+  model_citigo: int64
+  model_combolife: int64
+  model_corolla: int64
+  model_corsa: int64
+  model_crosslandx: int64
+  model_ecosport: int64
+  model_edge: int64
+  model_eos: int64
+  model_escort: int64
+  model_fabia: int64
+  model_fiesta: int64
+  model_focus: int64
+  model_fox: int64
+  model_fusion: int64
+  model_gclass: int64
+  model_glclass: int64
+  model_glaclass: int64
+  model_glbclass: int64
+  model_glcclass: int64
+  model_gleclass: int64
+  model_glsclass: int64
+  model_gt86: int64
+  model_gtc: int64
+  model_galaxy: int64
+  model_getz: int64
+  model_golf: int64
+  model_golfsv: int64
+  model_grandc-max: int64
+  model_grandtourneoconnect: int64
+  model_grandlandx: int64
+  model_hilux: int64
+  model_i10: int64
+  model_i20: int64
+  model_i30: int64
+  model_i40: int64
+  model_i800: int64
+  model_iq: int64
+  model_ix20: int64
+  model_ix35: int64
+  model_insignia: int64
+  model_ioniq: int64
+  model_jetta: int64
+  model_ka: int64
+  model_ka+: int64
+  model_kadjar: int64
+  model_kamiq: int64
+  model_karoq: int64
+  model_kodiaq: int64
+  model_kona: int64
+  model_kuga: int64
+  model_landcruiser: int64
+  model_mclass: int64
+  model_m2: int64
+  model_m3: int64
+  model_m4: int64
+  model_m5: int64
+  model_m6: int64
+  model_meriva: int64
+  model_mokka: int64
+  model_mokkax: int64
+  model_mondeo: int64
+  model_mustang: int64
+  model_octavia: int64
+  model_proaceverso: int64
+  model_passat: int64
+  model_polo: int64
+  model_prius: int64
+  model_puma: int64
+  model_q2: int64
+  model_q3: int64
+  model_q5: int64
+  model_q7: int64
+  model_q8: int64
+  model_rclass: int64
+  model_r8: int64
+  model_rav4: int64
+  model_rs3: int64
+  model_rs4: int64
+  model_rs5: int64
+  model_rs6: int64
+  model_rs7: int64
+  model_ranger: int64
+  model_rapid: int64
+  model_roomster: int64
+  model_sclass: int64
+  model_s-max: int64
+  model_s3: int64
+  model_s4: int64
+  model_s5: int64
+  model_s8: int64
+  model_slclass: int64
+  model_slk: int64
+  model_sq5: int64
+  model_sq7: int64
+  model_santafe: int64
+  model_scala: int64
+  model_scirocco: int64
+  model_sharan: int64
+  model_shuttle: int64
+  model_streetka: int64
+  model_superb: int64
+  model_supra: int64
+  model_t-cross: int64
+  model_t-roc: int64
+  model_tt: int64
+  model_terracan: int64
+  model_tigra: int64
+  model_tiguan: int64
+  model_tiguanallspace: int64
+  model_touareg: int64
+  model_touran: int64
+  model_tourneoconnect: int64
+  model_tourneocustom: int64
+  model_transittourneo: int64
+  model_tucson: int64
+  model_up: int64
+  model_urbancruiser: int64
+  model_vclass: int64
+  model_vectra: int64
+  model_veloster: int64
+  model_verso: int64
+  model_verso-s: int64
+  model_viva: int64
+  model_vivaro: int64
+  model_x-class: int64
+  model_x1: int64
+  model_x2: int64
+  model_x3: int64
+  model_x4: int64
+  model_x5: int64
+  model_x6: int64
+  model_x7: int64
+  model_yaris: int64
+  model_yeti: int64
+  model_yetioutdoor: int64
+  model_z3: int64
+  model_z4: int64
+  model_zafira: int64
+  model_zafiratourer: int64
+  model_i3: int64
+  model_i8: int64
+  model_180: int64
+  model_200: int64
+  model_220: int64
+  model_230: int64
+  transmission_automatic: int64
+  transmission_manual: int64
+  transmission_other: int64
+  transmission_semi-auto: int64
+  fueltype_diesel: int64
+  fueltype_electric: int64
+  fueltype_hybrid: int64
+  fueltype_other: int64
+  fueltype_petrol: int64
+  manufacturer_audi: int64
+  manufacturer_bmw: int64
+  manufacturer_ford: int64
+  manufacturer_hyundi: int64
+  manufacturer_merc: int64
+  manufacturer_skoda: int64
+  manufacturer_toyota: int64
+  manufacturer_vauxhall: int64
+  manufacturer_volkswagen: int64
 
-TARGET_COLUMN: Fail
+TARGET_COLUMN:
+  name: fail
