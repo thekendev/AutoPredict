@@ -8,5 +8,5 @@ data_ingestion:
 
 data_validation:
   root_dir: artifacts/data_validation
-  unzip_data_dir: artifacts/data_ingestion/auto_pred_cleaned_data.csv
+  unzip_data_dir: /Users/kanayojustice/Documents/Data_scientist_projects/AutoPredict/research/data/auto_pred_cleaned_data.csv
   STATUS_FILE: artifacts/data_validation/status.txt

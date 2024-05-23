@@ -217,6 +217,7 @@ COLUMNS:
   manufacturer_toyota: int64
   manufacturer_vauxhall: int64
   manufacturer_volkswagen: int64
+  fail: int64
 
 TARGET_COLUMN:
   name: fail
