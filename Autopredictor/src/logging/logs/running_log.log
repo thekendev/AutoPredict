@@ -957,3 +957,304 @@ x==========x]
 [2024-05-23 21:57:20,800: INFO:main: >>>>>> stage model trainer stage completed <<<<<<
 
 x==========x]
+[2024-05-23 23:08:42,907: INFO:common: yaml file: /Users/kanayojustice/Documents/Data_scientist_projects/AutoPredict/config/config.yaml loaded successfully]
+[2024-05-23 23:08:42,911: INFO:common: yaml file: /Users/kanayojustice/Documents/Data_scientist_projects/AutoPredict/params.yaml loaded successfully]
+[2024-05-23 23:08:42,957: INFO:common: yaml file: /Users/kanayojustice/Documents/Data_scientist_projects/AutoPredict/schema.yaml loaded successfully]
+[2024-05-23 23:08:42,959: INFO:common: created directory at: artifacts]
+[2024-05-23 23:09:37,651: INFO:common: yaml file: /Users/kanayojustice/Documents/Data_scientist_projects/AutoPredict/config/config.yaml loaded successfully]
+[2024-05-23 23:09:37,656: INFO:common: yaml file: /Users/kanayojustice/Documents/Data_scientist_projects/AutoPredict/params.yaml loaded successfully]
+[2024-05-23 23:09:37,702: INFO:common: yaml file: /Users/kanayojustice/Documents/Data_scientist_projects/AutoPredict/schema.yaml loaded successfully]
+[2024-05-23 23:09:37,705: INFO:common: created directory at: artifacts]
+[2024-05-23 23:09:37,707: INFO:common: created directory at: artifacts/model_evaluation]
+[2024-05-23 23:10:32,973: INFO:common: yaml file: /Users/kanayojustice/Documents/Data_scientist_projects/AutoPredict/config/config.yaml loaded successfully]
+[2024-05-23 23:10:32,976: INFO:common: yaml file: /Users/kanayojustice/Documents/Data_scientist_projects/AutoPredict/params.yaml loaded successfully]
+[2024-05-23 23:10:33,019: INFO:common: yaml file: /Users/kanayojustice/Documents/Data_scientist_projects/AutoPredict/schema.yaml loaded successfully]
+[2024-05-23 23:10:33,022: INFO:common: created directory at: artifacts]
+[2024-05-23 23:10:33,024: INFO:common: created directory at: artifacts/model_evaluation]
+[2024-05-23 23:11:02,036: INFO:main: >>>> stage Data ingestion stage started <<<<<]
+[2024-05-23 23:11:02,041: INFO:common: yaml file: /Users/kanayojustice/Documents/Data_scientist_projects/AutoPredict/config/config.yaml loaded successfully]
+[2024-05-23 23:11:02,041: INFO:common: yaml file: /Users/kanayojustice/Documents/Data_scientist_projects/AutoPredict/params.yaml loaded successfully]
+[2024-05-23 23:11:02,076: INFO:common: yaml file: /Users/kanayojustice/Documents/Data_scientist_projects/AutoPredict/schema.yaml loaded successfully]
+[2024-05-23 23:11:02,077: INFO:common: created directory at: artifacts]
+[2024-05-23 23:11:02,077: INFO:common: created directory at: artifacts/data_ingestion]
+[2024-05-23 23:11:05,819: INFO:data_ingestion: artifacts/data_ingestion/autopredict_cleaned_data.zip Download! with the following info: 
+Connection: close
+Content-Length: 1945315
+Cache-Control: max-age=300
+Content-Security-Policy: default-src 'none'; style-src 'unsafe-inline'; sandbox
+Content-Type: application/zip
+ETag: "b160506c17ea84ccc04e5b384952e3f307ac7aa5a12e2f509c92fd114a7bbbf6"
+Strict-Transport-Security: max-age=31536000
+X-Content-Type-Options: nosniff
+X-Frame-Options: deny
+X-XSS-Protection: 1; mode=block
+X-GitHub-Request-Id: 105A:10D795:130C98:17A614:664FBEF6
+Accept-Ranges: bytes
+Date: Thu, 23 May 2024 22:11:04 GMT
+Via: 1.1 varnish
+X-Served-By: cache-lhr7336-LHR
+X-Cache: MISS
+X-Cache-Hits: 0
+X-Timer: S1716502264.896633,VS0,VE180
+Vary: Authorization,Accept-Encoding,Origin
+Access-Control-Allow-Origin: *
+Cross-Origin-Resource-Policy: cross-origin
+X-Fastly-Request-ID: 3a468b0828ce76fa78052e02a1f6873fa0a47165
+Expires: Thu, 23 May 2024 22:16:04 GMT
+Source-Age: 0
+
+]
+[2024-05-23 23:11:05,959: INFO:main: >>>> stage Data ingestion stage completed <<<<<]
+[2024-05-23 23:11:05,960: INFO:main: >>>>>> stage Data validation stage started <<<<<<]
+[2024-05-23 23:11:05,964: INFO:common: yaml file: /Users/kanayojustice/Documents/Data_scientist_projects/AutoPredict/config/config.yaml loaded successfully]
+[2024-05-23 23:11:05,965: INFO:common: yaml file: /Users/kanayojustice/Documents/Data_scientist_projects/AutoPredict/params.yaml loaded successfully]
+[2024-05-23 23:11:06,002: INFO:common: yaml file: /Users/kanayojustice/Documents/Data_scientist_projects/AutoPredict/schema.yaml loaded successfully]
+[2024-05-23 23:11:06,003: INFO:common: created directory at: artifacts]
+[2024-05-23 23:11:06,003: INFO:common: created directory at: artifacts/data_validation]
+[2024-05-23 23:11:07,745: INFO:main: >>>>>> stage Data validation stage completed <<<<<<
+
+x==========x]
+[2024-05-23 23:11:07,745: INFO:main: >>>>>> stage Data transformation stage started <<<<<<]
+[2024-05-23 23:11:07,749: INFO:common: yaml file: /Users/kanayojustice/Documents/Data_scientist_projects/AutoPredict/config/config.yaml loaded successfully]
+[2024-05-23 23:11:07,750: INFO:common: yaml file: /Users/kanayojustice/Documents/Data_scientist_projects/AutoPredict/params.yaml loaded successfully]
+[2024-05-23 23:11:07,786: INFO:common: yaml file: /Users/kanayojustice/Documents/Data_scientist_projects/AutoPredict/schema.yaml loaded successfully]
+[2024-05-23 23:11:07,787: INFO:common: created directory at: artifacts]
+[2024-05-23 23:11:07,787: INFO:common: created directory at: artifacts/data_transformation]
+[2024-05-23 23:11:13,889: INFO:data_transformation: Splited data into training and test sets]
+[2024-05-23 23:11:13,890: INFO:data_transformation: (73284, 219)]
+[2024-05-23 23:11:13,890: INFO:data_transformation: (24428, 219)]
+[2024-05-23 23:11:13,919: INFO:main: >>>>>> stage Data transformation stage completed <<<<<<
+
+x==========x]
+[2024-05-23 23:11:13,919: INFO:main: >>>>>> stage model trainer stage started <<<<<<]
+[2024-05-23 23:11:13,923: INFO:common: yaml file: /Users/kanayojustice/Documents/Data_scientist_projects/AutoPredict/config/config.yaml loaded successfully]
+[2024-05-23 23:11:13,924: INFO:common: yaml file: /Users/kanayojustice/Documents/Data_scientist_projects/AutoPredict/params.yaml loaded successfully]
+[2024-05-23 23:11:13,961: INFO:common: yaml file: /Users/kanayojustice/Documents/Data_scientist_projects/AutoPredict/schema.yaml loaded successfully]
+[2024-05-23 23:11:13,962: INFO:common: created directory at: artifacts]
+[2024-05-23 23:11:13,963: INFO:common: created directory at: artifacts/model_trainer]
+[2024-05-23 23:11:18,565: INFO:main: >>>>>> stage model trainer stage completed <<<<<<
+
+x==========x]
+[2024-05-23 23:11:33,690: INFO:common: yaml file: /Users/kanayojustice/Documents/Data_scientist_projects/AutoPredict/config/config.yaml loaded successfully]
+[2024-05-23 23:11:33,702: INFO:common: yaml file: /Users/kanayojustice/Documents/Data_scientist_projects/AutoPredict/params.yaml loaded successfully]
+[2024-05-23 23:11:33,752: INFO:common: yaml file: /Users/kanayojustice/Documents/Data_scientist_projects/AutoPredict/schema.yaml loaded successfully]
+[2024-05-23 23:11:33,755: INFO:common: created directory at: artifacts]
+[2024-05-23 23:11:33,757: INFO:common: created directory at: artifacts/model_evaluation]
+[2024-05-23 23:11:43,687: INFO:common: yaml file: /Users/kanayojustice/Documents/Data_scientist_projects/AutoPredict/config/config.yaml loaded successfully]
+[2024-05-23 23:11:43,691: INFO:common: yaml file: /Users/kanayojustice/Documents/Data_scientist_projects/AutoPredict/params.yaml loaded successfully]
+[2024-05-23 23:11:43,732: INFO:common: yaml file: /Users/kanayojustice/Documents/Data_scientist_projects/AutoPredict/schema.yaml loaded successfully]
+[2024-05-23 23:11:43,735: INFO:common: created directory at: artifacts]
+[2024-05-23 23:11:43,736: INFO:common: created directory at: artifacts/model_evaluation]
+[2024-05-23 23:11:44,348: INFO:common: json file saved at: artifacts/model_evaluation/metrics.json]
+[2024-05-23 23:20:03,281: INFO:main: >>>> stage Data ingestion stage started <<<<<]
+[2024-05-23 23:20:03,286: INFO:common: yaml file: /Users/kanayojustice/Documents/Data_scientist_projects/AutoPredict/config/config.yaml loaded successfully]
+[2024-05-23 23:20:03,287: INFO:common: yaml file: /Users/kanayojustice/Documents/Data_scientist_projects/AutoPredict/params.yaml loaded successfully]
+[2024-05-23 23:20:03,319: INFO:common: yaml file: /Users/kanayojustice/Documents/Data_scientist_projects/AutoPredict/schema.yaml loaded successfully]
+[2024-05-23 23:20:03,320: INFO:common: created directory at: artifacts]
+[2024-05-23 23:20:03,320: INFO:common: created directory at: artifacts/data_ingestion]
+[2024-05-23 23:20:06,225: INFO:data_ingestion: artifacts/data_ingestion/autopredict_cleaned_data.zip Download! with the following info: 
+Connection: close
+Content-Length: 1945315
+Cache-Control: max-age=300
+Content-Security-Policy: default-src 'none'; style-src 'unsafe-inline'; sandbox
+Content-Type: application/zip
+ETag: "b160506c17ea84ccc04e5b384952e3f307ac7aa5a12e2f509c92fd114a7bbbf6"
+Strict-Transport-Security: max-age=31536000
+X-Content-Type-Options: nosniff
+X-Frame-Options: deny
+X-XSS-Protection: 1; mode=block
+X-GitHub-Request-Id: 4E00:0906:3ED717:4D1DAA:664FC114
+Accept-Ranges: bytes
+Date: Thu, 23 May 2024 22:20:05 GMT
+Via: 1.1 varnish
+X-Served-By: cache-lcy-eglc8600047-LCY
+X-Cache: MISS
+X-Cache-Hits: 0
+X-Timer: S1716502805.769209,VS0,VE285
+Vary: Authorization,Accept-Encoding,Origin
+Access-Control-Allow-Origin: *
+Cross-Origin-Resource-Policy: cross-origin
+X-Fastly-Request-ID: 89216e7f9afd7a93fbcf59216a46d47088b4f1f2
+Expires: Thu, 23 May 2024 22:25:05 GMT
+Source-Age: 0
+
+]
+[2024-05-23 23:20:06,364: INFO:main: >>>> stage Data ingestion stage completed <<<<<]
+[2024-05-23 23:20:06,365: INFO:main: >>>>>> stage Data validation stage started <<<<<<]
+[2024-05-23 23:20:06,369: INFO:common: yaml file: /Users/kanayojustice/Documents/Data_scientist_projects/AutoPredict/config/config.yaml loaded successfully]
+[2024-05-23 23:20:06,370: INFO:common: yaml file: /Users/kanayojustice/Documents/Data_scientist_projects/AutoPredict/params.yaml loaded successfully]
+[2024-05-23 23:20:06,407: INFO:common: yaml file: /Users/kanayojustice/Documents/Data_scientist_projects/AutoPredict/schema.yaml loaded successfully]
+[2024-05-23 23:20:06,408: INFO:common: created directory at: artifacts]
+[2024-05-23 23:20:06,408: INFO:common: created directory at: artifacts/data_validation]
+[2024-05-23 23:20:08,141: INFO:main: >>>>>> stage Data validation stage completed <<<<<<
+
+x==========x]
+[2024-05-23 23:20:08,142: INFO:main: >>>>>> stage Data transformation stage started <<<<<<]
+[2024-05-23 23:20:08,146: INFO:common: yaml file: /Users/kanayojustice/Documents/Data_scientist_projects/AutoPredict/config/config.yaml loaded successfully]
+[2024-05-23 23:20:08,147: INFO:common: yaml file: /Users/kanayojustice/Documents/Data_scientist_projects/AutoPredict/params.yaml loaded successfully]
+[2024-05-23 23:20:08,180: INFO:common: yaml file: /Users/kanayojustice/Documents/Data_scientist_projects/AutoPredict/schema.yaml loaded successfully]
+[2024-05-23 23:20:08,181: INFO:common: created directory at: artifacts]
+[2024-05-23 23:20:08,182: INFO:common: created directory at: artifacts/data_transformation]
+[2024-05-23 23:20:14,448: INFO:data_transformation: Splited data into training and test sets]
+[2024-05-23 23:20:14,448: INFO:data_transformation: (73284, 219)]
+[2024-05-23 23:20:14,448: INFO:data_transformation: (24428, 219)]
+[2024-05-23 23:20:14,497: INFO:main: >>>>>> stage Data transformation stage completed <<<<<<
+
+x==========x]
+[2024-05-23 23:20:14,498: INFO:main: >>>>>> stage model trainer stage started <<<<<<]
+[2024-05-23 23:20:14,523: INFO:common: yaml file: /Users/kanayojustice/Documents/Data_scientist_projects/AutoPredict/config/config.yaml loaded successfully]
+[2024-05-23 23:20:14,524: INFO:common: yaml file: /Users/kanayojustice/Documents/Data_scientist_projects/AutoPredict/params.yaml loaded successfully]
+[2024-05-23 23:20:14,653: INFO:common: yaml file: /Users/kanayojustice/Documents/Data_scientist_projects/AutoPredict/schema.yaml loaded successfully]
+[2024-05-23 23:20:14,657: INFO:common: created directory at: artifacts]
+[2024-05-23 23:20:14,658: INFO:common: created directory at: artifacts/model_trainer]
+[2024-05-23 23:20:18,674: INFO:main: >>>>>> stage model trainer stage completed <<<<<<
+
+x==========x]
+[2024-05-23 23:21:30,332: INFO:main: >>>> stage Data ingestion stage started <<<<<]
+[2024-05-23 23:21:30,338: INFO:common: yaml file: /Users/kanayojustice/Documents/Data_scientist_projects/AutoPredict/config/config.yaml loaded successfully]
+[2024-05-23 23:21:30,339: INFO:common: yaml file: /Users/kanayojustice/Documents/Data_scientist_projects/AutoPredict/params.yaml loaded successfully]
+[2024-05-23 23:21:30,373: INFO:common: yaml file: /Users/kanayojustice/Documents/Data_scientist_projects/AutoPredict/schema.yaml loaded successfully]
+[2024-05-23 23:21:30,374: INFO:common: created directory at: artifacts]
+[2024-05-23 23:21:30,374: INFO:common: created directory at: artifacts/data_ingestion]
+[2024-05-23 23:21:32,000: INFO:data_ingestion: artifacts/data_ingestion/autopredict_cleaned_data.zip Download! with the following info: 
+Connection: close
+Content-Length: 1945315
+Cache-Control: max-age=300
+Content-Security-Policy: default-src 'none'; style-src 'unsafe-inline'; sandbox
+Content-Type: application/zip
+ETag: "b160506c17ea84ccc04e5b384952e3f307ac7aa5a12e2f509c92fd114a7bbbf6"
+Strict-Transport-Security: max-age=31536000
+X-Content-Type-Options: nosniff
+X-Frame-Options: deny
+X-XSS-Protection: 1; mode=block
+X-GitHub-Request-Id: 105A:10D795:130C98:17A614:664FBEF6
+Accept-Ranges: bytes
+Date: Thu, 23 May 2024 22:21:31 GMT
+Via: 1.1 varnish
+X-Served-By: cache-lhr7324-LHR
+X-Cache: HIT
+X-Cache-Hits: 0
+X-Timer: S1716502891.405801,VS0,VE151
+Vary: Authorization,Accept-Encoding,Origin
+Access-Control-Allow-Origin: *
+Cross-Origin-Resource-Policy: cross-origin
+X-Fastly-Request-ID: 1023e9a818fc7c7fb73d907b3ffb350b677d9662
+Expires: Thu, 23 May 2024 22:26:31 GMT
+Source-Age: 0
+
+]
+[2024-05-23 23:21:32,159: INFO:main: >>>> stage Data ingestion stage completed <<<<<]
+[2024-05-23 23:21:32,159: INFO:main: >>>>>> stage Data validation stage started <<<<<<]
+[2024-05-23 23:21:32,165: INFO:common: yaml file: /Users/kanayojustice/Documents/Data_scientist_projects/AutoPredict/config/config.yaml loaded successfully]
+[2024-05-23 23:21:32,166: INFO:common: yaml file: /Users/kanayojustice/Documents/Data_scientist_projects/AutoPredict/params.yaml loaded successfully]
+[2024-05-23 23:21:32,209: INFO:common: yaml file: /Users/kanayojustice/Documents/Data_scientist_projects/AutoPredict/schema.yaml loaded successfully]
+[2024-05-23 23:21:32,210: INFO:common: created directory at: artifacts]
+[2024-05-23 23:21:32,211: INFO:common: created directory at: artifacts/data_validation]
+[2024-05-23 23:21:34,136: INFO:main: >>>>>> stage Data validation stage completed <<<<<<
+
+x==========x]
+[2024-05-23 23:21:34,136: INFO:main: >>>>>> stage Data transformation stage started <<<<<<]
+[2024-05-23 23:21:34,140: INFO:common: yaml file: /Users/kanayojustice/Documents/Data_scientist_projects/AutoPredict/config/config.yaml loaded successfully]
+[2024-05-23 23:21:34,141: INFO:common: yaml file: /Users/kanayojustice/Documents/Data_scientist_projects/AutoPredict/params.yaml loaded successfully]
+[2024-05-23 23:21:34,175: INFO:common: yaml file: /Users/kanayojustice/Documents/Data_scientist_projects/AutoPredict/schema.yaml loaded successfully]
+[2024-05-23 23:21:34,176: INFO:common: created directory at: artifacts]
+[2024-05-23 23:21:34,176: INFO:common: created directory at: artifacts/data_transformation]
+[2024-05-23 23:21:40,394: INFO:data_transformation: Splited data into training and test sets]
+[2024-05-23 23:21:40,395: INFO:data_transformation: (73284, 219)]
+[2024-05-23 23:21:40,395: INFO:data_transformation: (24428, 219)]
+[2024-05-23 23:21:40,427: INFO:main: >>>>>> stage Data transformation stage completed <<<<<<
+
+x==========x]
+[2024-05-23 23:21:40,427: INFO:main: >>>>>> stage model trainer stage started <<<<<<]
+[2024-05-23 23:21:40,432: INFO:common: yaml file: /Users/kanayojustice/Documents/Data_scientist_projects/AutoPredict/config/config.yaml loaded successfully]
+[2024-05-23 23:21:40,433: INFO:common: yaml file: /Users/kanayojustice/Documents/Data_scientist_projects/AutoPredict/params.yaml loaded successfully]
+[2024-05-23 23:21:40,475: INFO:common: yaml file: /Users/kanayojustice/Documents/Data_scientist_projects/AutoPredict/schema.yaml loaded successfully]
+[2024-05-23 23:21:40,476: INFO:common: created directory at: artifacts]
+[2024-05-23 23:21:40,476: INFO:common: created directory at: artifacts/model_trainer]
+[2024-05-23 23:21:44,436: INFO:main: >>>>>> stage model trainer stage completed <<<<<<
+
+x==========x]
+[2024-05-23 23:21:44,436: INFO:main: >>>>>> stage model trainer stage started <<<<<<]
+[2024-05-23 23:21:44,443: INFO:common: yaml file: /Users/kanayojustice/Documents/Data_scientist_projects/AutoPredict/config/config.yaml loaded successfully]
+[2024-05-23 23:21:44,444: INFO:common: yaml file: /Users/kanayojustice/Documents/Data_scientist_projects/AutoPredict/params.yaml loaded successfully]
+[2024-05-23 23:21:44,496: INFO:common: yaml file: /Users/kanayojustice/Documents/Data_scientist_projects/AutoPredict/schema.yaml loaded successfully]
+[2024-05-23 23:21:44,496: INFO:common: created directory at: artifacts]
+[2024-05-23 23:21:44,497: INFO:common: created directory at: artifacts/model_evaluation]
+[2024-05-23 23:21:45,076: INFO:common: json file saved at: artifacts/model_evaluation/metrics.json]
+[2024-05-23 23:21:45,088: INFO:main: >>>>>> stage model trainer stage completed <<<<<<
+
+x==========x]
+[2024-05-23 23:23:47,297: INFO:main: >>>> stage Data ingestion stage started <<<<<]
+[2024-05-23 23:23:47,302: INFO:common: yaml file: /Users/kanayojustice/Documents/Data_scientist_projects/AutoPredict/config/config.yaml loaded successfully]
+[2024-05-23 23:23:47,303: INFO:common: yaml file: /Users/kanayojustice/Documents/Data_scientist_projects/AutoPredict/params.yaml loaded successfully]
+[2024-05-23 23:23:47,338: INFO:common: yaml file: /Users/kanayojustice/Documents/Data_scientist_projects/AutoPredict/schema.yaml loaded successfully]
+[2024-05-23 23:23:47,339: INFO:common: created directory at: artifacts]
+[2024-05-23 23:23:47,339: INFO:common: created directory at: artifacts/data_ingestion]
+[2024-05-23 23:23:51,795: INFO:data_ingestion: artifacts/data_ingestion/autopredict_cleaned_data.zip Download! with the following info: 
+Connection: close
+Content-Length: 1945315
+Cache-Control: max-age=300
+Content-Security-Policy: default-src 'none'; style-src 'unsafe-inline'; sandbox
+Content-Type: application/zip
+ETag: "b160506c17ea84ccc04e5b384952e3f307ac7aa5a12e2f509c92fd114a7bbbf6"
+Strict-Transport-Security: max-age=31536000
+X-Content-Type-Options: nosniff
+X-Frame-Options: deny
+X-XSS-Protection: 1; mode=block
+X-GitHub-Request-Id: 4E00:0906:3ED717:4D1DAA:664FC114
+Accept-Ranges: bytes
+Date: Thu, 23 May 2024 22:23:48 GMT
+Via: 1.1 varnish
+X-Served-By: cache-lcy-eglc8600022-LCY
+X-Cache: HIT
+X-Cache-Hits: 0
+X-Timer: S1716503029.610477,VS0,VE2
+Vary: Authorization,Accept-Encoding,Origin
+Access-Control-Allow-Origin: *
+Cross-Origin-Resource-Policy: cross-origin
+X-Fastly-Request-ID: 5cbfc0a0750a45248d89ed808e20e9a099b57e3b
+Expires: Thu, 23 May 2024 22:28:48 GMT
+Source-Age: 224
+
+]
+[2024-05-23 23:23:51,936: INFO:main: >>>> stage Data ingestion stage completed <<<<<]
+[2024-05-23 23:23:51,936: INFO:main: >>>>>> stage Data validation stage started <<<<<<]
+[2024-05-23 23:23:51,941: INFO:common: yaml file: /Users/kanayojustice/Documents/Data_scientist_projects/AutoPredict/config/config.yaml loaded successfully]
+[2024-05-23 23:23:51,941: INFO:common: yaml file: /Users/kanayojustice/Documents/Data_scientist_projects/AutoPredict/params.yaml loaded successfully]
+[2024-05-23 23:23:51,977: INFO:common: yaml file: /Users/kanayojustice/Documents/Data_scientist_projects/AutoPredict/schema.yaml loaded successfully]
+[2024-05-23 23:23:51,978: INFO:common: created directory at: artifacts]
+[2024-05-23 23:23:51,978: INFO:common: created directory at: artifacts/data_validation]
+[2024-05-23 23:23:53,764: INFO:main: >>>>>> stage Data validation stage completed <<<<<<
+
+x==========x]
+[2024-05-23 23:23:53,764: INFO:main: >>>>>> stage Data transformation stage started <<<<<<]
+[2024-05-23 23:23:53,769: INFO:common: yaml file: /Users/kanayojustice/Documents/Data_scientist_projects/AutoPredict/config/config.yaml loaded successfully]
+[2024-05-23 23:23:53,770: INFO:common: yaml file: /Users/kanayojustice/Documents/Data_scientist_projects/AutoPredict/params.yaml loaded successfully]
+[2024-05-23 23:23:53,812: INFO:common: yaml file: /Users/kanayojustice/Documents/Data_scientist_projects/AutoPredict/schema.yaml loaded successfully]
+[2024-05-23 23:23:53,813: INFO:common: created directory at: artifacts]
+[2024-05-23 23:23:53,813: INFO:common: created directory at: artifacts/data_transformation]
+[2024-05-23 23:24:00,976: INFO:data_transformation: Splited data into training and test sets]
+[2024-05-23 23:24:00,976: INFO:data_transformation: (73284, 219)]
+[2024-05-23 23:24:00,977: INFO:data_transformation: (24428, 219)]
+[2024-05-23 23:24:01,007: INFO:main: >>>>>> stage Data transformation stage completed <<<<<<
+
+x==========x]
+[2024-05-23 23:24:01,008: INFO:main: >>>>>> stage model trainer stage started <<<<<<]
+[2024-05-23 23:24:01,012: INFO:common: yaml file: /Users/kanayojustice/Documents/Data_scientist_projects/AutoPredict/config/config.yaml loaded successfully]
+[2024-05-23 23:24:01,013: INFO:common: yaml file: /Users/kanayojustice/Documents/Data_scientist_projects/AutoPredict/params.yaml loaded successfully]
+[2024-05-23 23:24:01,057: INFO:common: yaml file: /Users/kanayojustice/Documents/Data_scientist_projects/AutoPredict/schema.yaml loaded successfully]
+[2024-05-23 23:24:01,058: INFO:common: created directory at: artifacts]
+[2024-05-23 23:24:01,058: INFO:common: created directory at: artifacts/model_trainer]
+[2024-05-23 23:24:05,607: INFO:main: >>>>>> stage model trainer stage completed <<<<<<
+
+x==========x]
+[2024-05-23 23:24:05,608: INFO:main: >>>>>> stage model evaluation stage started <<<<<<]
+[2024-05-23 23:24:05,613: INFO:common: yaml file: /Users/kanayojustice/Documents/Data_scientist_projects/AutoPredict/config/config.yaml loaded successfully]
+[2024-05-23 23:24:05,615: INFO:common: yaml file: /Users/kanayojustice/Documents/Data_scientist_projects/AutoPredict/params.yaml loaded successfully]
+[2024-05-23 23:24:05,683: INFO:common: yaml file: /Users/kanayojustice/Documents/Data_scientist_projects/AutoPredict/schema.yaml loaded successfully]
+[2024-05-23 23:24:05,685: INFO:common: created directory at: artifacts]
+[2024-05-23 23:24:05,686: INFO:common: created directory at: artifacts/model_evaluation]
+[2024-05-23 23:24:06,420: INFO:common: json file saved at: artifacts/model_evaluation/metrics.json]
+[2024-05-23 23:24:06,433: INFO:main: >>>>>> stage model evaluation stage completed <<<<<<
+
+x==========x]
