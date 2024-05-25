@@ -1,24 +1,31 @@
 module.exports = {
-  content: ['./*.html'],
+  purge: [],
+  darkMode: false, // or 'media' or 'class'
   theme: {
-    screens: {
-      sm: '480px',
-      md: '768px',
-      lg: '976px',
-      xl: '1440px',
-    },
     extend: {
       colors: {
-        brightRed: 'hsl(12, 88%, 59%)',
-        brightRedLight: 'hsl(12, 88%, 69%)',
-        brightRedSupLight: 'hsl(12, 88%, 95%)',
-        darkBlue: 'hsl(228, 39%, 23%)',
-        darkGrayishBlue: 'hsl(227, 12%, 61%)',
-        veryDarkBlue: 'hsl(233, 12%, 13%)',
-        veryPaleRed: 'hsl(13, 100%, 96%)',
-        veryLightGray: 'hsl(0, 0%, 98%)',
+        "bookmark-purple": "#5267DF",
+        "bookmark-red": "#FA5959",
+        "bookmark-blue": "#242A45",
+        "bookmark-grey": "#9194A2",
+        "bookmark-white": "#f7f7f7",
+      },
+    },
+    fontFamily: {
+      Poppins: ["Poppins, sans-serif"],
+    },
+    container: {
+      center: true,
+      padding: "1rem",
+      screens: {
+        lg: "1124px",
+        xl: "1124px",
+        "2xl": "1124px",
       },
     },
   },
+  variants: {
+    extend: {},
+  },
   plugins: [],
-}
+};
