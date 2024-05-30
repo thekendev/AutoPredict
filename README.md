@@ -14,3 +14,23 @@ End to End Predictive Maintenance for Automotive Components: Leveraging Historic
 - Update the pipeline
 - Update the main.py
 - Update the app.py
+
+
+
+# How to run?
+
+### STEPS:
+
+``` conda create -n mlproj python=3.8 -y ```
+
+
+``` conda activate venv/ ```
+
+
+``` pip install -r requirements.txt ```
+
+
+``` python app.py ```
+
+
+``` Now open up your local host 0.0.0.0:8080 ```
