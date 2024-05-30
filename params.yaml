@@ -1,2 +1,5 @@
 LogisticRegression:
-  pass
+  classifier__C: 22.0
+  classifier__max_iter: 200
+  classifier__penalty: 'l1'
+  preprocessor__num__imputer__strategy: 'mean'

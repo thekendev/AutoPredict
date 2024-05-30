@@ -23,9 +23,9 @@ class ModelEvaluation:
     def eval_metrics(self, actual, pred, pred_proba):
         conf_matrix = confusion_matrix(actual, pred)
         accuracy = accuracy_score(actual, pred)
-        precision = precision_score(actual, pred)
-        recall = recall_score(actual, pred)
-        f1 = f1_score(actual, pred)
+        precision = precision_score(actual, pred, pos_label='yes')  # Specify the positive label
+        recall = recall_score(actual, pred, pos_label='yes')  # Specify the positive label
+        f1 = f1_score(actual, pred, pos_label='yes')  # Specify the positive label
         roc_auc = roc_auc_score(actual, pred_proba)
         return conf_matrix, accuracy, precision, recall, f1, roc_auc
 

@@ -1568,3 +1568,2447 @@ x==========x]
 [2024-05-25 01:23:44,064: INFO:main: >>>>>> stage model evaluation stage completed <<<<<<
 
 x==========x]
+[2024-05-26 20:50:38,490: INFO:common: yaml file: /Users/kanayojustice/Documents/Data_scientist_projects/AutoPredict/config/config.yaml loaded successfully]
+[2024-05-26 20:50:38,497: INFO:common: yaml file: /Users/kanayojustice/Documents/Data_scientist_projects/AutoPredict/params.yaml loaded successfully]
+[2024-05-26 20:50:38,540: INFO:common: yaml file: /Users/kanayojustice/Documents/Data_scientist_projects/AutoPredict/schema.yaml loaded successfully]
+[2024-05-26 20:50:38,544: INFO:common: created directory at: artifacts]
+[2024-05-26 20:50:38,545: INFO:common: created directory at: artifacts/data_transformation]
+[2024-05-26 23:00:08,001: INFO:main: >>>> stage Data ingestion stage started <<<<<]
+[2024-05-26 23:00:08,008: INFO:common: yaml file: /Users/kanayojustice/Documents/Data_scientist_projects/AutoPredict/config/config.yaml loaded successfully]
+[2024-05-26 23:00:08,009: INFO:common: yaml file: /Users/kanayojustice/Documents/Data_scientist_projects/AutoPredict/params.yaml loaded successfully]
+[2024-05-26 23:00:08,043: INFO:common: yaml file: /Users/kanayojustice/Documents/Data_scientist_projects/AutoPredict/schema.yaml loaded successfully]
+[2024-05-26 23:00:08,046: INFO:common: created directory at: artifacts/]
+[2024-05-26 23:00:08,046: INFO:common: created directory at: artifacts/data_ingestion]
+[2024-05-26 23:00:12,011: INFO:data_ingestion: artifacts/data_ingestion/autopredict_cleaned_data.zip Download! with the following info: 
+Connection: close
+Content-Length: 1945315
+Cache-Control: max-age=300
+Content-Security-Policy: default-src 'none'; style-src 'unsafe-inline'; sandbox
+Content-Type: application/zip
+ETag: "33d4fc77827168beb118d9a9115ed5da41eedb7ca648b4ff2c047bb4e47370a6"
+Strict-Transport-Security: max-age=31536000
+X-Content-Type-Options: nosniff
+X-Frame-Options: deny
+X-XSS-Protection: 1; mode=block
+X-GitHub-Request-Id: 3CD0:1F4751:20BAF0:29CC74:6653B0EA
+Accept-Ranges: bytes
+Date: Sun, 26 May 2024 22:00:11 GMT
+Via: 1.1 varnish
+X-Served-By: cache-lhr7368-LHR
+X-Cache: MISS
+X-Cache-Hits: 0
+X-Timer: S1716760811.986940,VS0,VE239
+Vary: Authorization,Accept-Encoding,Origin
+Access-Control-Allow-Origin: *
+Cross-Origin-Resource-Policy: cross-origin
+X-Fastly-Request-ID: 783fb72ea68d859a48aff9cd9c2c258db50b02bc
+Expires: Sun, 26 May 2024 22:05:11 GMT
+Source-Age: 0
+
+]
+[2024-05-26 23:00:12,149: INFO:main: >>>> stage Data ingestion stage completed <<<<<]
+[2024-05-26 23:00:12,149: INFO:main: >>>>>> stage Data validation stage started <<<<<<]
+[2024-05-26 23:00:12,155: INFO:common: yaml file: /Users/kanayojustice/Documents/Data_scientist_projects/AutoPredict/config/config.yaml loaded successfully]
+[2024-05-26 23:00:12,156: INFO:common: yaml file: /Users/kanayojustice/Documents/Data_scientist_projects/AutoPredict/params.yaml loaded successfully]
+[2024-05-26 23:00:12,189: INFO:common: yaml file: /Users/kanayojustice/Documents/Data_scientist_projects/AutoPredict/schema.yaml loaded successfully]
+[2024-05-26 23:00:12,190: INFO:common: created directory at: artifacts/]
+[2024-05-26 23:00:12,191: INFO:common: created directory at: artifacts/data_validation]
+[2024-05-26 23:00:12,192: ERROR:main: [Errno 2] No such file or directory: '/Users/kanayojustice/Documents/Data_scientist_projects/AutoPredict/research/data/auto_pred_cleaned_data.csv']
+Traceback (most recent call last):
+  File "main.py", line 24, in <module>
+    obj.main()
+  File "/Users/kanayojustice/Documents/Data_scientist_projects/AutoPredict/Autopredictor/src/pipeline/stage_02_data_validation.py", line 19, in main
+    data_validation.validate_all_columns()
+  File "/Users/kanayojustice/Documents/Data_scientist_projects/AutoPredict/Autopredictor/src/components/data_validation.py", line 43, in validate_all_columns
+    raise e
+  File "/Users/kanayojustice/Documents/Data_scientist_projects/AutoPredict/Autopredictor/src/components/data_validation.py", line 24, in validate_all_columns
+    data = pd.read_csv(self.config.unzip_data_dir)
+  File "/Users/kanayojustice/Documents/Data_scientist_projects/AutoPredict/venv/lib/python3.8/site-packages/pandas/io/parsers/readers.py", line 912, in read_csv
+    return _read(filepath_or_buffer, kwds)
+  File "/Users/kanayojustice/Documents/Data_scientist_projects/AutoPredict/venv/lib/python3.8/site-packages/pandas/io/parsers/readers.py", line 577, in _read
+    parser = TextFileReader(filepath_or_buffer, **kwds)
+  File "/Users/kanayojustice/Documents/Data_scientist_projects/AutoPredict/venv/lib/python3.8/site-packages/pandas/io/parsers/readers.py", line 1407, in __init__
+    self._engine = self._make_engine(f, self.engine)
+  File "/Users/kanayojustice/Documents/Data_scientist_projects/AutoPredict/venv/lib/python3.8/site-packages/pandas/io/parsers/readers.py", line 1661, in _make_engine
+    self.handles = get_handle(
+  File "/Users/kanayojustice/Documents/Data_scientist_projects/AutoPredict/venv/lib/python3.8/site-packages/pandas/io/common.py", line 859, in get_handle
+    handle = open(
+FileNotFoundError: [Errno 2] No such file or directory: '/Users/kanayojustice/Documents/Data_scientist_projects/AutoPredict/research/data/auto_pred_cleaned_data.csv'
+[2024-05-26 23:01:51,442: INFO:main: >>>> stage Data ingestion stage started <<<<<]
+[2024-05-26 23:01:51,448: INFO:common: yaml file: /Users/kanayojustice/Documents/Data_scientist_projects/AutoPredict/config/config.yaml loaded successfully]
+[2024-05-26 23:01:51,449: INFO:common: yaml file: /Users/kanayojustice/Documents/Data_scientist_projects/AutoPredict/params.yaml loaded successfully]
+[2024-05-26 23:01:51,483: INFO:common: yaml file: /Users/kanayojustice/Documents/Data_scientist_projects/AutoPredict/schema.yaml loaded successfully]
+[2024-05-26 23:01:51,484: INFO:common: created directory at: artifacts/]
+[2024-05-26 23:01:51,485: INFO:common: created directory at: artifacts/data_ingestion]
+[2024-05-26 23:01:54,227: INFO:data_ingestion: artifacts/data_ingestion/autopredict_cleaned_data.zip Download! with the following info: 
+Connection: close
+Content-Length: 1945315
+Cache-Control: max-age=300
+Content-Security-Policy: default-src 'none'; style-src 'unsafe-inline'; sandbox
+Content-Type: application/zip
+ETag: "33d4fc77827168beb118d9a9115ed5da41eedb7ca648b4ff2c047bb4e47370a6"
+Strict-Transport-Security: max-age=31536000
+X-Content-Type-Options: nosniff
+X-Frame-Options: deny
+X-XSS-Protection: 1; mode=block
+X-GitHub-Request-Id: 3CD0:1F4751:20BAF0:29CC74:6653B0EA
+Accept-Ranges: bytes
+Date: Sun, 26 May 2024 22:01:53 GMT
+Via: 1.1 varnish
+X-Served-By: cache-lhr7366-LHR
+X-Cache: HIT
+X-Cache-Hits: 0
+X-Timer: S1716760914.685034,VS0,VE1
+Vary: Authorization,Accept-Encoding,Origin
+Access-Control-Allow-Origin: *
+Cross-Origin-Resource-Policy: cross-origin
+X-Fastly-Request-ID: f87dfce94ecd253140cf2e717e2af40272962577
+Expires: Sun, 26 May 2024 22:06:53 GMT
+Source-Age: 102
+
+]
+[2024-05-26 23:01:54,361: INFO:main: >>>> stage Data ingestion stage completed <<<<<]
+[2024-05-26 23:01:54,361: INFO:main: >>>>>> stage Data validation stage started <<<<<<]
+[2024-05-26 23:01:54,367: INFO:common: yaml file: /Users/kanayojustice/Documents/Data_scientist_projects/AutoPredict/config/config.yaml loaded successfully]
+[2024-05-26 23:01:54,368: INFO:common: yaml file: /Users/kanayojustice/Documents/Data_scientist_projects/AutoPredict/params.yaml loaded successfully]
+[2024-05-26 23:01:54,403: INFO:common: yaml file: /Users/kanayojustice/Documents/Data_scientist_projects/AutoPredict/schema.yaml loaded successfully]
+[2024-05-26 23:01:54,404: INFO:common: created directory at: artifacts/]
+[2024-05-26 23:01:54,404: INFO:common: created directory at: artifacts/data_validation]
+[2024-05-26 23:01:54,405: ERROR:main: [Errno 21] Is a directory: 'artifacts/data_ingestion']
+Traceback (most recent call last):
+  File "main.py", line 24, in <module>
+    obj.main()
+  File "/Users/kanayojustice/Documents/Data_scientist_projects/AutoPredict/Autopredictor/src/pipeline/stage_02_data_validation.py", line 19, in main
+    data_validation.validate_all_columns()
+  File "/Users/kanayojustice/Documents/Data_scientist_projects/AutoPredict/Autopredictor/src/components/data_validation.py", line 43, in validate_all_columns
+    raise e
+  File "/Users/kanayojustice/Documents/Data_scientist_projects/AutoPredict/Autopredictor/src/components/data_validation.py", line 24, in validate_all_columns
+    data = pd.read_csv(self.config.unzip_data_dir)
+  File "/Users/kanayojustice/Documents/Data_scientist_projects/AutoPredict/venv/lib/python3.8/site-packages/pandas/io/parsers/readers.py", line 912, in read_csv
+    return _read(filepath_or_buffer, kwds)
+  File "/Users/kanayojustice/Documents/Data_scientist_projects/AutoPredict/venv/lib/python3.8/site-packages/pandas/io/parsers/readers.py", line 577, in _read
+    parser = TextFileReader(filepath_or_buffer, **kwds)
+  File "/Users/kanayojustice/Documents/Data_scientist_projects/AutoPredict/venv/lib/python3.8/site-packages/pandas/io/parsers/readers.py", line 1407, in __init__
+    self._engine = self._make_engine(f, self.engine)
+  File "/Users/kanayojustice/Documents/Data_scientist_projects/AutoPredict/venv/lib/python3.8/site-packages/pandas/io/parsers/readers.py", line 1661, in _make_engine
+    self.handles = get_handle(
+  File "/Users/kanayojustice/Documents/Data_scientist_projects/AutoPredict/venv/lib/python3.8/site-packages/pandas/io/common.py", line 859, in get_handle
+    handle = open(
+IsADirectoryError: [Errno 21] Is a directory: 'artifacts/data_ingestion'
+[2024-05-26 23:04:09,838: INFO:main: >>>> stage Data ingestion stage started <<<<<]
+[2024-05-26 23:04:09,844: INFO:common: yaml file: /Users/kanayojustice/Documents/Data_scientist_projects/AutoPredict/config/config.yaml loaded successfully]
+[2024-05-26 23:04:09,845: INFO:common: yaml file: /Users/kanayojustice/Documents/Data_scientist_projects/AutoPredict/params.yaml loaded successfully]
+[2024-05-26 23:04:09,879: INFO:common: yaml file: /Users/kanayojustice/Documents/Data_scientist_projects/AutoPredict/schema.yaml loaded successfully]
+[2024-05-26 23:04:09,880: INFO:common: created directory at: artifacts/]
+[2024-05-26 23:04:09,881: INFO:common: created directory at: artifacts/data_ingestion]
+[2024-05-26 23:04:12,031: INFO:data_ingestion: artifacts/data_ingestion/autopredict_cleaned_data.zip Download! with the following info: 
+Connection: close
+Content-Length: 1945315
+Cache-Control: max-age=300
+Content-Security-Policy: default-src 'none'; style-src 'unsafe-inline'; sandbox
+Content-Type: application/zip
+ETag: "33d4fc77827168beb118d9a9115ed5da41eedb7ca648b4ff2c047bb4e47370a6"
+Strict-Transport-Security: max-age=31536000
+X-Content-Type-Options: nosniff
+X-Frame-Options: deny
+X-XSS-Protection: 1; mode=block
+X-GitHub-Request-Id: 3CD0:1F4751:20BAF0:29CC74:6653B0EA
+Accept-Ranges: bytes
+Date: Sun, 26 May 2024 22:04:11 GMT
+Via: 1.1 varnish
+X-Served-By: cache-lhr7345-LHR
+X-Cache: HIT
+X-Cache-Hits: 0
+X-Timer: S1716761051.495098,VS0,VE1
+Vary: Authorization,Accept-Encoding,Origin
+Access-Control-Allow-Origin: *
+Cross-Origin-Resource-Policy: cross-origin
+X-Fastly-Request-ID: 1e5aaec145548e3433355cc224df9b7cc862cbcd
+Expires: Sun, 26 May 2024 22:09:11 GMT
+Source-Age: 240
+
+]
+[2024-05-26 23:04:12,171: INFO:main: >>>> stage Data ingestion stage completed <<<<<]
+[2024-05-26 23:04:12,171: INFO:main: >>>>>> stage Data validation stage started <<<<<<]
+[2024-05-26 23:04:12,177: INFO:common: yaml file: /Users/kanayojustice/Documents/Data_scientist_projects/AutoPredict/config/config.yaml loaded successfully]
+[2024-05-26 23:04:12,178: INFO:common: yaml file: /Users/kanayojustice/Documents/Data_scientist_projects/AutoPredict/params.yaml loaded successfully]
+[2024-05-26 23:04:12,212: INFO:common: yaml file: /Users/kanayojustice/Documents/Data_scientist_projects/AutoPredict/schema.yaml loaded successfully]
+[2024-05-26 23:04:12,213: INFO:common: created directory at: artifacts/]
+[2024-05-26 23:04:12,214: INFO:common: created directory at: artifacts/data_validation]
+[2024-05-26 23:04:12,214: ERROR:main: [Errno 21] Is a directory: 'artifacts/data_ingestion']
+Traceback (most recent call last):
+  File "main.py", line 24, in <module>
+    obj.main()
+  File "/Users/kanayojustice/Documents/Data_scientist_projects/AutoPredict/Autopredictor/src/pipeline/stage_02_data_validation.py", line 19, in main
+    data_validation.validate_all_columns()
+  File "/Users/kanayojustice/Documents/Data_scientist_projects/AutoPredict/Autopredictor/src/components/data_validation.py", line 43, in validate_all_columns
+    raise e
+  File "/Users/kanayojustice/Documents/Data_scientist_projects/AutoPredict/Autopredictor/src/components/data_validation.py", line 24, in validate_all_columns
+    data = pd.read_csv(self.config.unzip_data_dir)
+  File "/Users/kanayojustice/Documents/Data_scientist_projects/AutoPredict/venv/lib/python3.8/site-packages/pandas/io/parsers/readers.py", line 912, in read_csv
+    return _read(filepath_or_buffer, kwds)
+  File "/Users/kanayojustice/Documents/Data_scientist_projects/AutoPredict/venv/lib/python3.8/site-packages/pandas/io/parsers/readers.py", line 577, in _read
+    parser = TextFileReader(filepath_or_buffer, **kwds)
+  File "/Users/kanayojustice/Documents/Data_scientist_projects/AutoPredict/venv/lib/python3.8/site-packages/pandas/io/parsers/readers.py", line 1407, in __init__
+    self._engine = self._make_engine(f, self.engine)
+  File "/Users/kanayojustice/Documents/Data_scientist_projects/AutoPredict/venv/lib/python3.8/site-packages/pandas/io/parsers/readers.py", line 1661, in _make_engine
+    self.handles = get_handle(
+  File "/Users/kanayojustice/Documents/Data_scientist_projects/AutoPredict/venv/lib/python3.8/site-packages/pandas/io/common.py", line 859, in get_handle
+    handle = open(
+IsADirectoryError: [Errno 21] Is a directory: 'artifacts/data_ingestion'
+[2024-05-26 23:04:41,354: INFO:main: >>>> stage Data ingestion stage started <<<<<]
+[2024-05-26 23:04:41,362: INFO:common: yaml file: /Users/kanayojustice/Documents/Data_scientist_projects/AutoPredict/config/config.yaml loaded successfully]
+[2024-05-26 23:04:41,363: INFO:common: yaml file: /Users/kanayojustice/Documents/Data_scientist_projects/AutoPredict/params.yaml loaded successfully]
+[2024-05-26 23:04:41,396: INFO:common: yaml file: /Users/kanayojustice/Documents/Data_scientist_projects/AutoPredict/schema.yaml loaded successfully]
+[2024-05-26 23:04:41,397: INFO:common: created directory at: artifacts/]
+[2024-05-26 23:04:41,398: INFO:common: created directory at: artifacts/data_ingestion]
+[2024-05-26 23:04:43,576: INFO:data_ingestion: artifacts/data_ingestion/autopredict_cleaned_data.zip Download! with the following info: 
+Connection: close
+Content-Length: 1945315
+Cache-Control: max-age=300
+Content-Security-Policy: default-src 'none'; style-src 'unsafe-inline'; sandbox
+Content-Type: application/zip
+ETag: "33d4fc77827168beb118d9a9115ed5da41eedb7ca648b4ff2c047bb4e47370a6"
+Strict-Transport-Security: max-age=31536000
+X-Content-Type-Options: nosniff
+X-Frame-Options: deny
+X-XSS-Protection: 1; mode=block
+X-GitHub-Request-Id: 3CD0:1F4751:20BAF0:29CC74:6653B0EA
+Accept-Ranges: bytes
+Date: Sun, 26 May 2024 22:04:43 GMT
+Via: 1.1 varnish
+X-Served-By: cache-lhr7321-LHR
+X-Cache: HIT
+X-Cache-Hits: 1
+X-Timer: S1716761083.215594,VS0,VE2
+Vary: Authorization,Accept-Encoding,Origin
+Access-Control-Allow-Origin: *
+Cross-Origin-Resource-Policy: cross-origin
+X-Fastly-Request-ID: 10bd95bc8ba6add678f521ede86f0ceaec703b34
+Expires: Sun, 26 May 2024 22:09:43 GMT
+Source-Age: 272
+
+]
+[2024-05-26 23:04:43,726: INFO:main: >>>> stage Data ingestion stage completed <<<<<]
+[2024-05-26 23:04:43,726: INFO:main: >>>>>> stage Data validation stage started <<<<<<]
+[2024-05-26 23:04:43,733: INFO:common: yaml file: /Users/kanayojustice/Documents/Data_scientist_projects/AutoPredict/config/config.yaml loaded successfully]
+[2024-05-26 23:04:43,734: INFO:common: yaml file: /Users/kanayojustice/Documents/Data_scientist_projects/AutoPredict/params.yaml loaded successfully]
+[2024-05-26 23:04:43,768: INFO:common: yaml file: /Users/kanayojustice/Documents/Data_scientist_projects/AutoPredict/schema.yaml loaded successfully]
+[2024-05-26 23:04:43,769: INFO:common: created directory at: artifacts/]
+[2024-05-26 23:04:43,770: INFO:common: created directory at: artifacts/data_validation]
+[2024-05-26 23:04:45,558: INFO:main: >>>>>> stage Data validation stage completed <<<<<<
+
+x==========x]
+[2024-05-26 23:04:45,558: INFO:main: >>>>>> stage Data transformation stage started <<<<<<]
+[2024-05-26 23:04:45,564: INFO:common: yaml file: /Users/kanayojustice/Documents/Data_scientist_projects/AutoPredict/config/config.yaml loaded successfully]
+[2024-05-26 23:04:45,565: INFO:common: yaml file: /Users/kanayojustice/Documents/Data_scientist_projects/AutoPredict/params.yaml loaded successfully]
+[2024-05-26 23:04:45,598: INFO:common: yaml file: /Users/kanayojustice/Documents/Data_scientist_projects/AutoPredict/schema.yaml loaded successfully]
+[2024-05-26 23:04:45,599: INFO:common: created directory at: artifacts/]
+[2024-05-26 23:04:45,600: INFO:common: created directory at: artifacts/data_transformation]
+[2024-05-26 23:04:45,600: ERROR:main: [Errno 2] No such file or directory: '/Users/kanayojustice/Documents/Data_scientist_projects/AutoPredict/research/data/auto_pred_cleaned_data.csv']
+Traceback (most recent call last):
+  File "main.py", line 37, in <module>
+    obj.main()
+  File "/Users/kanayojustice/Documents/Data_scientist_projects/AutoPredict/Autopredictor/src/pipeline/stage_03_data_transformation.py", line 20, in main
+    data_transformation.train_test_spliting()
+  File "/Users/kanayojustice/Documents/Data_scientist_projects/AutoPredict/Autopredictor/src/components/data_transformation.py", line 24, in train_test_spliting
+    data = pd.read_csv(self.config.data_path)
+  File "/Users/kanayojustice/Documents/Data_scientist_projects/AutoPredict/venv/lib/python3.8/site-packages/pandas/io/parsers/readers.py", line 912, in read_csv
+    return _read(filepath_or_buffer, kwds)
+  File "/Users/kanayojustice/Documents/Data_scientist_projects/AutoPredict/venv/lib/python3.8/site-packages/pandas/io/parsers/readers.py", line 577, in _read
+    parser = TextFileReader(filepath_or_buffer, **kwds)
+  File "/Users/kanayojustice/Documents/Data_scientist_projects/AutoPredict/venv/lib/python3.8/site-packages/pandas/io/parsers/readers.py", line 1407, in __init__
+    self._engine = self._make_engine(f, self.engine)
+  File "/Users/kanayojustice/Documents/Data_scientist_projects/AutoPredict/venv/lib/python3.8/site-packages/pandas/io/parsers/readers.py", line 1661, in _make_engine
+    self.handles = get_handle(
+  File "/Users/kanayojustice/Documents/Data_scientist_projects/AutoPredict/venv/lib/python3.8/site-packages/pandas/io/common.py", line 859, in get_handle
+    handle = open(
+FileNotFoundError: [Errno 2] No such file or directory: '/Users/kanayojustice/Documents/Data_scientist_projects/AutoPredict/research/data/auto_pred_cleaned_data.csv'
+[2024-05-26 23:06:29,718: INFO:main: >>>> stage Data ingestion stage started <<<<<]
+[2024-05-26 23:06:29,721: ERROR:main: while scanning a simple key
+  in "/Users/kanayojustice/Documents/Data_scientist_projects/AutoPredict/config/config.yaml", line 20, column 3
+could not find expected ':'
+  in "/Users/kanayojustice/Documents/Data_scientist_projects/AutoPredict/config/config.yaml", line 21, column 3]
+Traceback (most recent call last):
+  File "main.py", line 12, in <module>
+    obj.main()
+  File "/Users/kanayojustice/Documents/Data_scientist_projects/AutoPredict/Autopredictor/src/pipeline/stage_01_data_ingestion.py", line 14, in main
+    config = ConfigurationManager()
+  File "/Users/kanayojustice/Documents/Data_scientist_projects/AutoPredict/Autopredictor/src/config/configuration.py", line 16, in __init__
+    self.config = read_yaml(config_filepath)
+  File "/Users/kanayojustice/Documents/Data_scientist_projects/AutoPredict/venv/lib/python3.8/site-packages/ensure/main.py", line 849, in __call__
+    return_val = self.f(*args, **kwargs)
+  File "/Users/kanayojustice/Documents/Data_scientist_projects/AutoPredict/Autopredictor/src/utils/common.py", line 36, in read_yaml
+    raise e
+  File "/Users/kanayojustice/Documents/Data_scientist_projects/AutoPredict/Autopredictor/src/utils/common.py", line 30, in read_yaml
+    content = yaml.safe_load(yaml_file)
+  File "/Users/kanayojustice/Documents/Data_scientist_projects/AutoPredict/venv/lib/python3.8/site-packages/yaml/__init__.py", line 125, in safe_load
+    return load(stream, SafeLoader)
+  File "/Users/kanayojustice/Documents/Data_scientist_projects/AutoPredict/venv/lib/python3.8/site-packages/yaml/__init__.py", line 81, in load
+    return loader.get_single_data()
+  File "/Users/kanayojustice/Documents/Data_scientist_projects/AutoPredict/venv/lib/python3.8/site-packages/yaml/constructor.py", line 49, in get_single_data
+    node = self.get_single_node()
+  File "/Users/kanayojustice/Documents/Data_scientist_projects/AutoPredict/venv/lib/python3.8/site-packages/yaml/composer.py", line 36, in get_single_node
+    document = self.compose_document()
+  File "/Users/kanayojustice/Documents/Data_scientist_projects/AutoPredict/venv/lib/python3.8/site-packages/yaml/composer.py", line 55, in compose_document
+    node = self.compose_node(None, None)
+  File "/Users/kanayojustice/Documents/Data_scientist_projects/AutoPredict/venv/lib/python3.8/site-packages/yaml/composer.py", line 84, in compose_node
+    node = self.compose_mapping_node(anchor)
+  File "/Users/kanayojustice/Documents/Data_scientist_projects/AutoPredict/venv/lib/python3.8/site-packages/yaml/composer.py", line 133, in compose_mapping_node
+    item_value = self.compose_node(node, item_key)
+  File "/Users/kanayojustice/Documents/Data_scientist_projects/AutoPredict/venv/lib/python3.8/site-packages/yaml/composer.py", line 84, in compose_node
+    node = self.compose_mapping_node(anchor)
+  File "/Users/kanayojustice/Documents/Data_scientist_projects/AutoPredict/venv/lib/python3.8/site-packages/yaml/composer.py", line 127, in compose_mapping_node
+    while not self.check_event(MappingEndEvent):
+  File "/Users/kanayojustice/Documents/Data_scientist_projects/AutoPredict/venv/lib/python3.8/site-packages/yaml/parser.py", line 98, in check_event
+    self.current_event = self.state()
+  File "/Users/kanayojustice/Documents/Data_scientist_projects/AutoPredict/venv/lib/python3.8/site-packages/yaml/parser.py", line 428, in parse_block_mapping_key
+    if self.check_token(KeyToken):
+  File "/Users/kanayojustice/Documents/Data_scientist_projects/AutoPredict/venv/lib/python3.8/site-packages/yaml/scanner.py", line 115, in check_token
+    while self.need_more_tokens():
+  File "/Users/kanayojustice/Documents/Data_scientist_projects/AutoPredict/venv/lib/python3.8/site-packages/yaml/scanner.py", line 152, in need_more_tokens
+    self.stale_possible_simple_keys()
+  File "/Users/kanayojustice/Documents/Data_scientist_projects/AutoPredict/venv/lib/python3.8/site-packages/yaml/scanner.py", line 291, in stale_possible_simple_keys
+    raise ScannerError("while scanning a simple key", key.mark,
+yaml.scanner.ScannerError: while scanning a simple key
+  in "/Users/kanayojustice/Documents/Data_scientist_projects/AutoPredict/config/config.yaml", line 20, column 3
+could not find expected ':'
+  in "/Users/kanayojustice/Documents/Data_scientist_projects/AutoPredict/config/config.yaml", line 21, column 3
+[2024-05-26 23:06:41,320: INFO:main: >>>> stage Data ingestion stage started <<<<<]
+[2024-05-26 23:06:41,323: ERROR:main: while scanning a simple key
+  in "/Users/kanayojustice/Documents/Data_scientist_projects/AutoPredict/config/config.yaml", line 20, column 3
+could not find expected ':'
+  in "/Users/kanayojustice/Documents/Data_scientist_projects/AutoPredict/config/config.yaml", line 21, column 3]
+Traceback (most recent call last):
+  File "main.py", line 12, in <module>
+    obj.main()
+  File "/Users/kanayojustice/Documents/Data_scientist_projects/AutoPredict/Autopredictor/src/pipeline/stage_01_data_ingestion.py", line 14, in main
+    config = ConfigurationManager()
+  File "/Users/kanayojustice/Documents/Data_scientist_projects/AutoPredict/Autopredictor/src/config/configuration.py", line 16, in __init__
+    self.config = read_yaml(config_filepath)
+  File "/Users/kanayojustice/Documents/Data_scientist_projects/AutoPredict/venv/lib/python3.8/site-packages/ensure/main.py", line 849, in __call__
+    return_val = self.f(*args, **kwargs)
+  File "/Users/kanayojustice/Documents/Data_scientist_projects/AutoPredict/Autopredictor/src/utils/common.py", line 36, in read_yaml
+    raise e
+  File "/Users/kanayojustice/Documents/Data_scientist_projects/AutoPredict/Autopredictor/src/utils/common.py", line 30, in read_yaml
+    content = yaml.safe_load(yaml_file)
+  File "/Users/kanayojustice/Documents/Data_scientist_projects/AutoPredict/venv/lib/python3.8/site-packages/yaml/__init__.py", line 125, in safe_load
+    return load(stream, SafeLoader)
+  File "/Users/kanayojustice/Documents/Data_scientist_projects/AutoPredict/venv/lib/python3.8/site-packages/yaml/__init__.py", line 81, in load
+    return loader.get_single_data()
+  File "/Users/kanayojustice/Documents/Data_scientist_projects/AutoPredict/venv/lib/python3.8/site-packages/yaml/constructor.py", line 49, in get_single_data
+    node = self.get_single_node()
+  File "/Users/kanayojustice/Documents/Data_scientist_projects/AutoPredict/venv/lib/python3.8/site-packages/yaml/composer.py", line 36, in get_single_node
+    document = self.compose_document()
+  File "/Users/kanayojustice/Documents/Data_scientist_projects/AutoPredict/venv/lib/python3.8/site-packages/yaml/composer.py", line 55, in compose_document
+    node = self.compose_node(None, None)
+  File "/Users/kanayojustice/Documents/Data_scientist_projects/AutoPredict/venv/lib/python3.8/site-packages/yaml/composer.py", line 84, in compose_node
+    node = self.compose_mapping_node(anchor)
+  File "/Users/kanayojustice/Documents/Data_scientist_projects/AutoPredict/venv/lib/python3.8/site-packages/yaml/composer.py", line 133, in compose_mapping_node
+    item_value = self.compose_node(node, item_key)
+  File "/Users/kanayojustice/Documents/Data_scientist_projects/AutoPredict/venv/lib/python3.8/site-packages/yaml/composer.py", line 84, in compose_node
+    node = self.compose_mapping_node(anchor)
+  File "/Users/kanayojustice/Documents/Data_scientist_projects/AutoPredict/venv/lib/python3.8/site-packages/yaml/composer.py", line 127, in compose_mapping_node
+    while not self.check_event(MappingEndEvent):
+  File "/Users/kanayojustice/Documents/Data_scientist_projects/AutoPredict/venv/lib/python3.8/site-packages/yaml/parser.py", line 98, in check_event
+    self.current_event = self.state()
+  File "/Users/kanayojustice/Documents/Data_scientist_projects/AutoPredict/venv/lib/python3.8/site-packages/yaml/parser.py", line 428, in parse_block_mapping_key
+    if self.check_token(KeyToken):
+  File "/Users/kanayojustice/Documents/Data_scientist_projects/AutoPredict/venv/lib/python3.8/site-packages/yaml/scanner.py", line 115, in check_token
+    while self.need_more_tokens():
+  File "/Users/kanayojustice/Documents/Data_scientist_projects/AutoPredict/venv/lib/python3.8/site-packages/yaml/scanner.py", line 152, in need_more_tokens
+    self.stale_possible_simple_keys()
+  File "/Users/kanayojustice/Documents/Data_scientist_projects/AutoPredict/venv/lib/python3.8/site-packages/yaml/scanner.py", line 291, in stale_possible_simple_keys
+    raise ScannerError("while scanning a simple key", key.mark,
+yaml.scanner.ScannerError: while scanning a simple key
+  in "/Users/kanayojustice/Documents/Data_scientist_projects/AutoPredict/config/config.yaml", line 20, column 3
+could not find expected ':'
+  in "/Users/kanayojustice/Documents/Data_scientist_projects/AutoPredict/config/config.yaml", line 21, column 3
+[2024-05-26 23:07:12,950: INFO:main: >>>> stage Data ingestion stage started <<<<<]
+[2024-05-26 23:07:12,954: ERROR:main: while scanning a simple key
+  in "/Users/kanayojustice/Documents/Data_scientist_projects/AutoPredict/config/config.yaml", line 20, column 3
+could not find expected ':'
+  in "/Users/kanayojustice/Documents/Data_scientist_projects/AutoPredict/config/config.yaml", line 21, column 3]
+Traceback (most recent call last):
+  File "/Users/kanayojustice/Documents/Data_scientist_projects/AutoPredict/main.py", line 12, in <module>
+    obj.main()
+  File "/Users/kanayojustice/Documents/Data_scientist_projects/AutoPredict/Autopredictor/src/pipeline/stage_01_data_ingestion.py", line 14, in main
+    config = ConfigurationManager()
+  File "/Users/kanayojustice/Documents/Data_scientist_projects/AutoPredict/Autopredictor/src/config/configuration.py", line 16, in __init__
+    self.config = read_yaml(config_filepath)
+  File "/Users/kanayojustice/Documents/Data_scientist_projects/AutoPredict/venv/lib/python3.8/site-packages/ensure/main.py", line 849, in __call__
+    return_val = self.f(*args, **kwargs)
+  File "/Users/kanayojustice/Documents/Data_scientist_projects/AutoPredict/Autopredictor/src/utils/common.py", line 36, in read_yaml
+    raise e
+  File "/Users/kanayojustice/Documents/Data_scientist_projects/AutoPredict/Autopredictor/src/utils/common.py", line 30, in read_yaml
+    content = yaml.safe_load(yaml_file)
+  File "/Users/kanayojustice/Documents/Data_scientist_projects/AutoPredict/venv/lib/python3.8/site-packages/yaml/__init__.py", line 125, in safe_load
+    return load(stream, SafeLoader)
+  File "/Users/kanayojustice/Documents/Data_scientist_projects/AutoPredict/venv/lib/python3.8/site-packages/yaml/__init__.py", line 81, in load
+    return loader.get_single_data()
+  File "/Users/kanayojustice/Documents/Data_scientist_projects/AutoPredict/venv/lib/python3.8/site-packages/yaml/constructor.py", line 49, in get_single_data
+    node = self.get_single_node()
+  File "/Users/kanayojustice/Documents/Data_scientist_projects/AutoPredict/venv/lib/python3.8/site-packages/yaml/composer.py", line 36, in get_single_node
+    document = self.compose_document()
+  File "/Users/kanayojustice/Documents/Data_scientist_projects/AutoPredict/venv/lib/python3.8/site-packages/yaml/composer.py", line 55, in compose_document
+    node = self.compose_node(None, None)
+  File "/Users/kanayojustice/Documents/Data_scientist_projects/AutoPredict/venv/lib/python3.8/site-packages/yaml/composer.py", line 84, in compose_node
+    node = self.compose_mapping_node(anchor)
+  File "/Users/kanayojustice/Documents/Data_scientist_projects/AutoPredict/venv/lib/python3.8/site-packages/yaml/composer.py", line 133, in compose_mapping_node
+    item_value = self.compose_node(node, item_key)
+  File "/Users/kanayojustice/Documents/Data_scientist_projects/AutoPredict/venv/lib/python3.8/site-packages/yaml/composer.py", line 84, in compose_node
+    node = self.compose_mapping_node(anchor)
+  File "/Users/kanayojustice/Documents/Data_scientist_projects/AutoPredict/venv/lib/python3.8/site-packages/yaml/composer.py", line 127, in compose_mapping_node
+    while not self.check_event(MappingEndEvent):
+  File "/Users/kanayojustice/Documents/Data_scientist_projects/AutoPredict/venv/lib/python3.8/site-packages/yaml/parser.py", line 98, in check_event
+    self.current_event = self.state()
+  File "/Users/kanayojustice/Documents/Data_scientist_projects/AutoPredict/venv/lib/python3.8/site-packages/yaml/parser.py", line 428, in parse_block_mapping_key
+    if self.check_token(KeyToken):
+  File "/Users/kanayojustice/Documents/Data_scientist_projects/AutoPredict/venv/lib/python3.8/site-packages/yaml/scanner.py", line 115, in check_token
+    while self.need_more_tokens():
+  File "/Users/kanayojustice/Documents/Data_scientist_projects/AutoPredict/venv/lib/python3.8/site-packages/yaml/scanner.py", line 152, in need_more_tokens
+    self.stale_possible_simple_keys()
+  File "/Users/kanayojustice/Documents/Data_scientist_projects/AutoPredict/venv/lib/python3.8/site-packages/yaml/scanner.py", line 291, in stale_possible_simple_keys
+    raise ScannerError("while scanning a simple key", key.mark,
+yaml.scanner.ScannerError: while scanning a simple key
+  in "/Users/kanayojustice/Documents/Data_scientist_projects/AutoPredict/config/config.yaml", line 20, column 3
+could not find expected ':'
+  in "/Users/kanayojustice/Documents/Data_scientist_projects/AutoPredict/config/config.yaml", line 21, column 3
+[2024-05-26 23:08:05,765: INFO:main: >>>> stage Data ingestion stage started <<<<<]
+[2024-05-26 23:08:05,771: INFO:common: yaml file: /Users/kanayojustice/Documents/Data_scientist_projects/AutoPredict/config/config.yaml loaded successfully]
+[2024-05-26 23:08:05,772: INFO:common: yaml file: /Users/kanayojustice/Documents/Data_scientist_projects/AutoPredict/params.yaml loaded successfully]
+[2024-05-26 23:08:05,806: INFO:common: yaml file: /Users/kanayojustice/Documents/Data_scientist_projects/AutoPredict/schema.yaml loaded successfully]
+[2024-05-26 23:08:05,807: INFO:common: created directory at: artifacts/]
+[2024-05-26 23:08:05,808: INFO:common: created directory at: artifacts/data_ingestion]
+[2024-05-26 23:08:07,724: INFO:data_ingestion: artifacts/data_ingestion/autopredict_cleaned_data.zip Download! with the following info: 
+Connection: close
+Content-Length: 1945315
+Cache-Control: max-age=300
+Content-Security-Policy: default-src 'none'; style-src 'unsafe-inline'; sandbox
+Content-Type: application/zip
+ETag: "33d4fc77827168beb118d9a9115ed5da41eedb7ca648b4ff2c047bb4e47370a6"
+Strict-Transport-Security: max-age=31536000
+X-Content-Type-Options: nosniff
+X-Frame-Options: deny
+X-XSS-Protection: 1; mode=block
+X-GitHub-Request-Id: 3CD0:1F4751:20BAF0:29CC74:6653B0EA
+Accept-Ranges: bytes
+Date: Sun, 26 May 2024 22:08:07 GMT
+Via: 1.1 varnish
+X-Served-By: cache-lhr7371-LHR
+X-Cache: HIT
+X-Cache-Hits: 0
+X-Timer: S1716761287.195095,VS0,VE165
+Vary: Authorization,Accept-Encoding,Origin
+Access-Control-Allow-Origin: *
+Cross-Origin-Resource-Policy: cross-origin
+X-Fastly-Request-ID: b25908b9686f58a821b983f1128b0bd7f42a466e
+Expires: Sun, 26 May 2024 22:13:07 GMT
+Source-Age: 0
+
+]
+[2024-05-26 23:08:07,875: INFO:main: >>>> stage Data ingestion stage completed <<<<<]
+[2024-05-26 23:08:07,875: INFO:main: >>>>>> stage Data validation stage started <<<<<<]
+[2024-05-26 23:08:07,882: INFO:common: yaml file: /Users/kanayojustice/Documents/Data_scientist_projects/AutoPredict/config/config.yaml loaded successfully]
+[2024-05-26 23:08:07,883: INFO:common: yaml file: /Users/kanayojustice/Documents/Data_scientist_projects/AutoPredict/params.yaml loaded successfully]
+[2024-05-26 23:08:07,920: INFO:common: yaml file: /Users/kanayojustice/Documents/Data_scientist_projects/AutoPredict/schema.yaml loaded successfully]
+[2024-05-26 23:08:07,922: INFO:common: created directory at: artifacts/]
+[2024-05-26 23:08:07,922: INFO:common: created directory at: artifacts/data_validation]
+[2024-05-26 23:08:09,784: INFO:main: >>>>>> stage Data validation stage completed <<<<<<
+
+x==========x]
+[2024-05-26 23:08:09,785: INFO:main: >>>>>> stage Data transformation stage started <<<<<<]
+[2024-05-26 23:08:09,792: INFO:common: yaml file: /Users/kanayojustice/Documents/Data_scientist_projects/AutoPredict/config/config.yaml loaded successfully]
+[2024-05-26 23:08:09,793: INFO:common: yaml file: /Users/kanayojustice/Documents/Data_scientist_projects/AutoPredict/params.yaml loaded successfully]
+[2024-05-26 23:08:09,831: INFO:common: yaml file: /Users/kanayojustice/Documents/Data_scientist_projects/AutoPredict/schema.yaml loaded successfully]
+[2024-05-26 23:08:09,832: INFO:common: created directory at: artifacts/]
+[2024-05-26 23:08:09,833: INFO:common: created directory at: artifacts/data_transformation]
+[2024-05-26 23:08:11,751: ERROR:main: unsupported operand type(s) for /: 'str' and 'str']
+Traceback (most recent call last):
+  File "main.py", line 37, in <module>
+    obj.main()
+  File "/Users/kanayojustice/Documents/Data_scientist_projects/AutoPredict/Autopredictor/src/pipeline/stage_03_data_transformation.py", line 20, in main
+    data_transformation.train_test_spliting()
+  File "/Users/kanayojustice/Documents/Data_scientist_projects/AutoPredict/Autopredictor/src/components/data_transformation.py", line 26, in train_test_spliting
+    train.to_csv(self.config.root_dir / "train.csv", index=False)
+TypeError: unsupported operand type(s) for /: 'str' and 'str'
+[2024-05-26 23:11:35,544: INFO:main: >>>> stage Data ingestion stage started <<<<<]
+[2024-05-26 23:11:35,550: INFO:common: yaml file: /Users/kanayojustice/Documents/Data_scientist_projects/AutoPredict/config/config.yaml loaded successfully]
+[2024-05-26 23:11:35,551: INFO:common: yaml file: /Users/kanayojustice/Documents/Data_scientist_projects/AutoPredict/params.yaml loaded successfully]
+[2024-05-26 23:11:35,584: INFO:common: yaml file: /Users/kanayojustice/Documents/Data_scientist_projects/AutoPredict/schema.yaml loaded successfully]
+[2024-05-26 23:11:35,585: INFO:common: created directory at: artifacts/]
+[2024-05-26 23:11:35,585: INFO:common: created directory at: artifacts/data_ingestion]
+[2024-05-26 23:11:44,663: INFO:data_ingestion: artifacts/data_ingestion/autopredict_cleaned_data.zip Download! with the following info: 
+Connection: close
+Content-Length: 1945315
+Cache-Control: max-age=300
+Content-Security-Policy: default-src 'none'; style-src 'unsafe-inline'; sandbox
+Content-Type: application/zip
+ETag: "33d4fc77827168beb118d9a9115ed5da41eedb7ca648b4ff2c047bb4e47370a6"
+Strict-Transport-Security: max-age=31536000
+X-Content-Type-Options: nosniff
+X-Frame-Options: deny
+X-XSS-Protection: 1; mode=block
+X-GitHub-Request-Id: 78CA:213A52:1C0938:23C5D5:6653B39F
+Accept-Ranges: bytes
+Date: Sun, 26 May 2024 22:11:44 GMT
+Via: 1.1 varnish
+X-Served-By: cache-lcy-eglc8600032-LCY
+X-Cache: MISS
+X-Cache-Hits: 0
+X-Timer: S1716761504.884990,VS0,VE248
+Vary: Authorization,Accept-Encoding,Origin
+Access-Control-Allow-Origin: *
+Cross-Origin-Resource-Policy: cross-origin
+X-Fastly-Request-ID: 2d778f0d1d74aad7d51f35675eee456d9cf6d645
+Expires: Sun, 26 May 2024 22:16:44 GMT
+Source-Age: 0
+
+]
+[2024-05-26 23:11:44,812: INFO:main: >>>> stage Data ingestion stage completed <<<<<]
+[2024-05-26 23:11:44,812: INFO:main: >>>>>> stage Data validation stage started <<<<<<]
+[2024-05-26 23:11:44,821: INFO:common: yaml file: /Users/kanayojustice/Documents/Data_scientist_projects/AutoPredict/config/config.yaml loaded successfully]
+[2024-05-26 23:11:44,822: INFO:common: yaml file: /Users/kanayojustice/Documents/Data_scientist_projects/AutoPredict/params.yaml loaded successfully]
+[2024-05-26 23:11:44,857: INFO:common: yaml file: /Users/kanayojustice/Documents/Data_scientist_projects/AutoPredict/schema.yaml loaded successfully]
+[2024-05-26 23:11:44,858: INFO:common: created directory at: artifacts/]
+[2024-05-26 23:11:44,859: INFO:common: created directory at: artifacts/data_validation]
+[2024-05-26 23:11:46,840: INFO:main: >>>>>> stage Data validation stage completed <<<<<<
+
+x==========x]
+[2024-05-26 23:11:46,840: INFO:main: >>>>>> stage Data transformation stage started <<<<<<]
+[2024-05-26 23:11:46,846: INFO:common: yaml file: /Users/kanayojustice/Documents/Data_scientist_projects/AutoPredict/config/config.yaml loaded successfully]
+[2024-05-26 23:11:46,847: INFO:common: yaml file: /Users/kanayojustice/Documents/Data_scientist_projects/AutoPredict/params.yaml loaded successfully]
+[2024-05-26 23:11:46,885: INFO:common: yaml file: /Users/kanayojustice/Documents/Data_scientist_projects/AutoPredict/schema.yaml loaded successfully]
+[2024-05-26 23:11:46,886: INFO:common: created directory at: artifacts/]
+[2024-05-26 23:11:46,886: INFO:common: created directory at: artifacts/data_transformation]
+[2024-05-26 23:11:54,940: INFO:main: >>>>>> stage Data transformation stage completed <<<<<<
+
+x==========x]
+[2024-05-26 23:11:54,940: INFO:main: >>>>>> stage model trainer stage started <<<<<<]
+[2024-05-26 23:11:54,946: INFO:common: yaml file: /Users/kanayojustice/Documents/Data_scientist_projects/AutoPredict/config/config.yaml loaded successfully]
+[2024-05-26 23:11:54,947: INFO:common: yaml file: /Users/kanayojustice/Documents/Data_scientist_projects/AutoPredict/params.yaml loaded successfully]
+[2024-05-26 23:11:55,023: INFO:common: yaml file: /Users/kanayojustice/Documents/Data_scientist_projects/AutoPredict/schema.yaml loaded successfully]
+[2024-05-26 23:11:55,024: INFO:common: created directory at: artifacts/]
+[2024-05-26 23:11:55,024: INFO:common: created directory at: artifacts/model_trainer]
+[2024-05-26 23:11:55,030: ERROR:main: "'ConfigBox' object has no attribute 'train_data_path'"]
+Traceback (most recent call last):
+  File "box/box.py", line 503, in box.box.Box.__getitem__
+KeyError: 'train_data_path'
+
+The above exception was the direct cause of the following exception:
+
+Traceback (most recent call last):
+  File "box/box.py", line 536, in box.box.Box.__getattr__
+  File "box/box.py", line 524, in box.box.Box.__getitem__
+box.exceptions.BoxKeyError: "'train_data_path'"
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "box/box.py", line 538, in box.box.Box.__getattr__
+AttributeError: 'ConfigBox' object has no attribute 'train_data_path'
+
+The above exception was the direct cause of the following exception:
+
+Traceback (most recent call last):
+  File "box/config_box.py", line 28, in box.config_box.ConfigBox.__getattr__
+  File "box/box.py", line 552, in box.box.Box.__getattr__
+box.exceptions.BoxKeyError: "'ConfigBox' object has no attribute 'train_data_path'"
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "box/box.py", line 503, in box.box.Box.__getitem__
+KeyError: 'train_data_path'
+
+The above exception was the direct cause of the following exception:
+
+Traceback (most recent call last):
+  File "box/box.py", line 536, in box.box.Box.__getattr__
+  File "box/box.py", line 524, in box.box.Box.__getitem__
+box.exceptions.BoxKeyError: "'train_data_path'"
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "box/box.py", line 538, in box.box.Box.__getattr__
+AttributeError: 'ConfigBox' object has no attribute 'train_data_path'
+
+The above exception was the direct cause of the following exception:
+
+Traceback (most recent call last):
+  File "main.py", line 50, in <module>
+    obj.main()
+  File "/Users/kanayojustice/Documents/Data_scientist_projects/AutoPredict/Autopredictor/src/pipeline/stage_04_model_trainer.py", line 16, in main
+    model_trainer_config = config_manager.get_model_trainer_config()
+  File "/Users/kanayojustice/Documents/Data_scientist_projects/AutoPredict/Autopredictor/src/config/configuration.py", line 79, in get_model_trainer_config
+    train_data_path=config.train_data_path,
+  File "box/config_box.py", line 30, in box.config_box.ConfigBox.__getattr__
+  File "box/box.py", line 552, in box.box.Box.__getattr__
+box.exceptions.BoxKeyError: "'ConfigBox' object has no attribute 'train_data_path'"
+[2024-05-26 23:31:20,580: INFO:main: >>>> stage Data ingestion stage started <<<<<]
+[2024-05-26 23:31:20,588: INFO:common: yaml file: /Users/kanayojustice/Documents/Data_scientist_projects/AutoPredict/config/config.yaml loaded successfully]
+[2024-05-26 23:31:20,589: INFO:common: yaml file: /Users/kanayojustice/Documents/Data_scientist_projects/AutoPredict/params.yaml loaded successfully]
+[2024-05-26 23:31:20,623: INFO:common: yaml file: /Users/kanayojustice/Documents/Data_scientist_projects/AutoPredict/schema.yaml loaded successfully]
+[2024-05-26 23:31:20,624: INFO:common: created directory at: artifacts/]
+[2024-05-26 23:31:20,625: INFO:common: created directory at: artifacts/data_ingestion]
+[2024-05-26 23:31:23,339: INFO:data_ingestion: artifacts/data_ingestion/autopredict_cleaned_data.zip Download! with the following info: 
+Connection: close
+Content-Length: 1945315
+Cache-Control: max-age=300
+Content-Security-Policy: default-src 'none'; style-src 'unsafe-inline'; sandbox
+Content-Type: application/zip
+ETag: "33d4fc77827168beb118d9a9115ed5da41eedb7ca648b4ff2c047bb4e47370a6"
+Strict-Transport-Security: max-age=31536000
+X-Content-Type-Options: nosniff
+X-Frame-Options: deny
+X-XSS-Protection: 1; mode=block
+X-GitHub-Request-Id: 3CD0:1F4751:20BAF0:29CC74:6653B0EA
+Accept-Ranges: bytes
+Date: Sun, 26 May 2024 22:31:21 GMT
+Via: 1.1 varnish
+X-Served-By: cache-lhr7368-LHR
+X-Cache: HIT
+X-Cache-Hits: 0
+X-Timer: S1716762682.619209,VS0,VE143
+Vary: Authorization,Accept-Encoding,Origin
+Access-Control-Allow-Origin: *
+Cross-Origin-Resource-Policy: cross-origin
+X-Fastly-Request-ID: 1354ceb81a8ad76bedfd1da2c0c7a2e8290cdaaa
+Expires: Sun, 26 May 2024 22:36:21 GMT
+Source-Age: 0
+
+]
+[2024-05-26 23:31:23,476: INFO:main: >>>> stage Data ingestion stage completed <<<<<]
+[2024-05-26 23:31:23,476: INFO:main: >>>>>> stage Data validation stage started <<<<<<]
+[2024-05-26 23:31:23,482: INFO:common: yaml file: /Users/kanayojustice/Documents/Data_scientist_projects/AutoPredict/config/config.yaml loaded successfully]
+[2024-05-26 23:31:23,483: INFO:common: yaml file: /Users/kanayojustice/Documents/Data_scientist_projects/AutoPredict/params.yaml loaded successfully]
+[2024-05-26 23:31:23,519: INFO:common: yaml file: /Users/kanayojustice/Documents/Data_scientist_projects/AutoPredict/schema.yaml loaded successfully]
+[2024-05-26 23:31:23,521: INFO:common: created directory at: artifacts/]
+[2024-05-26 23:31:23,522: INFO:common: created directory at: artifacts/data_validation]
+[2024-05-26 23:31:25,349: INFO:main: >>>>>> stage Data validation stage completed <<<<<<
+
+x==========x]
+[2024-05-26 23:31:25,349: INFO:main: >>>>>> stage Data transformation stage started <<<<<<]
+[2024-05-26 23:31:25,356: INFO:common: yaml file: /Users/kanayojustice/Documents/Data_scientist_projects/AutoPredict/config/config.yaml loaded successfully]
+[2024-05-26 23:31:25,357: INFO:common: yaml file: /Users/kanayojustice/Documents/Data_scientist_projects/AutoPredict/params.yaml loaded successfully]
+[2024-05-26 23:31:25,394: INFO:common: yaml file: /Users/kanayojustice/Documents/Data_scientist_projects/AutoPredict/schema.yaml loaded successfully]
+[2024-05-26 23:31:25,395: INFO:common: created directory at: artifacts/]
+[2024-05-26 23:31:25,396: INFO:common: created directory at: artifacts/data_transformation]
+[2024-05-26 23:31:33,301: INFO:main: >>>>>> stage Data transformation stage completed <<<<<<
+
+x==========x]
+[2024-05-26 23:31:33,307: INFO:main: >>>>>> stage model trainer stage started <<<<<<]
+[2024-05-26 23:31:33,313: INFO:common: yaml file: /Users/kanayojustice/Documents/Data_scientist_projects/AutoPredict/config/config.yaml loaded successfully]
+[2024-05-26 23:31:33,314: INFO:common: yaml file: /Users/kanayojustice/Documents/Data_scientist_projects/AutoPredict/params.yaml loaded successfully]
+[2024-05-26 23:31:33,393: INFO:common: yaml file: /Users/kanayojustice/Documents/Data_scientist_projects/AutoPredict/schema.yaml loaded successfully]
+[2024-05-26 23:31:33,394: INFO:common: created directory at: artifacts/]
+[2024-05-26 23:31:33,394: INFO:common: created directory at: artifacts/model_trainer]
+[2024-05-26 23:31:33,394: ERROR:main: __init__() got an unexpected keyword argument 'transformed_train_path']
+Traceback (most recent call last):
+  File "main.py", line 50, in <module>
+    obj.main()
+  File "/Users/kanayojustice/Documents/Data_scientist_projects/AutoPredict/Autopredictor/src/pipeline/stage_04_model_trainer.py", line 16, in main
+    model_trainer_config = config_manager.get_model_trainer_config()
+  File "/Users/kanayojustice/Documents/Data_scientist_projects/AutoPredict/Autopredictor/src/config/configuration.py", line 75, in get_model_trainer_config
+    model_trainer_config = ModelTrainerConfig(
+TypeError: __init__() got an unexpected keyword argument 'transformed_train_path'
+[2024-05-26 23:39:34,157: INFO:main: >>>> stage Data ingestion stage started <<<<<]
+[2024-05-26 23:39:34,163: INFO:common: yaml file: /Users/kanayojustice/Documents/Data_scientist_projects/AutoPredict/config/config.yaml loaded successfully]
+[2024-05-26 23:39:34,164: INFO:common: yaml file: /Users/kanayojustice/Documents/Data_scientist_projects/AutoPredict/params.yaml loaded successfully]
+[2024-05-26 23:39:34,197: INFO:common: yaml file: /Users/kanayojustice/Documents/Data_scientist_projects/AutoPredict/schema.yaml loaded successfully]
+[2024-05-26 23:39:34,199: INFO:common: created directory at: artifacts/]
+[2024-05-26 23:39:34,199: INFO:common: created directory at: artifacts/data_ingestion]
+[2024-05-26 23:39:34,199: INFO:data_ingestion: file already exists of size: ~ 1900 KB]
+[2024-05-26 23:39:34,325: INFO:main: >>>> stage Data ingestion stage completed <<<<<]
+[2024-05-26 23:39:34,325: INFO:main: >>>>>> stage Data validation stage started <<<<<<]
+[2024-05-26 23:39:34,331: INFO:common: yaml file: /Users/kanayojustice/Documents/Data_scientist_projects/AutoPredict/config/config.yaml loaded successfully]
+[2024-05-26 23:39:34,331: INFO:common: yaml file: /Users/kanayojustice/Documents/Data_scientist_projects/AutoPredict/params.yaml loaded successfully]
+[2024-05-26 23:39:34,364: INFO:common: yaml file: /Users/kanayojustice/Documents/Data_scientist_projects/AutoPredict/schema.yaml loaded successfully]
+[2024-05-26 23:39:34,366: INFO:common: created directory at: artifacts/]
+[2024-05-26 23:39:34,366: INFO:common: created directory at: artifacts/data_validation]
+[2024-05-26 23:39:36,133: INFO:main: >>>>>> stage Data validation stage completed <<<<<<
+
+x==========x]
+[2024-05-26 23:39:36,133: INFO:main: >>>>>> stage Data transformation stage started <<<<<<]
+[2024-05-26 23:39:36,139: INFO:common: yaml file: /Users/kanayojustice/Documents/Data_scientist_projects/AutoPredict/config/config.yaml loaded successfully]
+[2024-05-26 23:39:36,140: INFO:common: yaml file: /Users/kanayojustice/Documents/Data_scientist_projects/AutoPredict/params.yaml loaded successfully]
+[2024-05-26 23:39:36,184: INFO:common: yaml file: /Users/kanayojustice/Documents/Data_scientist_projects/AutoPredict/schema.yaml loaded successfully]
+[2024-05-26 23:39:36,185: INFO:common: created directory at: artifacts/]
+[2024-05-26 23:39:36,185: INFO:common: created directory at: artifacts/data_transformation]
+[2024-05-26 23:39:44,025: INFO:main: >>>>>> stage Data transformation stage completed <<<<<<
+
+x==========x]
+[2024-05-26 23:39:44,026: INFO:main: >>>>>> stage model trainer stage started <<<<<<]
+[2024-05-26 23:39:44,033: INFO:common: yaml file: /Users/kanayojustice/Documents/Data_scientist_projects/AutoPredict/config/config.yaml loaded successfully]
+[2024-05-26 23:39:44,034: INFO:common: yaml file: /Users/kanayojustice/Documents/Data_scientist_projects/AutoPredict/params.yaml loaded successfully]
+[2024-05-26 23:39:44,113: INFO:common: yaml file: /Users/kanayojustice/Documents/Data_scientist_projects/AutoPredict/schema.yaml loaded successfully]
+[2024-05-26 23:39:44,115: INFO:common: created directory at: artifacts/]
+[2024-05-26 23:39:44,115: INFO:common: created directory at: artifacts/model_trainer]
+[2024-05-26 23:39:44,115: ERROR:main: "'ConfigBox' object has no attribute 'transformer_path'"]
+Traceback (most recent call last):
+  File "box/box.py", line 503, in box.box.Box.__getitem__
+KeyError: 'transformer_path'
+
+The above exception was the direct cause of the following exception:
+
+Traceback (most recent call last):
+  File "box/box.py", line 536, in box.box.Box.__getattr__
+  File "box/box.py", line 524, in box.box.Box.__getitem__
+box.exceptions.BoxKeyError: "'transformer_path'"
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "box/box.py", line 538, in box.box.Box.__getattr__
+AttributeError: 'ConfigBox' object has no attribute 'transformer_path'
+
+The above exception was the direct cause of the following exception:
+
+Traceback (most recent call last):
+  File "box/config_box.py", line 28, in box.config_box.ConfigBox.__getattr__
+  File "box/box.py", line 552, in box.box.Box.__getattr__
+box.exceptions.BoxKeyError: "'ConfigBox' object has no attribute 'transformer_path'"
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "box/box.py", line 503, in box.box.Box.__getitem__
+KeyError: 'transformer_path'
+
+The above exception was the direct cause of the following exception:
+
+Traceback (most recent call last):
+  File "box/box.py", line 536, in box.box.Box.__getattr__
+  File "box/box.py", line 524, in box.box.Box.__getitem__
+box.exceptions.BoxKeyError: "'transformer_path'"
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "box/box.py", line 538, in box.box.Box.__getattr__
+AttributeError: 'ConfigBox' object has no attribute 'transformer_path'
+
+The above exception was the direct cause of the following exception:
+
+Traceback (most recent call last):
+  File "main.py", line 50, in <module>
+    obj.main()
+  File "/Users/kanayojustice/Documents/Data_scientist_projects/AutoPredict/Autopredictor/src/pipeline/stage_04_model_trainer.py", line 16, in main
+    model_trainer_config = config_manager.get_model_trainer_config()
+  File "/Users/kanayojustice/Documents/Data_scientist_projects/AutoPredict/Autopredictor/src/config/configuration.py", line 77, in get_model_trainer_config
+    transformer_path=config.transformer_path,
+  File "box/config_box.py", line 30, in box.config_box.ConfigBox.__getattr__
+  File "box/box.py", line 552, in box.box.Box.__getattr__
+box.exceptions.BoxKeyError: "'ConfigBox' object has no attribute 'transformer_path'"
+[2024-05-26 23:41:57,491: INFO:main: >>>> stage Data ingestion stage started <<<<<]
+[2024-05-26 23:41:57,499: INFO:common: yaml file: /Users/kanayojustice/Documents/Data_scientist_projects/AutoPredict/config/config.yaml loaded successfully]
+[2024-05-26 23:41:57,500: INFO:common: yaml file: /Users/kanayojustice/Documents/Data_scientist_projects/AutoPredict/params.yaml loaded successfully]
+[2024-05-26 23:41:57,535: INFO:common: yaml file: /Users/kanayojustice/Documents/Data_scientist_projects/AutoPredict/schema.yaml loaded successfully]
+[2024-05-26 23:41:57,537: INFO:common: created directory at: artifacts/]
+[2024-05-26 23:41:57,537: INFO:common: created directory at: artifacts/data_ingestion]
+[2024-05-26 23:41:59,728: INFO:data_ingestion: artifacts/data_ingestion/autopredict_cleaned_data.zip Download! with the following info: 
+Connection: close
+Content-Length: 1945315
+Cache-Control: max-age=300
+Content-Security-Policy: default-src 'none'; style-src 'unsafe-inline'; sandbox
+Content-Type: application/zip
+ETag: "33d4fc77827168beb118d9a9115ed5da41eedb7ca648b4ff2c047bb4e47370a6"
+Strict-Transport-Security: max-age=31536000
+X-Content-Type-Options: nosniff
+X-Frame-Options: deny
+X-XSS-Protection: 1; mode=block
+X-GitHub-Request-Id: 3CD0:1F4751:20BAF0:29CC74:6653B0EA
+Accept-Ranges: bytes
+Date: Sun, 26 May 2024 22:41:59 GMT
+Via: 1.1 varnish
+X-Served-By: cache-lhr7331-LHR
+X-Cache: HIT
+X-Cache-Hits: 0
+X-Timer: S1716763319.941530,VS0,VE284
+Vary: Authorization,Accept-Encoding,Origin
+Access-Control-Allow-Origin: *
+Cross-Origin-Resource-Policy: cross-origin
+X-Fastly-Request-ID: 741a95f467f07ac2651909ff24509aeb9046ab45
+Expires: Sun, 26 May 2024 22:46:59 GMT
+Source-Age: 0
+
+]
+[2024-05-26 23:41:59,860: INFO:main: >>>> stage Data ingestion stage completed <<<<<]
+[2024-05-26 23:41:59,860: INFO:main: >>>>>> stage Data validation stage started <<<<<<]
+[2024-05-26 23:41:59,866: INFO:common: yaml file: /Users/kanayojustice/Documents/Data_scientist_projects/AutoPredict/config/config.yaml loaded successfully]
+[2024-05-26 23:41:59,867: INFO:common: yaml file: /Users/kanayojustice/Documents/Data_scientist_projects/AutoPredict/params.yaml loaded successfully]
+[2024-05-26 23:41:59,903: INFO:common: yaml file: /Users/kanayojustice/Documents/Data_scientist_projects/AutoPredict/schema.yaml loaded successfully]
+[2024-05-26 23:41:59,904: INFO:common: created directory at: artifacts/]
+[2024-05-26 23:41:59,904: INFO:common: created directory at: artifacts/data_validation]
+[2024-05-26 23:42:01,638: INFO:main: >>>>>> stage Data validation stage completed <<<<<<
+
+x==========x]
+[2024-05-26 23:42:01,639: INFO:main: >>>>>> stage Data transformation stage started <<<<<<]
+[2024-05-26 23:42:01,645: INFO:common: yaml file: /Users/kanayojustice/Documents/Data_scientist_projects/AutoPredict/config/config.yaml loaded successfully]
+[2024-05-26 23:42:01,646: INFO:common: yaml file: /Users/kanayojustice/Documents/Data_scientist_projects/AutoPredict/params.yaml loaded successfully]
+[2024-05-26 23:42:01,681: INFO:common: yaml file: /Users/kanayojustice/Documents/Data_scientist_projects/AutoPredict/schema.yaml loaded successfully]
+[2024-05-26 23:42:01,683: INFO:common: created directory at: artifacts/]
+[2024-05-26 23:42:01,683: INFO:common: created directory at: artifacts/data_transformation]
+[2024-05-26 23:42:09,655: INFO:main: >>>>>> stage Data transformation stage completed <<<<<<
+
+x==========x]
+[2024-05-26 23:42:09,655: INFO:main: >>>>>> stage model trainer stage started <<<<<<]
+[2024-05-26 23:42:09,662: INFO:common: yaml file: /Users/kanayojustice/Documents/Data_scientist_projects/AutoPredict/config/config.yaml loaded successfully]
+[2024-05-26 23:42:09,663: INFO:common: yaml file: /Users/kanayojustice/Documents/Data_scientist_projects/AutoPredict/params.yaml loaded successfully]
+[2024-05-26 23:42:09,747: INFO:common: yaml file: /Users/kanayojustice/Documents/Data_scientist_projects/AutoPredict/schema.yaml loaded successfully]
+[2024-05-26 23:42:09,748: INFO:common: created directory at: artifacts/]
+[2024-05-26 23:42:09,748: INFO:common: created directory at: artifacts/model_trainer]
+[2024-05-26 23:42:09,749: ERROR:main: __init__() got an unexpected keyword argument 'transformed_train_path']
+Traceback (most recent call last):
+  File "main.py", line 50, in <module>
+    obj.main()
+  File "/Users/kanayojustice/Documents/Data_scientist_projects/AutoPredict/Autopredictor/src/pipeline/stage_04_model_trainer.py", line 16, in main
+    model_trainer_config = config_manager.get_model_trainer_config()
+  File "/Users/kanayojustice/Documents/Data_scientist_projects/AutoPredict/Autopredictor/src/config/configuration.py", line 75, in get_model_trainer_config
+    model_trainer_config = ModelTrainerConfig(
+TypeError: __init__() got an unexpected keyword argument 'transformed_train_path'
+[2024-05-26 23:47:01,596: INFO:common: yaml file: /Users/kanayojustice/Documents/Data_scientist_projects/AutoPredict/config/config.yaml loaded successfully]
+[2024-05-26 23:47:01,599: INFO:common: yaml file: /Users/kanayojustice/Documents/Data_scientist_projects/AutoPredict/params.yaml loaded successfully]
+[2024-05-26 23:47:01,642: INFO:common: yaml file: /Users/kanayojustice/Documents/Data_scientist_projects/AutoPredict/schema.yaml loaded successfully]
+[2024-05-26 23:47:01,645: INFO:common: created directory at: artifacts/]
+[2024-05-26 23:47:01,646: INFO:common: created directory at: artifacts/data_ingestion]
+[2024-05-26 23:47:03,069: INFO:1347631616: artifacts/data_ingestion/autopredict_cleaned_data.zip Download! with the following info: 
+Connection: close
+Content-Length: 1945315
+Cache-Control: max-age=300
+Content-Security-Policy: default-src 'none'; style-src 'unsafe-inline'; sandbox
+Content-Type: application/zip
+ETag: "33d4fc77827168beb118d9a9115ed5da41eedb7ca648b4ff2c047bb4e47370a6"
+Strict-Transport-Security: max-age=31536000
+X-Content-Type-Options: nosniff
+X-Frame-Options: deny
+X-XSS-Protection: 1; mode=block
+X-GitHub-Request-Id: 3CD0:1F4751:20BAF0:29CC74:6653B0EA
+Accept-Ranges: bytes
+Date: Sun, 26 May 2024 22:47:02 GMT
+Via: 1.1 varnish
+X-Served-By: cache-lhr7327-LHR
+X-Cache: HIT
+X-Cache-Hits: 0
+X-Timer: S1716763623.570301,VS0,VE163
+Vary: Authorization,Accept-Encoding,Origin
+Access-Control-Allow-Origin: *
+Cross-Origin-Resource-Policy: cross-origin
+X-Fastly-Request-ID: 440f1a50bf5bf13e5ca67589670e0c07265d5f96
+Expires: Sun, 26 May 2024 22:52:02 GMT
+Source-Age: 0
+
+]
+[2024-05-26 23:47:19,575: INFO:common: yaml file: /Users/kanayojustice/Documents/Data_scientist_projects/AutoPredict/config/config.yaml loaded successfully]
+[2024-05-26 23:47:19,579: INFO:common: yaml file: /Users/kanayojustice/Documents/Data_scientist_projects/AutoPredict/params.yaml loaded successfully]
+[2024-05-26 23:47:19,617: INFO:common: yaml file: /Users/kanayojustice/Documents/Data_scientist_projects/AutoPredict/schema.yaml loaded successfully]
+[2024-05-26 23:47:19,620: INFO:common: created directory at: artifacts/]
+[2024-05-26 23:47:19,621: INFO:common: created directory at: artifacts/data_validation]
+[2024-05-26 23:51:52,626: INFO:common: yaml file: /Users/kanayojustice/Documents/Data_scientist_projects/AutoPredict/config/config.yaml loaded successfully]
+[2024-05-26 23:51:52,635: INFO:common: yaml file: /Users/kanayojustice/Documents/Data_scientist_projects/AutoPredict/params.yaml loaded successfully]
+[2024-05-26 23:51:52,683: INFO:common: yaml file: /Users/kanayojustice/Documents/Data_scientist_projects/AutoPredict/schema.yaml loaded successfully]
+[2024-05-26 23:51:52,686: INFO:common: created directory at: artifacts/]
+[2024-05-26 23:51:52,687: INFO:common: created directory at: artifacts/data_transformation]
+[2024-05-26 23:56:42,778: INFO:common: yaml file: /Users/kanayojustice/Documents/Data_scientist_projects/AutoPredict/config/config.yaml loaded successfully]
+[2024-05-26 23:56:42,780: INFO:common: yaml file: /Users/kanayojustice/Documents/Data_scientist_projects/AutoPredict/params.yaml loaded successfully]
+[2024-05-26 23:56:42,823: INFO:common: yaml file: /Users/kanayojustice/Documents/Data_scientist_projects/AutoPredict/schema.yaml loaded successfully]
+[2024-05-26 23:56:42,824: INFO:common: created directory at: artifacts/]
+[2024-05-26 23:56:42,825: INFO:common: created directory at: artifacts/data_transformation]
+[2024-05-27 00:03:01,674: INFO:common: yaml file: /Users/kanayojustice/Documents/Data_scientist_projects/AutoPredict/config/config.yaml loaded successfully]
+[2024-05-27 00:03:01,677: INFO:common: yaml file: /Users/kanayojustice/Documents/Data_scientist_projects/AutoPredict/params.yaml loaded successfully]
+[2024-05-27 00:03:01,717: INFO:common: yaml file: /Users/kanayojustice/Documents/Data_scientist_projects/AutoPredict/schema.yaml loaded successfully]
+[2024-05-27 00:03:01,719: INFO:common: created directory at: artifacts]
+[2024-05-27 00:03:01,721: INFO:common: created directory at: artifacts/data_transformation]
+[2024-05-27 00:03:14,744: INFO:common: yaml file: /Users/kanayojustice/Documents/Data_scientist_projects/AutoPredict/config/config.yaml loaded successfully]
+[2024-05-27 00:03:14,814: INFO:common: yaml file: /Users/kanayojustice/Documents/Data_scientist_projects/AutoPredict/params.yaml loaded successfully]
+[2024-05-27 00:03:14,913: INFO:common: yaml file: /Users/kanayojustice/Documents/Data_scientist_projects/AutoPredict/schema.yaml loaded successfully]
+[2024-05-27 00:03:14,916: INFO:common: created directory at: artifacts]
+[2024-05-27 00:03:14,919: INFO:common: created directory at: artifacts/data_transformation]
+[2024-05-27 00:11:09,800: INFO:common: yaml file: /Users/kanayojustice/Documents/Data_scientist_projects/AutoPredict/config/config.yaml loaded successfully]
+[2024-05-27 00:11:09,803: INFO:common: yaml file: /Users/kanayojustice/Documents/Data_scientist_projects/AutoPredict/params.yaml loaded successfully]
+[2024-05-27 00:11:09,842: INFO:common: yaml file: /Users/kanayojustice/Documents/Data_scientist_projects/AutoPredict/schema.yaml loaded successfully]
+[2024-05-27 00:11:09,845: INFO:common: created directory at: artifacts]
+[2024-05-27 00:11:09,848: INFO:common: created directory at: artifacts/data_transformation]
+[2024-05-27 00:11:54,219: INFO:common: yaml file: /Users/kanayojustice/Documents/Data_scientist_projects/AutoPredict/config/config.yaml loaded successfully]
+[2024-05-27 00:11:54,224: INFO:common: yaml file: /Users/kanayojustice/Documents/Data_scientist_projects/AutoPredict/params.yaml loaded successfully]
+[2024-05-27 00:11:54,302: INFO:common: yaml file: /Users/kanayojustice/Documents/Data_scientist_projects/AutoPredict/schema.yaml loaded successfully]
+[2024-05-27 00:11:54,309: INFO:common: created directory at: artifacts]
+[2024-05-27 00:11:54,311: INFO:common: created directory at: artifacts/data_transformation]
+[2024-05-27 00:12:07,090: INFO:common: yaml file: /Users/kanayojustice/Documents/Data_scientist_projects/AutoPredict/config/config.yaml loaded successfully]
+[2024-05-27 00:12:07,096: INFO:common: yaml file: /Users/kanayojustice/Documents/Data_scientist_projects/AutoPredict/params.yaml loaded successfully]
+[2024-05-27 00:12:07,136: INFO:common: yaml file: /Users/kanayojustice/Documents/Data_scientist_projects/AutoPredict/schema.yaml loaded successfully]
+[2024-05-27 00:12:07,138: INFO:common: created directory at: artifacts]
+[2024-05-27 00:12:07,140: INFO:common: created directory at: artifacts/data_transformation]
+[2024-05-27 00:12:21,242: INFO:common: yaml file: /Users/kanayojustice/Documents/Data_scientist_projects/AutoPredict/config/config.yaml loaded successfully]
+[2024-05-27 00:12:21,244: INFO:common: yaml file: /Users/kanayojustice/Documents/Data_scientist_projects/AutoPredict/params.yaml loaded successfully]
+[2024-05-27 00:12:21,287: INFO:common: yaml file: /Users/kanayojustice/Documents/Data_scientist_projects/AutoPredict/schema.yaml loaded successfully]
+[2024-05-27 00:12:21,289: INFO:common: created directory at: artifacts]
+[2024-05-27 00:12:21,290: INFO:common: created directory at: artifacts/data_transformation]
+[2024-05-27 00:14:46,821: INFO:common: yaml file: /Users/kanayojustice/Documents/Data_scientist_projects/AutoPredict/config/config.yaml loaded successfully]
+[2024-05-27 00:14:46,825: INFO:common: yaml file: /Users/kanayojustice/Documents/Data_scientist_projects/AutoPredict/params.yaml loaded successfully]
+[2024-05-27 00:14:46,875: INFO:common: yaml file: /Users/kanayojustice/Documents/Data_scientist_projects/AutoPredict/schema.yaml loaded successfully]
+[2024-05-27 00:14:46,879: INFO:common: created directory at: artifacts]
+[2024-05-27 00:14:46,880: INFO:common: created directory at: artifacts/data_transformation]
+[2024-05-27 00:14:59,657: INFO:common: yaml file: /Users/kanayojustice/Documents/Data_scientist_projects/AutoPredict/config/config.yaml loaded successfully]
+[2024-05-27 00:14:59,660: INFO:common: yaml file: /Users/kanayojustice/Documents/Data_scientist_projects/AutoPredict/params.yaml loaded successfully]
+[2024-05-27 00:14:59,704: INFO:common: yaml file: /Users/kanayojustice/Documents/Data_scientist_projects/AutoPredict/schema.yaml loaded successfully]
+[2024-05-27 00:14:59,706: INFO:common: created directory at: artifacts]
+[2024-05-27 00:14:59,708: INFO:common: created directory at: artifacts/data_transformation]
+[2024-05-27 00:16:09,373: INFO:common: yaml file: /Users/kanayojustice/Documents/Data_scientist_projects/AutoPredict/config/config.yaml loaded successfully]
+[2024-05-27 00:16:09,376: INFO:common: yaml file: /Users/kanayojustice/Documents/Data_scientist_projects/AutoPredict/params.yaml loaded successfully]
+[2024-05-27 00:16:09,426: INFO:common: yaml file: /Users/kanayojustice/Documents/Data_scientist_projects/AutoPredict/schema.yaml loaded successfully]
+[2024-05-27 00:16:09,429: INFO:common: created directory at: artifacts]
+[2024-05-27 00:16:09,431: INFO:common: created directory at: artifacts/data_transformation]
+[2024-05-27 00:16:19,664: INFO:common: yaml file: /Users/kanayojustice/Documents/Data_scientist_projects/AutoPredict/config/config.yaml loaded successfully]
+[2024-05-27 00:16:19,668: INFO:common: yaml file: /Users/kanayojustice/Documents/Data_scientist_projects/AutoPredict/params.yaml loaded successfully]
+[2024-05-27 00:16:19,709: INFO:common: yaml file: /Users/kanayojustice/Documents/Data_scientist_projects/AutoPredict/schema.yaml loaded successfully]
+[2024-05-27 00:16:19,711: INFO:common: created directory at: artifacts]
+[2024-05-27 00:16:19,712: INFO:common: created directory at: artifacts/data_transformation]
+[2024-05-27 00:17:34,892: INFO:common: yaml file: /Users/kanayojustice/Documents/Data_scientist_projects/AutoPredict/config/config.yaml loaded successfully]
+[2024-05-27 00:17:34,896: INFO:common: yaml file: /Users/kanayojustice/Documents/Data_scientist_projects/AutoPredict/params.yaml loaded successfully]
+[2024-05-27 00:17:34,946: INFO:common: yaml file: /Users/kanayojustice/Documents/Data_scientist_projects/AutoPredict/schema.yaml loaded successfully]
+[2024-05-27 00:17:34,949: INFO:common: created directory at: artifacts]
+[2024-05-27 00:17:34,951: INFO:common: created directory at: artifacts/data_transformation]
+[2024-05-27 00:17:45,818: INFO:common: yaml file: /Users/kanayojustice/Documents/Data_scientist_projects/AutoPredict/config/config.yaml loaded successfully]
+[2024-05-27 00:17:45,821: INFO:common: yaml file: /Users/kanayojustice/Documents/Data_scientist_projects/AutoPredict/params.yaml loaded successfully]
+[2024-05-27 00:17:45,869: INFO:common: yaml file: /Users/kanayojustice/Documents/Data_scientist_projects/AutoPredict/schema.yaml loaded successfully]
+[2024-05-27 00:17:45,871: INFO:common: created directory at: artifacts]
+[2024-05-27 00:17:45,873: INFO:common: created directory at: artifacts/data_transformation]
+[2024-05-27 00:17:53,689: INFO:common: yaml file: /Users/kanayojustice/Documents/Data_scientist_projects/AutoPredict/config/config.yaml loaded successfully]
+[2024-05-27 00:17:53,693: INFO:common: yaml file: /Users/kanayojustice/Documents/Data_scientist_projects/AutoPredict/params.yaml loaded successfully]
+[2024-05-27 00:17:53,780: INFO:common: yaml file: /Users/kanayojustice/Documents/Data_scientist_projects/AutoPredict/schema.yaml loaded successfully]
+[2024-05-27 00:17:53,785: INFO:common: created directory at: artifacts]
+[2024-05-27 00:17:53,788: INFO:common: created directory at: artifacts/data_transformation]
+[2024-05-27 00:20:25,044: INFO:common: yaml file: /Users/kanayojustice/Documents/Data_scientist_projects/AutoPredict/config/config.yaml loaded successfully]
+[2024-05-27 00:20:25,047: INFO:common: yaml file: /Users/kanayojustice/Documents/Data_scientist_projects/AutoPredict/params.yaml loaded successfully]
+[2024-05-27 00:20:25,115: INFO:common: yaml file: /Users/kanayojustice/Documents/Data_scientist_projects/AutoPredict/schema.yaml loaded successfully]
+[2024-05-27 00:20:25,119: INFO:common: created directory at: artifacts]
+[2024-05-27 00:20:25,120: INFO:common: created directory at: artifacts/data_ingestion]
+[2024-05-27 00:20:32,701: INFO:1347631616: artifacts/data_ingestion/autopredict_cleaned_data.zip Download! with the following info: 
+Connection: close
+Content-Length: 1945315
+Cache-Control: max-age=300
+Content-Security-Policy: default-src 'none'; style-src 'unsafe-inline'; sandbox
+Content-Type: application/zip
+ETag: "33d4fc77827168beb118d9a9115ed5da41eedb7ca648b4ff2c047bb4e47370a6"
+Strict-Transport-Security: max-age=31536000
+X-Content-Type-Options: nosniff
+X-Frame-Options: deny
+X-XSS-Protection: 1; mode=block
+X-GitHub-Request-Id: 7736:1F0FF2:21396F:2A88D2:6653C3B8
+Accept-Ranges: bytes
+Date: Sun, 26 May 2024 23:20:26 GMT
+Via: 1.1 varnish
+X-Served-By: cache-lhr7328-LHR
+X-Cache: MISS
+X-Cache-Hits: 0
+X-Timer: S1716765626.098223,VS0,VE191
+Vary: Authorization,Accept-Encoding,Origin
+Access-Control-Allow-Origin: *
+Cross-Origin-Resource-Policy: cross-origin
+X-Fastly-Request-ID: bf592e8f6091160d8ef91fcc7259ebf8e178aa7e
+Expires: Sun, 26 May 2024 23:25:26 GMT
+Source-Age: 0
+
+]
+[2024-05-27 00:20:38,488: INFO:common: yaml file: /Users/kanayojustice/Documents/Data_scientist_projects/AutoPredict/config/config.yaml loaded successfully]
+[2024-05-27 00:20:38,494: INFO:common: yaml file: /Users/kanayojustice/Documents/Data_scientist_projects/AutoPredict/params.yaml loaded successfully]
+[2024-05-27 00:20:38,536: INFO:common: yaml file: /Users/kanayojustice/Documents/Data_scientist_projects/AutoPredict/schema.yaml loaded successfully]
+[2024-05-27 00:20:38,539: INFO:common: created directory at: artifacts]
+[2024-05-27 00:20:38,540: INFO:common: created directory at: artifacts/data_validation]
+[2024-05-27 00:20:51,192: INFO:common: yaml file: /Users/kanayojustice/Documents/Data_scientist_projects/AutoPredict/config/config.yaml loaded successfully]
+[2024-05-27 00:20:51,195: INFO:common: yaml file: /Users/kanayojustice/Documents/Data_scientist_projects/AutoPredict/params.yaml loaded successfully]
+[2024-05-27 00:20:51,235: INFO:common: yaml file: /Users/kanayojustice/Documents/Data_scientist_projects/AutoPredict/schema.yaml loaded successfully]
+[2024-05-27 00:20:51,237: INFO:common: created directory at: artifacts]
+[2024-05-27 00:20:51,239: INFO:common: created directory at: artifacts/data_validation]
+[2024-05-27 00:21:13,722: INFO:common: yaml file: /Users/kanayojustice/Documents/Data_scientist_projects/AutoPredict/config/config.yaml loaded successfully]
+[2024-05-27 00:21:13,724: INFO:common: yaml file: /Users/kanayojustice/Documents/Data_scientist_projects/AutoPredict/params.yaml loaded successfully]
+[2024-05-27 00:21:13,765: INFO:common: yaml file: /Users/kanayojustice/Documents/Data_scientist_projects/AutoPredict/schema.yaml loaded successfully]
+[2024-05-27 00:21:13,767: INFO:common: created directory at: artifacts]
+[2024-05-27 00:21:13,770: INFO:common: created directory at: artifacts/data_transformation]
+[2024-05-27 00:26:50,421: INFO:common: yaml file: /Users/kanayojustice/Documents/Data_scientist_projects/AutoPredict/config/config.yaml loaded successfully]
+[2024-05-27 00:26:50,423: INFO:common: yaml file: /Users/kanayojustice/Documents/Data_scientist_projects/AutoPredict/params.yaml loaded successfully]
+[2024-05-27 00:26:50,460: INFO:common: yaml file: /Users/kanayojustice/Documents/Data_scientist_projects/AutoPredict/schema.yaml loaded successfully]
+[2024-05-27 00:26:50,462: INFO:common: created directory at: artifacts]
+[2024-05-27 00:26:50,463: INFO:common: created directory at: artifacts/data_ingestion]
+[2024-05-27 00:26:54,912: INFO:1347631616: artifacts/data_ingestion/autopredict_cleaned_data.zip Download! with the following info: 
+Connection: close
+Content-Length: 1244279
+Cache-Control: max-age=300
+Content-Security-Policy: default-src 'none'; style-src 'unsafe-inline'; sandbox
+Content-Type: application/zip
+ETag: "00ba4f4d643a5a7fbad0a5c72c87acd6c8c6422203ea64783077638f1c25179b"
+Strict-Transport-Security: max-age=31536000
+X-Content-Type-Options: nosniff
+X-Frame-Options: deny
+X-XSS-Protection: 1; mode=block
+X-GitHub-Request-Id: 7C6C:212606:1DF114:260FE7:6653C534
+Accept-Ranges: bytes
+Date: Sun, 26 May 2024 23:26:51 GMT
+Via: 1.1 varnish
+X-Served-By: cache-lhr7356-LHR
+X-Cache: MISS
+X-Cache-Hits: 0
+X-Timer: S1716766011.355448,VS0,VE199
+Vary: Authorization,Accept-Encoding,Origin
+Access-Control-Allow-Origin: *
+Cross-Origin-Resource-Policy: cross-origin
+X-Fastly-Request-ID: e4eba2dee866c6d5617b4b62a25515ac2f371639
+Expires: Sun, 26 May 2024 23:31:51 GMT
+Source-Age: 0
+
+]
+[2024-05-27 00:27:37,945: INFO:common: yaml file: /Users/kanayojustice/Documents/Data_scientist_projects/AutoPredict/config/config.yaml loaded successfully]
+[2024-05-27 00:27:37,951: INFO:common: yaml file: /Users/kanayojustice/Documents/Data_scientist_projects/AutoPredict/params.yaml loaded successfully]
+[2024-05-27 00:27:37,996: INFO:common: yaml file: /Users/kanayojustice/Documents/Data_scientist_projects/AutoPredict/schema.yaml loaded successfully]
+[2024-05-27 00:27:37,998: INFO:common: created directory at: artifacts]
+[2024-05-27 00:27:38,000: INFO:common: created directory at: artifacts/data_validation]
+[2024-05-27 00:33:48,933: INFO:common: yaml file: /Users/kanayojustice/Documents/Data_scientist_projects/AutoPredict/config/config.yaml loaded successfully]
+[2024-05-27 00:33:48,937: INFO:common: yaml file: /Users/kanayojustice/Documents/Data_scientist_projects/AutoPredict/params.yaml loaded successfully]
+[2024-05-27 00:33:48,942: INFO:common: yaml file: /Users/kanayojustice/Documents/Data_scientist_projects/AutoPredict/schema.yaml loaded successfully]
+[2024-05-27 00:33:48,944: INFO:common: created directory at: artifacts]
+[2024-05-27 00:33:48,945: INFO:common: created directory at: artifacts/data_validation]
+[2024-05-27 00:49:09,811: INFO:common: yaml file: /Users/kanayojustice/Documents/Data_scientist_projects/AutoPredict/config/config.yaml loaded successfully]
+[2024-05-27 00:49:09,814: INFO:common: yaml file: /Users/kanayojustice/Documents/Data_scientist_projects/AutoPredict/params.yaml loaded successfully]
+[2024-05-27 00:49:09,823: INFO:common: yaml file: /Users/kanayojustice/Documents/Data_scientist_projects/AutoPredict/schema.yaml loaded successfully]
+[2024-05-27 00:49:09,825: INFO:common: created directory at: artifacts]
+[2024-05-27 00:49:09,827: INFO:common: created directory at: artifacts/data_ingestion]
+[2024-05-27 00:49:11,624: INFO:1347631616: artifacts/data_ingestion/autopredict_cleaned_data.zip Download! with the following info: 
+Connection: close
+Content-Length: 1268268
+Cache-Control: max-age=300
+Content-Security-Policy: default-src 'none'; style-src 'unsafe-inline'; sandbox
+Content-Type: application/zip
+ETag: "5d493dbc444db2fa89e3a3d034d18ca7eb909fbdea2a0399f3081049b971949a"
+Strict-Transport-Security: max-age=31536000
+X-Content-Type-Options: nosniff
+X-Frame-Options: deny
+X-XSS-Protection: 1; mode=block
+X-GitHub-Request-Id: 0A24:221504:1C8659:241994:6653CA74
+Accept-Ranges: bytes
+Date: Sun, 26 May 2024 23:49:11 GMT
+Via: 1.1 varnish
+X-Served-By: cache-lcy-eglc8600075-LCY
+X-Cache: MISS
+X-Cache-Hits: 0
+X-Timer: S1716767351.986177,VS0,VE194
+Vary: Authorization,Accept-Encoding,Origin
+Access-Control-Allow-Origin: *
+Cross-Origin-Resource-Policy: cross-origin
+X-Fastly-Request-ID: b828ec272e2270d594c8a1502500e6d161e35180
+Expires: Sun, 26 May 2024 23:54:11 GMT
+Source-Age: 0
+
+]
+[2024-05-27 00:49:52,277: INFO:common: yaml file: /Users/kanayojustice/Documents/Data_scientist_projects/AutoPredict/config/config.yaml loaded successfully]
+[2024-05-27 00:49:52,283: INFO:common: yaml file: /Users/kanayojustice/Documents/Data_scientist_projects/AutoPredict/params.yaml loaded successfully]
+[2024-05-27 00:49:52,294: INFO:common: yaml file: /Users/kanayojustice/Documents/Data_scientist_projects/AutoPredict/schema.yaml loaded successfully]
+[2024-05-27 00:49:52,296: INFO:common: created directory at: artifacts]
+[2024-05-27 00:49:52,298: INFO:common: created directory at: artifacts/data_validation]
+[2024-05-27 00:50:20,243: INFO:common: yaml file: /Users/kanayojustice/Documents/Data_scientist_projects/AutoPredict/config/config.yaml loaded successfully]
+[2024-05-27 00:50:20,245: INFO:common: yaml file: /Users/kanayojustice/Documents/Data_scientist_projects/AutoPredict/params.yaml loaded successfully]
+[2024-05-27 00:50:20,249: INFO:common: yaml file: /Users/kanayojustice/Documents/Data_scientist_projects/AutoPredict/schema.yaml loaded successfully]
+[2024-05-27 00:50:20,251: INFO:common: created directory at: artifacts]
+[2024-05-27 00:50:20,253: INFO:common: created directory at: artifacts/data_validation]
+[2024-05-27 00:50:46,128: INFO:common: yaml file: /Users/kanayojustice/Documents/Data_scientist_projects/AutoPredict/config/config.yaml loaded successfully]
+[2024-05-27 00:50:46,131: INFO:common: yaml file: /Users/kanayojustice/Documents/Data_scientist_projects/AutoPredict/params.yaml loaded successfully]
+[2024-05-27 00:50:46,135: INFO:common: yaml file: /Users/kanayojustice/Documents/Data_scientist_projects/AutoPredict/schema.yaml loaded successfully]
+[2024-05-27 00:50:46,136: INFO:common: created directory at: artifacts]
+[2024-05-27 00:50:46,138: INFO:common: created directory at: artifacts/data_transformation]
+[2024-05-27 00:51:38,017: INFO:common: yaml file: /Users/kanayojustice/Documents/Data_scientist_projects/AutoPredict/config/config.yaml loaded successfully]
+[2024-05-27 00:51:38,022: INFO:common: yaml file: /Users/kanayojustice/Documents/Data_scientist_projects/AutoPredict/params.yaml loaded successfully]
+[2024-05-27 00:51:38,028: INFO:common: yaml file: /Users/kanayojustice/Documents/Data_scientist_projects/AutoPredict/schema.yaml loaded successfully]
+[2024-05-27 00:51:38,030: INFO:common: created directory at: artifacts]
+[2024-05-27 00:51:38,031: INFO:common: created directory at: artifacts/data_transformation]
+[2024-05-27 00:55:29,686: INFO:common: yaml file: /Users/kanayojustice/Documents/Data_scientist_projects/AutoPredict/config/config.yaml loaded successfully]
+[2024-05-27 00:55:29,689: INFO:common: yaml file: /Users/kanayojustice/Documents/Data_scientist_projects/AutoPredict/params.yaml loaded successfully]
+[2024-05-27 00:55:29,694: INFO:common: yaml file: /Users/kanayojustice/Documents/Data_scientist_projects/AutoPredict/schema.yaml loaded successfully]
+[2024-05-27 00:55:29,698: INFO:common: created directory at: artifacts]
+[2024-05-27 00:55:29,701: INFO:common: created directory at: artifacts/data_transformation]
+[2024-05-27 00:58:09,417: INFO:common: yaml file: /Users/kanayojustice/Documents/Data_scientist_projects/AutoPredict/config/config.yaml loaded successfully]
+[2024-05-27 00:58:09,419: INFO:common: yaml file: /Users/kanayojustice/Documents/Data_scientist_projects/AutoPredict/params.yaml loaded successfully]
+[2024-05-27 00:58:09,424: INFO:common: yaml file: /Users/kanayojustice/Documents/Data_scientist_projects/AutoPredict/schema.yaml loaded successfully]
+[2024-05-27 00:58:09,427: INFO:common: created directory at: artifacts]
+[2024-05-27 00:58:09,429: INFO:common: created directory at: artifacts/data_transformation]
+[2024-05-27 01:02:50,728: INFO:common: yaml file: /Users/kanayojustice/Documents/Data_scientist_projects/AutoPredict/config/config.yaml loaded successfully]
+[2024-05-27 01:02:50,731: INFO:common: yaml file: /Users/kanayojustice/Documents/Data_scientist_projects/AutoPredict/params.yaml loaded successfully]
+[2024-05-27 01:02:50,737: INFO:common: yaml file: /Users/kanayojustice/Documents/Data_scientist_projects/AutoPredict/schema.yaml loaded successfully]
+[2024-05-27 01:02:50,738: INFO:common: created directory at: artifacts]
+[2024-05-27 01:02:50,740: INFO:common: created directory at: artifacts/data_transformation]
+[2024-05-27 01:06:07,780: INFO:common: yaml file: /Users/kanayojustice/Documents/Data_scientist_projects/AutoPredict/config/config.yaml loaded successfully]
+[2024-05-27 01:06:07,788: INFO:common: yaml file: /Users/kanayojustice/Documents/Data_scientist_projects/AutoPredict/params.yaml loaded successfully]
+[2024-05-27 01:06:07,793: INFO:common: yaml file: /Users/kanayojustice/Documents/Data_scientist_projects/AutoPredict/schema.yaml loaded successfully]
+[2024-05-27 01:06:07,794: INFO:common: created directory at: artifacts]
+[2024-05-27 01:06:07,797: INFO:common: created directory at: artifacts/data_transformation]
+[2024-05-27 01:07:01,696: INFO:common: yaml file: /Users/kanayojustice/Documents/Data_scientist_projects/AutoPredict/config/config.yaml loaded successfully]
+[2024-05-27 01:07:01,698: INFO:common: yaml file: /Users/kanayojustice/Documents/Data_scientist_projects/AutoPredict/params.yaml loaded successfully]
+[2024-05-27 01:07:01,703: INFO:common: yaml file: /Users/kanayojustice/Documents/Data_scientist_projects/AutoPredict/schema.yaml loaded successfully]
+[2024-05-27 01:07:01,708: INFO:common: created directory at: artifacts]
+[2024-05-27 01:07:01,710: INFO:common: created directory at: artifacts/data_transformation]
+[2024-05-27 01:07:21,048: INFO:common: yaml file: /Users/kanayojustice/Documents/Data_scientist_projects/AutoPredict/config/config.yaml loaded successfully]
+[2024-05-27 01:07:21,051: INFO:common: yaml file: /Users/kanayojustice/Documents/Data_scientist_projects/AutoPredict/params.yaml loaded successfully]
+[2024-05-27 01:07:21,056: INFO:common: yaml file: /Users/kanayojustice/Documents/Data_scientist_projects/AutoPredict/schema.yaml loaded successfully]
+[2024-05-27 01:07:21,058: INFO:common: created directory at: artifacts]
+[2024-05-27 01:07:21,060: INFO:common: created directory at: artifacts/data_transformation]
+[2024-05-27 01:08:23,040: INFO:common: yaml file: /Users/kanayojustice/Documents/Data_scientist_projects/AutoPredict/config/config.yaml loaded successfully]
+[2024-05-27 01:08:23,043: INFO:common: yaml file: /Users/kanayojustice/Documents/Data_scientist_projects/AutoPredict/params.yaml loaded successfully]
+[2024-05-27 01:08:23,047: INFO:common: yaml file: /Users/kanayojustice/Documents/Data_scientist_projects/AutoPredict/schema.yaml loaded successfully]
+[2024-05-27 01:08:23,049: INFO:common: created directory at: artifacts]
+[2024-05-27 01:08:23,050: INFO:common: created directory at: artifacts/data_transformation]
+[2024-05-27 01:09:21,390: INFO:common: yaml file: /Users/kanayojustice/Documents/Data_scientist_projects/AutoPredict/config/config.yaml loaded successfully]
+[2024-05-27 01:09:21,393: INFO:common: yaml file: /Users/kanayojustice/Documents/Data_scientist_projects/AutoPredict/params.yaml loaded successfully]
+[2024-05-27 01:09:21,398: INFO:common: yaml file: /Users/kanayojustice/Documents/Data_scientist_projects/AutoPredict/schema.yaml loaded successfully]
+[2024-05-27 01:09:21,400: INFO:common: created directory at: artifacts]
+[2024-05-27 01:09:21,403: INFO:common: created directory at: artifacts/data_transformation]
+[2024-05-27 01:10:52,603: INFO:common: yaml file: /Users/kanayojustice/Documents/Data_scientist_projects/AutoPredict/config/config.yaml loaded successfully]
+[2024-05-27 01:10:52,608: INFO:common: yaml file: /Users/kanayojustice/Documents/Data_scientist_projects/AutoPredict/params.yaml loaded successfully]
+[2024-05-27 01:10:52,611: INFO:common: yaml file: /Users/kanayojustice/Documents/Data_scientist_projects/AutoPredict/schema.yaml loaded successfully]
+[2024-05-27 01:10:52,613: INFO:common: created directory at: artifacts]
+[2024-05-27 01:10:52,615: INFO:common: created directory at: artifacts/data_transformation]
+[2024-05-27 01:11:05,929: INFO:common: yaml file: /Users/kanayojustice/Documents/Data_scientist_projects/AutoPredict/config/config.yaml loaded successfully]
+[2024-05-27 01:11:05,931: INFO:common: yaml file: /Users/kanayojustice/Documents/Data_scientist_projects/AutoPredict/params.yaml loaded successfully]
+[2024-05-27 01:11:05,936: INFO:common: yaml file: /Users/kanayojustice/Documents/Data_scientist_projects/AutoPredict/schema.yaml loaded successfully]
+[2024-05-27 01:11:05,941: INFO:common: created directory at: artifacts]
+[2024-05-27 01:11:05,945: INFO:common: created directory at: artifacts/data_transformation]
+[2024-05-27 01:12:07,820: INFO:common: yaml file: /Users/kanayojustice/Documents/Data_scientist_projects/AutoPredict/config/config.yaml loaded successfully]
+[2024-05-27 01:12:07,823: INFO:common: yaml file: /Users/kanayojustice/Documents/Data_scientist_projects/AutoPredict/params.yaml loaded successfully]
+[2024-05-27 01:12:07,827: INFO:common: yaml file: /Users/kanayojustice/Documents/Data_scientist_projects/AutoPredict/schema.yaml loaded successfully]
+[2024-05-27 01:12:07,829: INFO:common: created directory at: artifacts]
+[2024-05-27 01:12:07,832: INFO:common: created directory at: artifacts/data_transformation]
+[2024-05-27 01:21:22,061: INFO:common: yaml file: /Users/kanayojustice/Documents/Data_scientist_projects/AutoPredict/config/config.yaml loaded successfully]
+[2024-05-27 01:21:22,065: INFO:common: yaml file: /Users/kanayojustice/Documents/Data_scientist_projects/AutoPredict/params.yaml loaded successfully]
+[2024-05-27 01:21:22,071: INFO:common: yaml file: /Users/kanayojustice/Documents/Data_scientist_projects/AutoPredict/schema.yaml loaded successfully]
+[2024-05-27 01:21:22,073: INFO:common: created directory at: artifacts]
+[2024-05-27 01:21:22,075: INFO:common: created directory at: artifacts/data_transformation]
+[2024-05-27 01:21:22,848: INFO:1476729587: Splited data into training and test sets]
+[2024-05-27 01:21:22,850: INFO:1476729587: (73284, 11)]
+[2024-05-27 01:21:22,852: INFO:1476729587: (24428, 11)]
+[2024-05-27 01:22:46,961: INFO:common: yaml file: /Users/kanayojustice/Documents/Data_scientist_projects/AutoPredict/config/config.yaml loaded successfully]
+[2024-05-27 01:22:46,970: INFO:common: yaml file: /Users/kanayojustice/Documents/Data_scientist_projects/AutoPredict/params.yaml loaded successfully]
+[2024-05-27 01:22:46,977: INFO:common: yaml file: /Users/kanayojustice/Documents/Data_scientist_projects/AutoPredict/schema.yaml loaded successfully]
+[2024-05-27 01:22:46,979: INFO:common: created directory at: artifacts]
+[2024-05-27 01:22:46,982: INFO:common: created directory at: artifacts/data_transformation]
+[2024-05-27 01:22:47,891: INFO:2418939903: Splited data into training and test sets]
+[2024-05-27 01:22:47,892: INFO:2418939903: (73284, 11)]
+[2024-05-27 01:22:47,893: INFO:2418939903: (24428, 11)]
+[2024-05-27 01:36:26,425: INFO:common: yaml file: /Users/kanayojustice/Documents/Data_scientist_projects/AutoPredict/config/config.yaml loaded successfully]
+[2024-05-27 01:36:26,429: INFO:common: yaml file: /Users/kanayojustice/Documents/Data_scientist_projects/AutoPredict/params.yaml loaded successfully]
+[2024-05-27 01:36:26,435: INFO:common: yaml file: /Users/kanayojustice/Documents/Data_scientist_projects/AutoPredict/schema.yaml loaded successfully]
+[2024-05-27 01:36:26,436: INFO:common: created directory at: artifacts]
+[2024-05-27 01:36:26,438: INFO:common: created directory at: artifacts/model_trainer]
+[2024-05-27 01:39:26,723: ERROR:2598013538: An error occurred: name 'CONFIG_FILE_PATH' is not defined]
+[2024-05-27 01:42:08,669: INFO:common: yaml file: /Users/kanayojustice/Documents/Data_scientist_projects/AutoPredict/config/config.yaml loaded successfully]
+[2024-05-27 01:42:08,671: INFO:common: yaml file: /Users/kanayojustice/Documents/Data_scientist_projects/AutoPredict/params.yaml loaded successfully]
+[2024-05-27 01:42:08,675: INFO:common: yaml file: /Users/kanayojustice/Documents/Data_scientist_projects/AutoPredict/schema.yaml loaded successfully]
+[2024-05-27 01:42:08,679: INFO:common: created directory at: artifacts]
+[2024-05-27 01:42:08,681: INFO:common: created directory at: artifacts/model_trainer]
+[2024-05-27 01:42:08,683: ERROR:2598013538: An error occurred: "'ConfigBox' object has no attribute 'train_data_path'"]
+[2024-05-27 01:45:57,570: INFO:common: yaml file: /Users/kanayojustice/Documents/Data_scientist_projects/AutoPredict/config/config.yaml loaded successfully]
+[2024-05-27 01:45:57,573: INFO:common: created directory at: artifacts/model_trainer]
+[2024-05-27 01:45:57,575: ERROR:3132728846: An error occurred: "'target_column'"]
+[2024-05-27 01:47:55,559: INFO:common: yaml file: /Users/kanayojustice/Documents/Data_scientist_projects/AutoPredict/config/config.yaml loaded successfully]
+[2024-05-27 01:47:55,561: INFO:common: created directory at: artifacts/model_trainer]
+[2024-05-27 01:47:55,562: ERROR:3132728846: An error occurred: "'target_column'"]
+[2024-05-27 01:52:37,605: INFO:common: yaml file: /Users/kanayojustice/Documents/Data_scientist_projects/AutoPredict/config/config.yaml loaded successfully]
+[2024-05-27 01:52:37,611: INFO:common: yaml file: /Users/kanayojustice/Documents/Data_scientist_projects/AutoPredict/params.yaml loaded successfully]
+[2024-05-27 01:52:37,615: INFO:common: yaml file: /Users/kanayojustice/Documents/Data_scientist_projects/AutoPredict/schema.yaml loaded successfully]
+[2024-05-27 01:52:37,618: INFO:common: created directory at: artifacts]
+[2024-05-27 01:52:37,619: INFO:common: created directory at: artifacts/model_trainer]
+[2024-05-27 01:52:37,954: ERROR:3132728846: An error occurred: unhashable type: "Box"]
+[2024-05-27 01:54:45,506: INFO:common: yaml file: /Users/kanayojustice/Documents/Data_scientist_projects/AutoPredict/config/config.yaml loaded successfully]
+[2024-05-27 01:54:45,510: INFO:common: yaml file: /Users/kanayojustice/Documents/Data_scientist_projects/AutoPredict/params.yaml loaded successfully]
+[2024-05-27 01:54:45,515: INFO:common: yaml file: /Users/kanayojustice/Documents/Data_scientist_projects/AutoPredict/schema.yaml loaded successfully]
+[2024-05-27 01:54:45,517: INFO:common: created directory at: artifacts]
+[2024-05-27 01:54:45,518: INFO:common: created directory at: artifacts/model_trainer]
+[2024-05-27 01:54:45,933: ERROR:2598013538: An error occurred: unhashable type: "Box"]
+[2024-05-27 01:54:54,589: INFO:common: yaml file: /Users/kanayojustice/Documents/Data_scientist_projects/AutoPredict/config/config.yaml loaded successfully]
+[2024-05-27 01:54:54,594: INFO:common: yaml file: /Users/kanayojustice/Documents/Data_scientist_projects/AutoPredict/params.yaml loaded successfully]
+[2024-05-27 01:54:54,599: INFO:common: yaml file: /Users/kanayojustice/Documents/Data_scientist_projects/AutoPredict/schema.yaml loaded successfully]
+[2024-05-27 01:54:54,601: INFO:common: created directory at: artifacts]
+[2024-05-27 01:54:54,602: INFO:common: created directory at: artifacts/model_trainer]
+[2024-05-27 01:54:54,604: ERROR:2598013538: An error occurred: [Errno 2] No such file or directory: 'artifacts/data_transformation/transformed_train.csv']
+[2024-05-27 01:55:06,015: INFO:common: yaml file: /Users/kanayojustice/Documents/Data_scientist_projects/AutoPredict/config/config.yaml loaded successfully]
+[2024-05-27 01:55:06,018: INFO:common: yaml file: /Users/kanayojustice/Documents/Data_scientist_projects/AutoPredict/params.yaml loaded successfully]
+[2024-05-27 01:55:06,025: INFO:common: yaml file: /Users/kanayojustice/Documents/Data_scientist_projects/AutoPredict/schema.yaml loaded successfully]
+[2024-05-27 01:55:06,028: INFO:common: created directory at: artifacts]
+[2024-05-27 01:55:06,029: INFO:common: created directory at: artifacts/model_trainer]
+[2024-05-27 01:55:06,420: ERROR:2598013538: An error occurred: unhashable type: "Box"]
+[2024-05-27 01:58:20,534: INFO:common: yaml file: /Users/kanayojustice/Documents/Data_scientist_projects/AutoPredict/config/config.yaml loaded successfully]
+[2024-05-27 01:58:20,537: INFO:common: yaml file: /Users/kanayojustice/Documents/Data_scientist_projects/AutoPredict/params.yaml loaded successfully]
+[2024-05-27 01:58:20,541: INFO:common: yaml file: /Users/kanayojustice/Documents/Data_scientist_projects/AutoPredict/schema.yaml loaded successfully]
+[2024-05-27 01:58:20,544: INFO:common: created directory at: artifacts]
+[2024-05-27 01:58:20,546: INFO:common: created directory at: artifacts/model_trainer]
+[2024-05-27 01:58:20,995: ERROR:2598013538: An error occurred: "['fail'] not found in axis"]
+[2024-05-27 02:05:10,626: INFO:common: yaml file: /Users/kanayojustice/Documents/Data_scientist_projects/AutoPredict/config/config.yaml loaded successfully]
+[2024-05-27 02:05:10,629: INFO:common: yaml file: /Users/kanayojustice/Documents/Data_scientist_projects/AutoPredict/params.yaml loaded successfully]
+[2024-05-27 02:05:10,633: INFO:common: yaml file: /Users/kanayojustice/Documents/Data_scientist_projects/AutoPredict/schema.yaml loaded successfully]
+[2024-05-27 02:05:10,635: INFO:common: created directory at: artifacts]
+[2024-05-27 02:05:10,636: INFO:common: created directory at: artifacts/model_trainer]
+[2024-05-27 02:05:10,637: ERROR:2598013538: An error occurred: "'train_data_path'"]
+[2024-05-27 02:06:31,200: INFO:common: yaml file: /Users/kanayojustice/Documents/Data_scientist_projects/AutoPredict/config/config.yaml loaded successfully]
+[2024-05-27 02:06:31,202: INFO:common: yaml file: /Users/kanayojustice/Documents/Data_scientist_projects/AutoPredict/params.yaml loaded successfully]
+[2024-05-27 02:06:31,209: INFO:common: yaml file: /Users/kanayojustice/Documents/Data_scientist_projects/AutoPredict/schema.yaml loaded successfully]
+[2024-05-27 02:06:31,211: INFO:common: created directory at: artifacts]
+[2024-05-27 02:06:31,212: INFO:common: created directory at: artifacts/model_trainer]
+[2024-05-27 02:06:31,509: ERROR:2598013538: An error occurred: could not convert string to float: ' A3']
+[2024-05-27 02:18:13,873: INFO:common: yaml file: /Users/kanayojustice/Documents/Data_scientist_projects/AutoPredict/config/config.yaml loaded successfully]
+[2024-05-27 02:18:13,877: INFO:common: yaml file: /Users/kanayojustice/Documents/Data_scientist_projects/AutoPredict/params.yaml loaded successfully]
+[2024-05-27 02:18:13,882: INFO:common: yaml file: /Users/kanayojustice/Documents/Data_scientist_projects/AutoPredict/schema.yaml loaded successfully]
+[2024-05-27 02:18:13,884: INFO:common: created directory at: artifacts]
+[2024-05-27 02:18:13,887: INFO:common: created directory at: artifacts/model_trainer]
+[2024-05-27 02:18:14,092: ERROR:2598013538: An error occurred: [Errno 21] Is a directory: 'artifacts/model_trainer']
+[2024-05-27 02:20:33,832: INFO:common: yaml file: /Users/kanayojustice/Documents/Data_scientist_projects/AutoPredict/config/config.yaml loaded successfully]
+[2024-05-27 02:20:33,835: INFO:common: yaml file: /Users/kanayojustice/Documents/Data_scientist_projects/AutoPredict/params.yaml loaded successfully]
+[2024-05-27 02:20:33,840: INFO:common: yaml file: /Users/kanayojustice/Documents/Data_scientist_projects/AutoPredict/schema.yaml loaded successfully]
+[2024-05-27 02:20:33,843: INFO:common: created directory at: artifacts]
+[2024-05-27 02:20:33,847: INFO:common: created directory at: artifacts/model_trainer]
+[2024-05-27 02:20:34,101: ERROR:2598013538: An error occurred: This ColumnTransformer instance is not fitted yet. Call 'fit' with appropriate arguments before using this estimator.]
+[2024-05-27 02:22:10,051: INFO:common: yaml file: /Users/kanayojustice/Documents/Data_scientist_projects/AutoPredict/config/config.yaml loaded successfully]
+[2024-05-27 02:22:10,055: INFO:common: yaml file: /Users/kanayojustice/Documents/Data_scientist_projects/AutoPredict/params.yaml loaded successfully]
+[2024-05-27 02:22:10,060: INFO:common: yaml file: /Users/kanayojustice/Documents/Data_scientist_projects/AutoPredict/schema.yaml loaded successfully]
+[2024-05-27 02:22:10,063: INFO:common: created directory at: artifacts]
+[2024-05-27 02:22:10,065: INFO:common: created directory at: artifacts/model_trainer]
+[2024-05-27 02:22:11,355: ERROR:2598013538: An error occurred: [Errno 21] Is a directory: 'artifacts/model_trainer']
+[2024-05-27 02:24:33,341: INFO:common: yaml file: /Users/kanayojustice/Documents/Data_scientist_projects/AutoPredict/config/config.yaml loaded successfully]
+[2024-05-27 02:24:33,344: INFO:common: yaml file: /Users/kanayojustice/Documents/Data_scientist_projects/AutoPredict/params.yaml loaded successfully]
+[2024-05-27 02:24:33,349: INFO:common: yaml file: /Users/kanayojustice/Documents/Data_scientist_projects/AutoPredict/schema.yaml loaded successfully]
+[2024-05-27 02:24:33,351: INFO:common: created directory at: artifacts]
+[2024-05-27 02:24:33,353: INFO:common: created directory at: artifacts/model_trainer]
+[2024-05-27 02:24:34,825: INFO:3996547528: Model saved at artifacts/model_trainer/LogisticRegression.joblib]
+[2024-05-27 02:24:34,880: ERROR:2598013538: An error occurred: This ColumnTransformer instance is not fitted yet. Call 'fit' with appropriate arguments before using this estimator.]
+[2024-05-27 02:27:23,867: INFO:common: yaml file: /Users/kanayojustice/Documents/Data_scientist_projects/AutoPredict/config/config.yaml loaded successfully]
+[2024-05-27 02:27:23,870: INFO:common: yaml file: /Users/kanayojustice/Documents/Data_scientist_projects/AutoPredict/params.yaml loaded successfully]
+[2024-05-27 02:27:23,875: INFO:common: yaml file: /Users/kanayojustice/Documents/Data_scientist_projects/AutoPredict/schema.yaml loaded successfully]
+[2024-05-27 02:27:23,877: INFO:common: created directory at: artifacts]
+[2024-05-27 02:27:23,879: INFO:common: created directory at: artifacts/model_trainer]
+[2024-05-27 02:27:25,029: INFO:1026449288: Model saved at artifacts/model_trainer/LogisticRegression.joblib]
+[2024-05-27 02:27:25,080: ERROR:2598013538: An error occurred: This ColumnTransformer instance is not fitted yet. Call 'fit' with appropriate arguments before using this estimator.]
+[2024-05-27 02:28:49,327: INFO:common: yaml file: /Users/kanayojustice/Documents/Data_scientist_projects/AutoPredict/config/config.yaml loaded successfully]
+[2024-05-27 02:28:49,331: INFO:common: yaml file: /Users/kanayojustice/Documents/Data_scientist_projects/AutoPredict/params.yaml loaded successfully]
+[2024-05-27 02:28:49,336: INFO:common: yaml file: /Users/kanayojustice/Documents/Data_scientist_projects/AutoPredict/schema.yaml loaded successfully]
+[2024-05-27 02:28:49,340: INFO:common: created directory at: artifacts]
+[2024-05-27 02:28:49,341: INFO:common: created directory at: artifacts/model_trainer]
+[2024-05-27 02:28:50,562: INFO:1026449288: Model saved at artifacts/model_trainer/LogisticRegression.joblib]
+[2024-05-27 02:28:50,615: ERROR:3615655402: An error occurred: This ColumnTransformer instance is not fitted yet. Call 'fit' with appropriate arguments before using this estimator.]
+[2024-05-27 02:29:02,962: INFO:common: yaml file: /Users/kanayojustice/Documents/Data_scientist_projects/AutoPredict/config/config.yaml loaded successfully]
+[2024-05-27 02:29:02,966: INFO:common: yaml file: /Users/kanayojustice/Documents/Data_scientist_projects/AutoPredict/params.yaml loaded successfully]
+[2024-05-27 02:29:02,971: INFO:common: yaml file: /Users/kanayojustice/Documents/Data_scientist_projects/AutoPredict/schema.yaml loaded successfully]
+[2024-05-27 02:29:02,973: INFO:common: created directory at: artifacts]
+[2024-05-27 02:29:02,974: INFO:common: created directory at: artifacts/model_trainer]
+[2024-05-27 02:29:04,109: INFO:1026449288: Model saved at artifacts/model_trainer/LogisticRegression.joblib]
+[2024-05-27 02:29:04,158: ERROR:3615655402: An error occurred: This ColumnTransformer instance is not fitted yet. Call 'fit' with appropriate arguments before using this estimator.]
+[2024-05-27 02:30:35,985: INFO:common: yaml file: /Users/kanayojustice/Documents/Data_scientist_projects/AutoPredict/config/config.yaml loaded successfully]
+[2024-05-27 02:30:35,987: INFO:common: yaml file: /Users/kanayojustice/Documents/Data_scientist_projects/AutoPredict/params.yaml loaded successfully]
+[2024-05-27 02:30:35,991: INFO:common: yaml file: /Users/kanayojustice/Documents/Data_scientist_projects/AutoPredict/schema.yaml loaded successfully]
+[2024-05-27 02:30:36,000: INFO:common: created directory at: artifacts]
+[2024-05-27 02:30:36,001: INFO:common: created directory at: artifacts/model_trainer]
+[2024-05-27 02:30:37,281: INFO:519892927: Model saved at artifacts/model_trainer/LogisticRegression.joblib]
+[2024-05-27 02:30:37,334: ERROR:3615655402: An error occurred: This ColumnTransformer instance is not fitted yet. Call 'fit' with appropriate arguments before using this estimator.]
+[2024-05-27 02:31:24,151: INFO:common: yaml file: /Users/kanayojustice/Documents/Data_scientist_projects/AutoPredict/config/config.yaml loaded successfully]
+[2024-05-27 02:31:24,154: INFO:common: yaml file: /Users/kanayojustice/Documents/Data_scientist_projects/AutoPredict/params.yaml loaded successfully]
+[2024-05-27 02:31:24,158: INFO:common: yaml file: /Users/kanayojustice/Documents/Data_scientist_projects/AutoPredict/schema.yaml loaded successfully]
+[2024-05-27 02:31:24,160: INFO:common: created directory at: artifacts]
+[2024-05-27 02:31:24,163: INFO:common: created directory at: artifacts/model_trainer]
+[2024-05-27 02:31:25,590: INFO:519892927: Model saved at artifacts/model_trainer/LogisticRegression.joblib]
+[2024-05-27 02:31:25,645: ERROR:155387429: An error occurred: This ColumnTransformer instance is not fitted yet. Call 'fit' with appropriate arguments before using this estimator.]
+[2024-05-27 02:32:59,807: INFO:common: yaml file: /Users/kanayojustice/Documents/Data_scientist_projects/AutoPredict/config/config.yaml loaded successfully]
+[2024-05-27 02:32:59,810: INFO:common: yaml file: /Users/kanayojustice/Documents/Data_scientist_projects/AutoPredict/params.yaml loaded successfully]
+[2024-05-27 02:32:59,817: INFO:common: yaml file: /Users/kanayojustice/Documents/Data_scientist_projects/AutoPredict/schema.yaml loaded successfully]
+[2024-05-27 02:32:59,819: INFO:common: created directory at: artifacts]
+[2024-05-27 02:32:59,822: INFO:common: created directory at: artifacts/data_ingestion]
+[2024-05-27 02:33:05,301: INFO:1347631616: artifacts/data_ingestion/autopredict_cleaned_data.zip Download! with the following info: 
+Connection: close
+Content-Length: 1268268
+Cache-Control: max-age=300
+Content-Security-Policy: default-src 'none'; style-src 'unsafe-inline'; sandbox
+Content-Type: application/zip
+ETag: "5d493dbc444db2fa89e3a3d034d18ca7eb909fbdea2a0399f3081049b971949a"
+Strict-Transport-Security: max-age=31536000
+X-Content-Type-Options: nosniff
+X-Frame-Options: deny
+X-XSS-Protection: 1; mode=block
+X-GitHub-Request-Id: 80C5:226131:1D36A6:2536BD:6653E2CB
+Accept-Ranges: bytes
+Date: Mon, 27 May 2024 01:33:00 GMT
+Via: 1.1 varnish
+X-Served-By: cache-lhr7349-LHR
+X-Cache: MISS
+X-Cache-Hits: 0
+X-Timer: S1716773581.728418,VS0,VE191
+Vary: Authorization,Accept-Encoding,Origin
+Access-Control-Allow-Origin: *
+Cross-Origin-Resource-Policy: cross-origin
+X-Fastly-Request-ID: fe27f563075c171e840ab42f75df79bb9e988fc4
+Expires: Mon, 27 May 2024 01:38:00 GMT
+Source-Age: 0
+
+]
+[2024-05-27 02:33:20,408: INFO:common: yaml file: /Users/kanayojustice/Documents/Data_scientist_projects/AutoPredict/config/config.yaml loaded successfully]
+[2024-05-27 02:33:20,411: INFO:common: yaml file: /Users/kanayojustice/Documents/Data_scientist_projects/AutoPredict/params.yaml loaded successfully]
+[2024-05-27 02:33:20,415: INFO:common: yaml file: /Users/kanayojustice/Documents/Data_scientist_projects/AutoPredict/schema.yaml loaded successfully]
+[2024-05-27 02:33:20,417: INFO:common: created directory at: artifacts]
+[2024-05-27 02:33:20,418: INFO:common: created directory at: artifacts/data_ingestion]
+[2024-05-27 02:33:21,843: INFO:1347631616: artifacts/data_ingestion/autopredict_cleaned_data.zip Download! with the following info: 
+Connection: close
+Content-Length: 1268268
+Cache-Control: max-age=300
+Content-Security-Policy: default-src 'none'; style-src 'unsafe-inline'; sandbox
+Content-Type: application/zip
+ETag: "5d493dbc444db2fa89e3a3d034d18ca7eb909fbdea2a0399f3081049b971949a"
+Strict-Transport-Security: max-age=31536000
+X-Content-Type-Options: nosniff
+X-Frame-Options: deny
+X-XSS-Protection: 1; mode=block
+X-GitHub-Request-Id: 31ED:1EB71E:2242F0:2BF90E:6653E2E0
+Accept-Ranges: bytes
+Date: Mon, 27 May 2024 01:33:21 GMT
+Via: 1.1 varnish
+X-Served-By: cache-lcy-eglc8600097-LCY
+X-Cache: MISS
+X-Cache-Hits: 0
+X-Timer: S1716773601.430260,VS0,VE130
+Vary: Authorization,Accept-Encoding,Origin
+Access-Control-Allow-Origin: *
+Cross-Origin-Resource-Policy: cross-origin
+X-Fastly-Request-ID: 76d73259aa67ebb3d28aac0bb0b25f0e41bbc168
+Expires: Mon, 27 May 2024 01:38:21 GMT
+Source-Age: 0
+
+]
+[2024-05-27 02:33:29,957: INFO:common: yaml file: /Users/kanayojustice/Documents/Data_scientist_projects/AutoPredict/config/config.yaml loaded successfully]
+[2024-05-27 02:33:29,959: INFO:common: yaml file: /Users/kanayojustice/Documents/Data_scientist_projects/AutoPredict/params.yaml loaded successfully]
+[2024-05-27 02:33:29,965: INFO:common: yaml file: /Users/kanayojustice/Documents/Data_scientist_projects/AutoPredict/schema.yaml loaded successfully]
+[2024-05-27 02:33:29,967: INFO:common: created directory at: artifacts]
+[2024-05-27 02:33:29,970: INFO:common: created directory at: artifacts/data_validation]
+[2024-05-27 02:33:45,741: INFO:common: yaml file: /Users/kanayojustice/Documents/Data_scientist_projects/AutoPredict/config/config.yaml loaded successfully]
+[2024-05-27 02:33:45,746: INFO:common: yaml file: /Users/kanayojustice/Documents/Data_scientist_projects/AutoPredict/params.yaml loaded successfully]
+[2024-05-27 02:33:45,752: INFO:common: yaml file: /Users/kanayojustice/Documents/Data_scientist_projects/AutoPredict/schema.yaml loaded successfully]
+[2024-05-27 02:33:45,753: INFO:common: created directory at: artifacts]
+[2024-05-27 02:33:45,754: INFO:common: created directory at: artifacts/data_transformation]
+[2024-05-27 02:33:46,558: INFO:2418939903: Splited data into training and test sets]
+[2024-05-27 02:33:46,559: INFO:2418939903: (73284, 11)]
+[2024-05-27 02:33:46,561: INFO:2418939903: (24428, 11)]
+[2024-05-27 02:34:14,743: INFO:common: yaml file: /Users/kanayojustice/Documents/Data_scientist_projects/AutoPredict/config/config.yaml loaded successfully]
+[2024-05-27 02:34:14,746: INFO:common: yaml file: /Users/kanayojustice/Documents/Data_scientist_projects/AutoPredict/params.yaml loaded successfully]
+[2024-05-27 02:34:14,750: INFO:common: yaml file: /Users/kanayojustice/Documents/Data_scientist_projects/AutoPredict/schema.yaml loaded successfully]
+[2024-05-27 02:34:14,752: INFO:common: created directory at: artifacts]
+[2024-05-27 02:34:14,754: INFO:common: created directory at: artifacts/model_trainer]
+[2024-05-27 02:34:16,195: INFO:519892927: Model saved at artifacts/model_trainer/LogisticRegression.joblib]
+[2024-05-27 02:34:16,249: ERROR:155387429: An error occurred: This ColumnTransformer instance is not fitted yet. Call 'fit' with appropriate arguments before using this estimator.]
+[2024-05-27 02:36:00,986: INFO:common: yaml file: /Users/kanayojustice/Documents/Data_scientist_projects/AutoPredict/config/config.yaml loaded successfully]
+[2024-05-27 02:36:00,988: INFO:common: yaml file: /Users/kanayojustice/Documents/Data_scientist_projects/AutoPredict/params.yaml loaded successfully]
+[2024-05-27 02:36:00,992: INFO:common: yaml file: /Users/kanayojustice/Documents/Data_scientist_projects/AutoPredict/schema.yaml loaded successfully]
+[2024-05-27 02:36:00,995: INFO:common: created directory at: artifacts]
+[2024-05-27 02:36:00,996: INFO:common: created directory at: artifacts/model_trainer]
+[2024-05-27 02:36:00,999: ERROR:155387429: An error occurred: [Errno 2] No such file or directory: 'artifacts/data_transformation/train.csv']
+[2024-05-27 02:36:26,157: INFO:common: yaml file: /Users/kanayojustice/Documents/Data_scientist_projects/AutoPredict/config/config.yaml loaded successfully]
+[2024-05-27 02:36:26,160: INFO:common: yaml file: /Users/kanayojustice/Documents/Data_scientist_projects/AutoPredict/params.yaml loaded successfully]
+[2024-05-27 02:36:26,165: INFO:common: yaml file: /Users/kanayojustice/Documents/Data_scientist_projects/AutoPredict/schema.yaml loaded successfully]
+[2024-05-27 02:36:26,166: INFO:common: created directory at: artifacts]
+[2024-05-27 02:36:26,167: INFO:common: created directory at: artifacts/model_trainer]
+[2024-05-27 02:36:27,466: INFO:519892927: Model saved at artifacts/model_trainer/LogisticRegression.joblib]
+[2024-05-27 02:36:27,518: ERROR:155387429: An error occurred: This ColumnTransformer instance is not fitted yet. Call 'fit' with appropriate arguments before using this estimator.]
+[2024-05-27 02:39:31,277: INFO:common: yaml file: /Users/kanayojustice/Documents/Data_scientist_projects/AutoPredict/config/config.yaml loaded successfully]
+[2024-05-27 02:39:31,281: INFO:common: yaml file: /Users/kanayojustice/Documents/Data_scientist_projects/AutoPredict/params.yaml loaded successfully]
+[2024-05-27 02:39:31,285: INFO:common: yaml file: /Users/kanayojustice/Documents/Data_scientist_projects/AutoPredict/schema.yaml loaded successfully]
+[2024-05-27 02:39:31,287: INFO:common: created directory at: artifacts]
+[2024-05-27 02:39:31,288: INFO:common: created directory at: artifacts/data_ingestion]
+[2024-05-27 02:39:33,139: INFO:1347631616: artifacts/data_ingestion/autopredict_cleaned_data.zip Download! with the following info: 
+Connection: close
+Content-Length: 1268268
+Cache-Control: max-age=300
+Content-Security-Policy: default-src 'none'; style-src 'unsafe-inline'; sandbox
+Content-Type: application/zip
+ETag: "5d493dbc444db2fa89e3a3d034d18ca7eb909fbdea2a0399f3081049b971949a"
+Strict-Transport-Security: max-age=31536000
+X-Content-Type-Options: nosniff
+X-Frame-Options: deny
+X-XSS-Protection: 1; mode=block
+X-GitHub-Request-Id: 31ED:1EB71E:2242F0:2BF90E:6653E2E0
+Accept-Ranges: bytes
+Date: Mon, 27 May 2024 01:39:32 GMT
+Via: 1.1 varnish
+X-Served-By: cache-lcy-eglc8600075-LCY
+X-Cache: HIT
+X-Cache-Hits: 0
+X-Timer: S1716773972.404785,VS0,VE150
+Vary: Authorization,Accept-Encoding,Origin
+Access-Control-Allow-Origin: *
+Cross-Origin-Resource-Policy: cross-origin
+X-Fastly-Request-ID: 3ac77c743178311af9b6ba95a9e0eb721a7aa047
+Expires: Mon, 27 May 2024 01:44:32 GMT
+Source-Age: 0
+
+]
+[2024-05-27 02:39:38,513: INFO:common: yaml file: /Users/kanayojustice/Documents/Data_scientist_projects/AutoPredict/config/config.yaml loaded successfully]
+[2024-05-27 02:39:38,518: INFO:common: yaml file: /Users/kanayojustice/Documents/Data_scientist_projects/AutoPredict/params.yaml loaded successfully]
+[2024-05-27 02:39:38,523: INFO:common: yaml file: /Users/kanayojustice/Documents/Data_scientist_projects/AutoPredict/schema.yaml loaded successfully]
+[2024-05-27 02:39:38,525: INFO:common: created directory at: artifacts]
+[2024-05-27 02:39:38,531: INFO:common: created directory at: artifacts/data_validation]
+[2024-05-27 02:39:58,519: INFO:common: yaml file: /Users/kanayojustice/Documents/Data_scientist_projects/AutoPredict/config/config.yaml loaded successfully]
+[2024-05-27 02:39:58,524: INFO:common: yaml file: /Users/kanayojustice/Documents/Data_scientist_projects/AutoPredict/params.yaml loaded successfully]
+[2024-05-27 02:39:58,530: INFO:common: yaml file: /Users/kanayojustice/Documents/Data_scientist_projects/AutoPredict/schema.yaml loaded successfully]
+[2024-05-27 02:39:58,532: INFO:common: created directory at: artifacts]
+[2024-05-27 02:39:58,534: INFO:common: created directory at: artifacts/data_transformation]
+[2024-05-27 02:39:59,421: INFO:1182716991: Splited data into training and test sets]
+[2024-05-27 02:39:59,422: INFO:1182716991: (73284, 11)]
+[2024-05-27 02:39:59,423: INFO:1182716991: (24428, 11)]
+[2024-05-27 02:40:27,626: INFO:common: yaml file: /Users/kanayojustice/Documents/Data_scientist_projects/AutoPredict/config/config.yaml loaded successfully]
+[2024-05-27 02:40:27,629: INFO:common: yaml file: /Users/kanayojustice/Documents/Data_scientist_projects/AutoPredict/params.yaml loaded successfully]
+[2024-05-27 02:40:27,635: INFO:common: yaml file: /Users/kanayojustice/Documents/Data_scientist_projects/AutoPredict/schema.yaml loaded successfully]
+[2024-05-27 02:40:27,637: INFO:common: created directory at: artifacts]
+[2024-05-27 02:40:27,638: INFO:common: created directory at: artifacts/model_trainer]
+[2024-05-27 02:40:29,082: INFO:519892927: Model saved at artifacts/model_trainer/LogisticRegression.joblib]
+[2024-05-27 02:40:29,130: ERROR:155387429: An error occurred: This ColumnTransformer instance is not fitted yet. Call 'fit' with appropriate arguments before using this estimator.]
+[2024-05-27 02:40:39,642: INFO:common: yaml file: /Users/kanayojustice/Documents/Data_scientist_projects/AutoPredict/config/config.yaml loaded successfully]
+[2024-05-27 02:40:39,645: INFO:common: yaml file: /Users/kanayojustice/Documents/Data_scientist_projects/AutoPredict/params.yaml loaded successfully]
+[2024-05-27 02:40:39,651: INFO:common: yaml file: /Users/kanayojustice/Documents/Data_scientist_projects/AutoPredict/schema.yaml loaded successfully]
+[2024-05-27 02:40:39,653: INFO:common: created directory at: artifacts]
+[2024-05-27 02:40:39,656: INFO:common: created directory at: artifacts/model_trainer]
+[2024-05-27 02:40:40,940: INFO:519892927: Model saved at artifacts/model_trainer/LogisticRegression.joblib]
+[2024-05-27 02:40:40,993: ERROR:155387429: An error occurred: This ColumnTransformer instance is not fitted yet. Call 'fit' with appropriate arguments before using this estimator.]
+[2024-05-27 02:43:32,769: INFO:common: yaml file: /Users/kanayojustice/Documents/Data_scientist_projects/AutoPredict/config/config.yaml loaded successfully]
+[2024-05-27 02:43:32,773: INFO:common: yaml file: /Users/kanayojustice/Documents/Data_scientist_projects/AutoPredict/params.yaml loaded successfully]
+[2024-05-27 02:43:32,781: INFO:common: yaml file: /Users/kanayojustice/Documents/Data_scientist_projects/AutoPredict/schema.yaml loaded successfully]
+[2024-05-27 02:43:32,783: INFO:common: created directory at: artifacts]
+[2024-05-27 02:43:32,785: INFO:common: created directory at: artifacts/data_ingestion]
+[2024-05-27 02:43:34,531: INFO:1347631616: artifacts/data_ingestion/autopredict_cleaned_data.zip Download! with the following info: 
+Connection: close
+Content-Length: 1268268
+Cache-Control: max-age=300
+Content-Security-Policy: default-src 'none'; style-src 'unsafe-inline'; sandbox
+Content-Type: application/zip
+ETag: "5d493dbc444db2fa89e3a3d034d18ca7eb909fbdea2a0399f3081049b971949a"
+Strict-Transport-Security: max-age=31536000
+X-Content-Type-Options: nosniff
+X-Frame-Options: deny
+X-XSS-Protection: 1; mode=block
+X-GitHub-Request-Id: 80C5:226131:1D36A6:2536BD:6653E2CB
+Accept-Ranges: bytes
+Date: Mon, 27 May 2024 01:43:34 GMT
+Via: 1.1 varnish
+X-Served-By: cache-lhr7364-LHR
+X-Cache: HIT
+X-Cache-Hits: 0
+X-Timer: S1716774214.138279,VS0,VE141
+Vary: Authorization,Accept-Encoding,Origin
+Access-Control-Allow-Origin: *
+Cross-Origin-Resource-Policy: cross-origin
+X-Fastly-Request-ID: b6bda735cc833c9a17f9f979837779a1dff2fae2
+Expires: Mon, 27 May 2024 01:48:34 GMT
+Source-Age: 0
+
+]
+[2024-05-27 02:43:44,286: INFO:common: yaml file: /Users/kanayojustice/Documents/Data_scientist_projects/AutoPredict/config/config.yaml loaded successfully]
+[2024-05-27 02:43:44,297: INFO:common: yaml file: /Users/kanayojustice/Documents/Data_scientist_projects/AutoPredict/params.yaml loaded successfully]
+[2024-05-27 02:43:44,308: INFO:common: yaml file: /Users/kanayojustice/Documents/Data_scientist_projects/AutoPredict/schema.yaml loaded successfully]
+[2024-05-27 02:43:44,317: INFO:common: created directory at: artifacts]
+[2024-05-27 02:43:44,323: INFO:common: created directory at: artifacts/data_validation]
+[2024-05-27 02:44:19,846: INFO:common: yaml file: /Users/kanayojustice/Documents/Data_scientist_projects/AutoPredict/config/config.yaml loaded successfully]
+[2024-05-27 02:44:19,849: INFO:common: yaml file: /Users/kanayojustice/Documents/Data_scientist_projects/AutoPredict/params.yaml loaded successfully]
+[2024-05-27 02:44:19,853: INFO:common: yaml file: /Users/kanayojustice/Documents/Data_scientist_projects/AutoPredict/schema.yaml loaded successfully]
+[2024-05-27 02:44:19,855: INFO:common: created directory at: artifacts]
+[2024-05-27 02:44:19,857: INFO:common: created directory at: artifacts/data_transformation]
+[2024-05-27 02:44:31,036: INFO:common: yaml file: /Users/kanayojustice/Documents/Data_scientist_projects/AutoPredict/config/config.yaml loaded successfully]
+[2024-05-27 02:44:31,039: INFO:common: yaml file: /Users/kanayojustice/Documents/Data_scientist_projects/AutoPredict/params.yaml loaded successfully]
+[2024-05-27 02:44:31,044: INFO:common: yaml file: /Users/kanayojustice/Documents/Data_scientist_projects/AutoPredict/schema.yaml loaded successfully]
+[2024-05-27 02:44:31,134: INFO:common: created directory at: artifacts]
+[2024-05-27 02:44:31,138: INFO:common: created directory at: artifacts/data_transformation]
+[2024-05-27 02:48:34,657: INFO:common: yaml file: /Users/kanayojustice/Documents/Data_scientist_projects/AutoPredict/config/config.yaml loaded successfully]
+[2024-05-27 02:48:34,662: INFO:common: yaml file: /Users/kanayojustice/Documents/Data_scientist_projects/AutoPredict/params.yaml loaded successfully]
+[2024-05-27 02:48:34,666: INFO:common: yaml file: /Users/kanayojustice/Documents/Data_scientist_projects/AutoPredict/schema.yaml loaded successfully]
+[2024-05-27 02:48:34,667: INFO:common: created directory at: artifacts]
+[2024-05-27 02:48:34,669: INFO:common: created directory at: artifacts/data_transformation]
+[2024-05-27 02:51:08,695: INFO:common: yaml file: /Users/kanayojustice/Documents/Data_scientist_projects/AutoPredict/config/config.yaml loaded successfully]
+[2024-05-27 02:51:08,699: INFO:common: yaml file: /Users/kanayojustice/Documents/Data_scientist_projects/AutoPredict/params.yaml loaded successfully]
+[2024-05-27 02:51:08,706: INFO:common: yaml file: /Users/kanayojustice/Documents/Data_scientist_projects/AutoPredict/schema.yaml loaded successfully]
+[2024-05-27 02:51:08,707: INFO:common: created directory at: artifacts]
+[2024-05-27 02:51:08,709: INFO:common: created directory at: artifacts/data_transformation]
+[2024-05-27 02:52:39,995: INFO:common: yaml file: /Users/kanayojustice/Documents/Data_scientist_projects/AutoPredict/config/config.yaml loaded successfully]
+[2024-05-27 02:52:39,999: INFO:common: yaml file: /Users/kanayojustice/Documents/Data_scientist_projects/AutoPredict/params.yaml loaded successfully]
+[2024-05-27 02:52:40,003: INFO:common: yaml file: /Users/kanayojustice/Documents/Data_scientist_projects/AutoPredict/schema.yaml loaded successfully]
+[2024-05-27 02:52:40,005: INFO:common: created directory at: artifacts]
+[2024-05-27 02:52:40,007: INFO:common: created directory at: artifacts/data_transformation]
+[2024-05-27 02:52:40,932: INFO:3829771068: Splited data into training and test sets]
+[2024-05-27 02:52:40,934: INFO:3829771068: (73284, 11)]
+[2024-05-27 02:52:40,936: INFO:3829771068: (24428, 11)]
+[2024-05-27 02:53:23,910: INFO:common: yaml file: /Users/kanayojustice/Documents/Data_scientist_projects/AutoPredict/config/config.yaml loaded successfully]
+[2024-05-27 02:53:23,915: INFO:common: yaml file: /Users/kanayojustice/Documents/Data_scientist_projects/AutoPredict/params.yaml loaded successfully]
+[2024-05-27 02:53:23,920: INFO:common: yaml file: /Users/kanayojustice/Documents/Data_scientist_projects/AutoPredict/schema.yaml loaded successfully]
+[2024-05-27 02:53:23,921: INFO:common: created directory at: artifacts]
+[2024-05-27 02:53:23,923: INFO:common: created directory at: artifacts/model_trainer]
+[2024-05-27 02:53:24,143: ERROR:155387429: An error occurred: "['fail'] not found in axis"]
+[2024-05-27 02:57:34,823: INFO:common: yaml file: /Users/kanayojustice/Documents/Data_scientist_projects/AutoPredict/config/config.yaml loaded successfully]
+[2024-05-27 02:57:34,826: INFO:common: yaml file: /Users/kanayojustice/Documents/Data_scientist_projects/AutoPredict/params.yaml loaded successfully]
+[2024-05-27 02:57:34,831: INFO:common: yaml file: /Users/kanayojustice/Documents/Data_scientist_projects/AutoPredict/schema.yaml loaded successfully]
+[2024-05-27 02:57:34,833: INFO:common: created directory at: artifacts]
+[2024-05-27 02:57:34,834: INFO:common: created directory at: artifacts/data_ingestion]
+[2024-05-27 02:57:36,153: INFO:1347631616: artifacts/data_ingestion/autopredict_cleaned_data.zip Download! with the following info: 
+Connection: close
+Content-Length: 1268268
+Cache-Control: max-age=300
+Content-Security-Policy: default-src 'none'; style-src 'unsafe-inline'; sandbox
+Content-Type: application/zip
+ETag: "5d493dbc444db2fa89e3a3d034d18ca7eb909fbdea2a0399f3081049b971949a"
+Strict-Transport-Security: max-age=31536000
+X-Content-Type-Options: nosniff
+X-Frame-Options: deny
+X-XSS-Protection: 1; mode=block
+X-GitHub-Request-Id: 80C5:226131:1D36A6:2536BD:6653E2CB
+Accept-Ranges: bytes
+Date: Mon, 27 May 2024 01:57:35 GMT
+Via: 1.1 varnish
+X-Served-By: cache-lhr7326-LHR
+X-Cache: HIT
+X-Cache-Hits: 0
+X-Timer: S1716775056.585160,VS0,VE144
+Vary: Authorization,Accept-Encoding,Origin
+Access-Control-Allow-Origin: *
+Cross-Origin-Resource-Policy: cross-origin
+X-Fastly-Request-ID: 83f6eacca62b69f306fb40348dcb485e620f239e
+Expires: Mon, 27 May 2024 02:02:35 GMT
+Source-Age: 0
+
+]
+[2024-05-27 02:57:41,741: INFO:common: yaml file: /Users/kanayojustice/Documents/Data_scientist_projects/AutoPredict/config/config.yaml loaded successfully]
+[2024-05-27 02:57:41,744: INFO:common: yaml file: /Users/kanayojustice/Documents/Data_scientist_projects/AutoPredict/params.yaml loaded successfully]
+[2024-05-27 02:57:41,749: INFO:common: yaml file: /Users/kanayojustice/Documents/Data_scientist_projects/AutoPredict/schema.yaml loaded successfully]
+[2024-05-27 02:57:41,757: INFO:common: created directory at: artifacts]
+[2024-05-27 02:57:41,759: INFO:common: created directory at: artifacts/data_validation]
+[2024-05-27 02:58:21,759: INFO:common: yaml file: /Users/kanayojustice/Documents/Data_scientist_projects/AutoPredict/config/config.yaml loaded successfully]
+[2024-05-27 02:58:21,764: INFO:common: yaml file: /Users/kanayojustice/Documents/Data_scientist_projects/AutoPredict/params.yaml loaded successfully]
+[2024-05-27 02:58:21,769: INFO:common: yaml file: /Users/kanayojustice/Documents/Data_scientist_projects/AutoPredict/schema.yaml loaded successfully]
+[2024-05-27 02:58:21,896: INFO:common: created directory at: artifacts]
+[2024-05-27 02:58:21,902: INFO:common: created directory at: artifacts/data_transformation]
+[2024-05-27 02:58:22,675: INFO:516236958: Split data into training and test sets]
+[2024-05-27 02:58:22,677: INFO:516236958: (73284, 11)]
+[2024-05-27 02:58:22,678: INFO:516236958: (24428, 11)]
+[2024-05-27 03:01:31,144: INFO:common: yaml file: /Users/kanayojustice/Documents/Data_scientist_projects/AutoPredict/config/config.yaml loaded successfully]
+[2024-05-27 03:01:31,148: INFO:common: yaml file: /Users/kanayojustice/Documents/Data_scientist_projects/AutoPredict/params.yaml loaded successfully]
+[2024-05-27 03:01:31,153: INFO:common: yaml file: /Users/kanayojustice/Documents/Data_scientist_projects/AutoPredict/schema.yaml loaded successfully]
+[2024-05-27 03:01:31,155: INFO:common: created directory at: artifacts]
+[2024-05-27 03:01:31,157: INFO:common: created directory at: artifacts/data_transformation]
+[2024-05-27 03:01:32,139: INFO:1626044353: Split data into training and test sets]
+[2024-05-27 03:01:32,140: INFO:1626044353: (73284, 11)]
+[2024-05-27 03:01:32,140: INFO:1626044353: (24428, 11)]
+[2024-05-27 03:02:28,728: INFO:common: yaml file: /Users/kanayojustice/Documents/Data_scientist_projects/AutoPredict/config/config.yaml loaded successfully]
+[2024-05-27 03:02:28,732: INFO:common: yaml file: /Users/kanayojustice/Documents/Data_scientist_projects/AutoPredict/params.yaml loaded successfully]
+[2024-05-27 03:02:28,738: INFO:common: yaml file: /Users/kanayojustice/Documents/Data_scientist_projects/AutoPredict/schema.yaml loaded successfully]
+[2024-05-27 03:02:28,740: INFO:common: created directory at: artifacts]
+[2024-05-27 03:02:28,744: INFO:common: created directory at: artifacts/model_trainer]
+[2024-05-27 03:02:31,056: ERROR:155387429: An error occurred: A given column is not a column of the dataframe]
+[2024-05-30 01:32:36,353: INFO:common: yaml file: /Users/kanayojustice/Documents/Data_scientist_projects/AutoPredict/config/config.yaml loaded successfully]
+[2024-05-30 01:32:36,361: INFO:common: yaml file: /Users/kanayojustice/Documents/Data_scientist_projects/AutoPredict/params.yaml loaded successfully]
+[2024-05-30 01:32:36,366: INFO:common: yaml file: /Users/kanayojustice/Documents/Data_scientist_projects/AutoPredict/schema.yaml loaded successfully]
+[2024-05-30 01:32:36,368: INFO:common: created directory at: artifacts]
+[2024-05-30 01:32:36,371: INFO:common: created directory at: artifacts/data_ingestion]
+[2024-05-30 01:32:38,166: INFO:1347631616: artifacts/data_ingestion/autopredict_cleaned_data.zip Download! with the following info: 
+Connection: close
+Content-Length: 1268268
+Cache-Control: max-age=300
+Content-Security-Policy: default-src 'none'; style-src 'unsafe-inline'; sandbox
+Content-Type: application/zip
+ETag: "5d493dbc444db2fa89e3a3d034d18ca7eb909fbdea2a0399f3081049b971949a"
+Strict-Transport-Security: max-age=31536000
+X-Content-Type-Options: nosniff
+X-Frame-Options: deny
+X-XSS-Protection: 1; mode=block
+X-GitHub-Request-Id: 8F3F:212606:562F56:6B8A64:6657C924
+Accept-Ranges: bytes
+Date: Thu, 30 May 2024 00:32:37 GMT
+Via: 1.1 varnish
+X-Served-By: cache-lcy-eglc8600038-LCY
+X-Cache: MISS
+X-Cache-Hits: 0
+X-Timer: S1717029158.500070,VS0,VE201
+Vary: Authorization,Accept-Encoding,Origin
+Access-Control-Allow-Origin: *
+Cross-Origin-Resource-Policy: cross-origin
+X-Fastly-Request-ID: ebb18e9459c12a188a256ae197e54a9a3f1548a5
+Expires: Thu, 30 May 2024 00:37:37 GMT
+Source-Age: 0
+
+]
+[2024-05-30 01:32:46,910: INFO:common: yaml file: /Users/kanayojustice/Documents/Data_scientist_projects/AutoPredict/config/config.yaml loaded successfully]
+[2024-05-30 01:32:46,914: INFO:common: yaml file: /Users/kanayojustice/Documents/Data_scientist_projects/AutoPredict/params.yaml loaded successfully]
+[2024-05-30 01:32:46,919: INFO:common: yaml file: /Users/kanayojustice/Documents/Data_scientist_projects/AutoPredict/schema.yaml loaded successfully]
+[2024-05-30 01:32:46,920: INFO:common: created directory at: artifacts]
+[2024-05-30 01:32:46,922: INFO:common: created directory at: artifacts/data_validation]
+[2024-05-30 01:33:02,614: INFO:common: yaml file: /Users/kanayojustice/Documents/Data_scientist_projects/AutoPredict/config/config.yaml loaded successfully]
+[2024-05-30 01:33:02,617: INFO:common: yaml file: /Users/kanayojustice/Documents/Data_scientist_projects/AutoPredict/params.yaml loaded successfully]
+[2024-05-30 01:33:02,622: INFO:common: yaml file: /Users/kanayojustice/Documents/Data_scientist_projects/AutoPredict/schema.yaml loaded successfully]
+[2024-05-30 01:33:02,624: INFO:common: created directory at: artifacts]
+[2024-05-30 01:33:02,627: INFO:common: created directory at: artifacts/data_transformation]
+[2024-05-30 01:33:03,535: INFO:2538196378: Split data into training and test sets]
+[2024-05-30 01:33:03,535: INFO:2538196378: (73284, 11)]
+[2024-05-30 01:33:03,537: INFO:2538196378: (24428, 11)]
+[2024-05-30 01:37:30,287: INFO:common: yaml file: /Users/kanayojustice/Documents/Data_scientist_projects/AutoPredict/config/config.yaml loaded successfully]
+[2024-05-30 01:37:30,290: INFO:common: yaml file: /Users/kanayojustice/Documents/Data_scientist_projects/AutoPredict/params.yaml loaded successfully]
+[2024-05-30 01:37:30,296: INFO:common: yaml file: /Users/kanayojustice/Documents/Data_scientist_projects/AutoPredict/schema.yaml loaded successfully]
+[2024-05-30 01:37:30,298: INFO:common: created directory at: artifacts]
+[2024-05-30 01:37:30,300: INFO:common: created directory at: artifacts/model_trainer]
+[2024-05-30 01:37:32,303: ERROR:155387429: An error occurred: A given column is not a column of the dataframe]
+[2024-05-30 13:59:15,552: INFO:common: yaml file: /Users/kanayojustice/Documents/Data_scientist_projects/AutoPredict/config/config.yaml loaded successfully]
+[2024-05-30 13:59:15,558: INFO:common: yaml file: /Users/kanayojustice/Documents/Data_scientist_projects/AutoPredict/params.yaml loaded successfully]
+[2024-05-30 13:59:15,565: INFO:common: yaml file: /Users/kanayojustice/Documents/Data_scientist_projects/AutoPredict/schema.yaml loaded successfully]
+[2024-05-30 13:59:15,566: INFO:common: created directory at: artifacts]
+[2024-05-30 13:59:15,568: INFO:common: created directory at: artifacts/data_ingestion]
+[2024-05-30 13:59:17,094: INFO:1347631616: artifacts/data_ingestion/autopredict_cleaned_data.zip Download! with the following info: 
+Connection: close
+Content-Length: 1268268
+Cache-Control: max-age=300
+Content-Security-Policy: default-src 'none'; style-src 'unsafe-inline'; sandbox
+Content-Type: application/zip
+ETag: "5d493dbc444db2fa89e3a3d034d18ca7eb909fbdea2a0399f3081049b971949a"
+Strict-Transport-Security: max-age=31536000
+X-Content-Type-Options: nosniff
+X-Frame-Options: deny
+X-XSS-Protection: 1; mode=block
+X-GitHub-Request-Id: F16C:35B3ED:341B76:3FCA50:66587823
+Accept-Ranges: bytes
+Date: Thu, 30 May 2024 12:59:16 GMT
+Via: 1.1 varnish
+X-Served-By: cache-lhr-egll1980061-LHR
+X-Cache: MISS
+X-Cache-Hits: 0
+X-Timer: S1717073956.415071,VS0,VE203
+Vary: Authorization,Accept-Encoding,Origin
+Access-Control-Allow-Origin: *
+Cross-Origin-Resource-Policy: cross-origin
+X-Fastly-Request-ID: d12e1555e47f8062172697dfe5b4ce662d305dbd
+Expires: Thu, 30 May 2024 13:04:16 GMT
+Source-Age: 0
+
+]
+[2024-05-30 13:59:24,577: INFO:common: yaml file: /Users/kanayojustice/Documents/Data_scientist_projects/AutoPredict/config/config.yaml loaded successfully]
+[2024-05-30 13:59:24,580: INFO:common: yaml file: /Users/kanayojustice/Documents/Data_scientist_projects/AutoPredict/params.yaml loaded successfully]
+[2024-05-30 13:59:24,585: INFO:common: yaml file: /Users/kanayojustice/Documents/Data_scientist_projects/AutoPredict/schema.yaml loaded successfully]
+[2024-05-30 13:59:24,586: INFO:common: created directory at: artifacts]
+[2024-05-30 13:59:24,588: INFO:common: created directory at: artifacts/data_validation]
+[2024-05-30 13:59:34,240: INFO:common: yaml file: /Users/kanayojustice/Documents/Data_scientist_projects/AutoPredict/config/config.yaml loaded successfully]
+[2024-05-30 13:59:34,244: INFO:common: yaml file: /Users/kanayojustice/Documents/Data_scientist_projects/AutoPredict/params.yaml loaded successfully]
+[2024-05-30 13:59:34,250: INFO:common: yaml file: /Users/kanayojustice/Documents/Data_scientist_projects/AutoPredict/schema.yaml loaded successfully]
+[2024-05-30 13:59:34,252: INFO:common: created directory at: artifacts]
+[2024-05-30 13:59:34,255: INFO:common: created directory at: artifacts/data_transformation]
+[2024-05-30 13:59:35,181: INFO:716117572: Split data into training and test sets]
+[2024-05-30 13:59:35,182: INFO:716117572: (73284, 11)]
+[2024-05-30 13:59:35,183: INFO:716117572: (24428, 11)]
+[2024-05-30 14:42:02,377: INFO:common: yaml file: /Users/kanayojustice/Documents/Data_scientist_projects/AutoPredict/config/config.yaml loaded successfully]
+[2024-05-30 14:42:02,385: INFO:common: yaml file: /Users/kanayojustice/Documents/Data_scientist_projects/AutoPredict/params.yaml loaded successfully]
+[2024-05-30 14:42:02,390: INFO:common: yaml file: /Users/kanayojustice/Documents/Data_scientist_projects/AutoPredict/schema.yaml loaded successfully]
+[2024-05-30 14:42:02,392: INFO:common: created directory at: artifacts]
+[2024-05-30 14:42:02,394: INFO:common: created directory at: artifacts/model_trainer]
+[2024-05-30 14:47:18,924: INFO:common: yaml file: /Users/kanayojustice/Documents/Data_scientist_projects/AutoPredict/config/config.yaml loaded successfully]
+[2024-05-30 14:47:18,930: INFO:common: yaml file: /Users/kanayojustice/Documents/Data_scientist_projects/AutoPredict/params.yaml loaded successfully]
+[2024-05-30 14:47:18,934: INFO:common: yaml file: /Users/kanayojustice/Documents/Data_scientist_projects/AutoPredict/schema.yaml loaded successfully]
+[2024-05-30 14:47:18,937: INFO:common: created directory at: artifacts]
+[2024-05-30 14:47:18,941: INFO:common: created directory at: artifacts/model_trainer]
+[2024-05-30 14:49:32,375: INFO:common: yaml file: /Users/kanayojustice/Documents/Data_scientist_projects/AutoPredict/config/config.yaml loaded successfully]
+[2024-05-30 14:49:32,380: INFO:common: yaml file: /Users/kanayojustice/Documents/Data_scientist_projects/AutoPredict/params.yaml loaded successfully]
+[2024-05-30 14:49:32,384: INFO:common: yaml file: /Users/kanayojustice/Documents/Data_scientist_projects/AutoPredict/schema.yaml loaded successfully]
+[2024-05-30 14:49:32,385: INFO:common: created directory at: artifacts]
+[2024-05-30 14:49:32,387: INFO:common: created directory at: artifacts/model_trainer]
+[2024-05-30 14:52:35,641: INFO:common: yaml file: /Users/kanayojustice/Documents/Data_scientist_projects/AutoPredict/config/config.yaml loaded successfully]
+[2024-05-30 14:52:35,646: INFO:common: yaml file: /Users/kanayojustice/Documents/Data_scientist_projects/AutoPredict/params.yaml loaded successfully]
+[2024-05-30 14:52:35,650: INFO:common: yaml file: /Users/kanayojustice/Documents/Data_scientist_projects/AutoPredict/schema.yaml loaded successfully]
+[2024-05-30 14:52:35,652: INFO:common: created directory at: artifacts]
+[2024-05-30 14:52:35,654: INFO:common: created directory at: artifacts/model_trainer]
+[2024-05-30 15:00:17,101: INFO:common: yaml file: /Users/kanayojustice/Documents/Data_scientist_projects/AutoPredict/config/config.yaml loaded successfully]
+[2024-05-30 15:00:17,105: INFO:common: yaml file: /Users/kanayojustice/Documents/Data_scientist_projects/AutoPredict/params.yaml loaded successfully]
+[2024-05-30 15:00:17,110: INFO:common: yaml file: /Users/kanayojustice/Documents/Data_scientist_projects/AutoPredict/schema.yaml loaded successfully]
+[2024-05-30 15:00:17,118: INFO:common: created directory at: artifacts]
+[2024-05-30 15:00:17,207: INFO:common: created directory at: artifacts/model_trainer]
+[2024-05-30 15:01:55,271: INFO:common: yaml file: /Users/kanayojustice/Documents/Data_scientist_projects/AutoPredict/config/config.yaml loaded successfully]
+[2024-05-30 15:01:55,275: INFO:common: yaml file: /Users/kanayojustice/Documents/Data_scientist_projects/AutoPredict/params.yaml loaded successfully]
+[2024-05-30 15:01:55,282: INFO:common: yaml file: /Users/kanayojustice/Documents/Data_scientist_projects/AutoPredict/schema.yaml loaded successfully]
+[2024-05-30 15:01:55,285: INFO:common: created directory at: artifacts]
+[2024-05-30 15:01:55,287: INFO:common: created directory at: artifacts/model_trainer]
+[2024-05-30 15:04:12,611: INFO:common: yaml file: /Users/kanayojustice/Documents/Data_scientist_projects/AutoPredict/config/config.yaml loaded successfully]
+[2024-05-30 15:04:12,615: INFO:common: yaml file: /Users/kanayojustice/Documents/Data_scientist_projects/AutoPredict/params.yaml loaded successfully]
+[2024-05-30 15:04:12,621: INFO:common: yaml file: /Users/kanayojustice/Documents/Data_scientist_projects/AutoPredict/schema.yaml loaded successfully]
+[2024-05-30 15:04:12,624: INFO:common: created directory at: artifacts]
+[2024-05-30 15:04:12,627: INFO:common: created directory at: artifacts/model_evaluation]
+[2024-05-30 15:04:13,420: ERROR:3756246525: pos_label=1 is not a valid label. It should be one of ['no', 'yes']]
+Traceback (most recent call last):
+  File "/var/folders/d3/98d2b4cx25d5djc40sr477nm0000gn/T/ipykernel_6891/3756246525.py", line 7, in <module>
+    model_evaluation.save_results()
+  File "/var/folders/d3/98d2b4cx25d5djc40sr477nm0000gn/T/ipykernel_6891/1247889310.py", line 24, in save_results
+    (conf_matrix, accuracy, precision, recall, f1, roc_auc) = self.eval_metrics(test_y, predicted_labels, predicted_probabilities)
+  File "/var/folders/d3/98d2b4cx25d5djc40sr477nm0000gn/T/ipykernel_6891/1247889310.py", line 8, in eval_metrics
+    precision = precision_score(actual, pred)
+  File "/Users/kanayojustice/Documents/Data_scientist_projects/AutoPredict/venv/lib/python3.8/site-packages/sklearn/utils/_param_validation.py", line 214, in wrapper
+    return func(*args, **kwargs)
+  File "/Users/kanayojustice/Documents/Data_scientist_projects/AutoPredict/venv/lib/python3.8/site-packages/sklearn/metrics/_classification.py", line 2131, in precision_score
+    p, _, _, _ = precision_recall_fscore_support(
+  File "/Users/kanayojustice/Documents/Data_scientist_projects/AutoPredict/venv/lib/python3.8/site-packages/sklearn/utils/_param_validation.py", line 187, in wrapper
+    return func(*args, **kwargs)
+  File "/Users/kanayojustice/Documents/Data_scientist_projects/AutoPredict/venv/lib/python3.8/site-packages/sklearn/metrics/_classification.py", line 1724, in precision_recall_fscore_support
+    labels = _check_set_wise_labels(y_true, y_pred, average, labels, pos_label)
+  File "/Users/kanayojustice/Documents/Data_scientist_projects/AutoPredict/venv/lib/python3.8/site-packages/sklearn/metrics/_classification.py", line 1509, in _check_set_wise_labels
+    raise ValueError(
+ValueError: pos_label=1 is not a valid label. It should be one of ['no', 'yes']
+[2024-05-30 15:06:59,504: INFO:common: yaml file: /Users/kanayojustice/Documents/Data_scientist_projects/AutoPredict/config/config.yaml loaded successfully]
+[2024-05-30 15:06:59,510: INFO:common: yaml file: /Users/kanayojustice/Documents/Data_scientist_projects/AutoPredict/params.yaml loaded successfully]
+[2024-05-30 15:06:59,517: INFO:common: yaml file: /Users/kanayojustice/Documents/Data_scientist_projects/AutoPredict/schema.yaml loaded successfully]
+[2024-05-30 15:06:59,519: INFO:common: created directory at: artifacts]
+[2024-05-30 15:06:59,521: INFO:common: created directory at: artifacts/model_evaluation]
+[2024-05-30 15:07:01,030: INFO:common: json file saved at: artifacts/model_evaluation/metrics.json]
+[2024-05-30 15:07:06,335: INFO:common: yaml file: /Users/kanayojustice/Documents/Data_scientist_projects/AutoPredict/config/config.yaml loaded successfully]
+[2024-05-30 15:07:06,339: INFO:common: yaml file: /Users/kanayojustice/Documents/Data_scientist_projects/AutoPredict/params.yaml loaded successfully]
+[2024-05-30 15:07:06,343: INFO:common: yaml file: /Users/kanayojustice/Documents/Data_scientist_projects/AutoPredict/schema.yaml loaded successfully]
+[2024-05-30 15:07:06,345: INFO:common: created directory at: artifacts]
+[2024-05-30 15:07:06,348: INFO:common: created directory at: artifacts/model_evaluation]
+[2024-05-30 15:07:06,349: ERROR:104034282: [Errno 2] No such file or directory: 'artifacts/data_transformation/test.csv']
+Traceback (most recent call last):
+  File "/var/folders/d3/98d2b4cx25d5djc40sr477nm0000gn/T/ipykernel_6943/104034282.py", line 6, in <module>
+    model_evaluation.save_results()
+  File "/var/folders/d3/98d2b4cx25d5djc40sr477nm0000gn/T/ipykernel_6943/664716473.py", line 15, in save_results
+    test_data = pd.read_csv(self.config.test_data_path)
+  File "/Users/kanayojustice/Documents/Data_scientist_projects/AutoPredict/venv/lib/python3.8/site-packages/pandas/io/parsers/readers.py", line 912, in read_csv
+    return _read(filepath_or_buffer, kwds)
+  File "/Users/kanayojustice/Documents/Data_scientist_projects/AutoPredict/venv/lib/python3.8/site-packages/pandas/io/parsers/readers.py", line 577, in _read
+    parser = TextFileReader(filepath_or_buffer, **kwds)
+  File "/Users/kanayojustice/Documents/Data_scientist_projects/AutoPredict/venv/lib/python3.8/site-packages/pandas/io/parsers/readers.py", line 1407, in __init__
+    self._engine = self._make_engine(f, self.engine)
+  File "/Users/kanayojustice/Documents/Data_scientist_projects/AutoPredict/venv/lib/python3.8/site-packages/pandas/io/parsers/readers.py", line 1661, in _make_engine
+    self.handles = get_handle(
+  File "/Users/kanayojustice/Documents/Data_scientist_projects/AutoPredict/venv/lib/python3.8/site-packages/pandas/io/common.py", line 859, in get_handle
+    handle = open(
+FileNotFoundError: [Errno 2] No such file or directory: 'artifacts/data_transformation/test.csv'
+[2024-05-30 15:08:01,433: INFO:common: yaml file: /Users/kanayojustice/Documents/Data_scientist_projects/AutoPredict/config/config.yaml loaded successfully]
+[2024-05-30 15:08:01,438: INFO:common: yaml file: /Users/kanayojustice/Documents/Data_scientist_projects/AutoPredict/params.yaml loaded successfully]
+[2024-05-30 15:08:01,442: INFO:common: yaml file: /Users/kanayojustice/Documents/Data_scientist_projects/AutoPredict/schema.yaml loaded successfully]
+[2024-05-30 15:08:01,444: INFO:common: created directory at: artifacts]
+[2024-05-30 15:08:01,446: INFO:common: created directory at: artifacts/model_evaluation]
+[2024-05-30 15:08:02,947: INFO:common: json file saved at: artifacts/model_evaluation/metrics.json]
+[2024-05-30 15:10:49,100: INFO:main: >>>> stage Data ingestion stage started <<<<<]
+[2024-05-30 15:10:49,106: INFO:common: yaml file: /Users/kanayojustice/Documents/Data_scientist_projects/AutoPredict/config/config.yaml loaded successfully]
+[2024-05-30 15:10:49,107: INFO:common: yaml file: /Users/kanayojustice/Documents/Data_scientist_projects/AutoPredict/params.yaml loaded successfully]
+[2024-05-30 15:10:49,110: INFO:common: yaml file: /Users/kanayojustice/Documents/Data_scientist_projects/AutoPredict/schema.yaml loaded successfully]
+[2024-05-30 15:10:49,110: INFO:common: created directory at: artifacts]
+[2024-05-30 15:10:49,111: INFO:common: created directory at: artifacts/data_ingestion]
+[2024-05-30 15:10:49,111: INFO:data_ingestion: file already exists of size: ~ 1239 KB]
+[2024-05-30 15:10:49,158: INFO:main: >>>> stage Data ingestion stage completed <<<<<]
+[2024-05-30 15:10:49,158: INFO:main: >>>>>> stage Data validation stage started <<<<<<]
+[2024-05-30 15:10:49,165: INFO:common: yaml file: /Users/kanayojustice/Documents/Data_scientist_projects/AutoPredict/config/config.yaml loaded successfully]
+[2024-05-30 15:10:49,168: INFO:common: yaml file: /Users/kanayojustice/Documents/Data_scientist_projects/AutoPredict/params.yaml loaded successfully]
+[2024-05-30 15:10:49,174: INFO:common: yaml file: /Users/kanayojustice/Documents/Data_scientist_projects/AutoPredict/schema.yaml loaded successfully]
+[2024-05-30 15:10:49,175: INFO:common: created directory at: artifacts]
+[2024-05-30 15:10:49,176: INFO:common: created directory at: artifacts/data_validation]
+[2024-05-30 15:10:49,372: INFO:main: >>>>>> stage Data validation stage completed <<<<<<
+
+x==========x]
+[2024-05-30 15:10:49,373: INFO:main: >>>>>> stage Data transformation stage started <<<<<<]
+[2024-05-30 15:10:49,378: INFO:common: yaml file: /Users/kanayojustice/Documents/Data_scientist_projects/AutoPredict/config/config.yaml loaded successfully]
+[2024-05-30 15:10:49,380: INFO:common: yaml file: /Users/kanayojustice/Documents/Data_scientist_projects/AutoPredict/params.yaml loaded successfully]
+[2024-05-30 15:10:49,383: INFO:common: yaml file: /Users/kanayojustice/Documents/Data_scientist_projects/AutoPredict/schema.yaml loaded successfully]
+[2024-05-30 15:10:49,384: INFO:common: created directory at: artifacts]
+[2024-05-30 15:10:49,384: INFO:common: created directory at: artifacts/data_transformation]
+[2024-05-30 15:10:49,385: ERROR:main: "'ConfigBox' object has no attribute 'transformed_train_path'"]
+Traceback (most recent call last):
+  File "box/box.py", line 503, in box.box.Box.__getitem__
+KeyError: 'transformed_train_path'
+
+The above exception was the direct cause of the following exception:
+
+Traceback (most recent call last):
+  File "box/box.py", line 536, in box.box.Box.__getattr__
+  File "box/box.py", line 524, in box.box.Box.__getitem__
+box.exceptions.BoxKeyError: "'transformed_train_path'"
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "box/box.py", line 538, in box.box.Box.__getattr__
+AttributeError: 'ConfigBox' object has no attribute 'transformed_train_path'
+
+The above exception was the direct cause of the following exception:
+
+Traceback (most recent call last):
+  File "box/config_box.py", line 28, in box.config_box.ConfigBox.__getattr__
+  File "box/box.py", line 552, in box.box.Box.__getattr__
+box.exceptions.BoxKeyError: "'ConfigBox' object has no attribute 'transformed_train_path'"
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "box/box.py", line 503, in box.box.Box.__getitem__
+KeyError: 'transformed_train_path'
+
+The above exception was the direct cause of the following exception:
+
+Traceback (most recent call last):
+  File "box/box.py", line 536, in box.box.Box.__getattr__
+  File "box/box.py", line 524, in box.box.Box.__getitem__
+box.exceptions.BoxKeyError: "'transformed_train_path'"
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "box/box.py", line 538, in box.box.Box.__getattr__
+AttributeError: 'ConfigBox' object has no attribute 'transformed_train_path'
+
+The above exception was the direct cause of the following exception:
+
+Traceback (most recent call last):
+  File "/Users/kanayojustice/Documents/Data_scientist_projects/AutoPredict/main.py", line 37, in <module>
+    obj.main()
+  File "/Users/kanayojustice/Documents/Data_scientist_projects/AutoPredict/Autopredictor/src/pipeline/stage_03_data_transformation.py", line 17, in main
+    data_transformation_config = config.get_data_transformation_config()
+  File "/Users/kanayojustice/Documents/Data_scientist_projects/AutoPredict/Autopredictor/src/config/configuration.py", line 64, in get_data_transformation_config
+    transformed_train_path=config.transformed_train_path,
+  File "box/config_box.py", line 30, in box.config_box.ConfigBox.__getattr__
+  File "box/box.py", line 552, in box.box.Box.__getattr__
+box.exceptions.BoxKeyError: "'ConfigBox' object has no attribute 'transformed_train_path'"
+[2024-05-30 15:17:35,084: INFO:common: yaml file: /Users/kanayojustice/Documents/Data_scientist_projects/AutoPredict/config/config.yaml loaded successfully]
+[2024-05-30 15:17:35,088: INFO:common: yaml file: /Users/kanayojustice/Documents/Data_scientist_projects/AutoPredict/params.yaml loaded successfully]
+[2024-05-30 15:17:35,092: INFO:common: yaml file: /Users/kanayojustice/Documents/Data_scientist_projects/AutoPredict/schema.yaml loaded successfully]
+[2024-05-30 15:17:35,093: INFO:common: created directory at: artifacts]
+[2024-05-30 15:17:35,095: INFO:common: created directory at: artifacts/data_transformation]
+[2024-05-30 15:17:35,858: INFO:716117572: Split data into training and test sets]
+[2024-05-30 15:17:35,859: INFO:716117572: (73284, 11)]
+[2024-05-30 15:17:35,860: INFO:716117572: (24428, 11)]
+[2024-05-30 15:31:19,757: INFO:main: >>>> stage Data ingestion stage started <<<<<]
+[2024-05-30 15:31:19,764: INFO:common: yaml file: /Users/kanayojustice/Documents/Data_scientist_projects/AutoPredict/config/config.yaml loaded successfully]
+[2024-05-30 15:31:19,766: INFO:common: yaml file: /Users/kanayojustice/Documents/Data_scientist_projects/AutoPredict/params.yaml loaded successfully]
+[2024-05-30 15:31:19,769: INFO:common: yaml file: /Users/kanayojustice/Documents/Data_scientist_projects/AutoPredict/schema.yaml loaded successfully]
+[2024-05-30 15:31:19,769: INFO:common: created directory at: artifacts]
+[2024-05-30 15:31:19,769: INFO:common: created directory at: artifacts/data_ingestion]
+[2024-05-30 15:31:19,770: INFO:data_ingestion: file already exists of size: ~ 1239 KB]
+[2024-05-30 15:31:19,815: INFO:main: >>>> stage Data ingestion stage completed <<<<<]
+[2024-05-30 15:31:19,815: INFO:main: >>>>>> stage Data validation stage started <<<<<<]
+[2024-05-30 15:31:19,821: INFO:common: yaml file: /Users/kanayojustice/Documents/Data_scientist_projects/AutoPredict/config/config.yaml loaded successfully]
+[2024-05-30 15:31:19,824: INFO:common: yaml file: /Users/kanayojustice/Documents/Data_scientist_projects/AutoPredict/params.yaml loaded successfully]
+[2024-05-30 15:31:19,826: INFO:common: yaml file: /Users/kanayojustice/Documents/Data_scientist_projects/AutoPredict/schema.yaml loaded successfully]
+[2024-05-30 15:31:19,827: INFO:common: created directory at: artifacts]
+[2024-05-30 15:31:19,827: INFO:common: created directory at: artifacts/data_validation]
+[2024-05-30 15:31:20,002: INFO:main: >>>>>> stage Data validation stage completed <<<<<<
+
+x==========x]
+[2024-05-30 15:31:20,002: INFO:main: >>>>>> stage Data transformation stage started <<<<<<]
+[2024-05-30 15:31:20,007: INFO:common: yaml file: /Users/kanayojustice/Documents/Data_scientist_projects/AutoPredict/config/config.yaml loaded successfully]
+[2024-05-30 15:31:20,009: INFO:common: yaml file: /Users/kanayojustice/Documents/Data_scientist_projects/AutoPredict/params.yaml loaded successfully]
+[2024-05-30 15:31:20,012: INFO:common: yaml file: /Users/kanayojustice/Documents/Data_scientist_projects/AutoPredict/schema.yaml loaded successfully]
+[2024-05-30 15:31:20,012: INFO:common: created directory at: artifacts]
+[2024-05-30 15:31:20,012: INFO:common: created directory at: artifacts/data_transformation]
+[2024-05-30 15:31:20,692: INFO:data_transformation: Split data into training and test sets]
+[2024-05-30 15:31:20,692: INFO:data_transformation: (73284, 11)]
+[2024-05-30 15:31:20,692: INFO:data_transformation: (24428, 11)]
+[2024-05-30 15:31:42,026: INFO:main: >>>>>> stage Data transformation stage completed <<<<<<
+
+x==========x]
+[2024-05-30 15:31:42,027: INFO:main: >>>>>> stage model trainer stage started <<<<<<]
+[2024-05-30 15:31:42,032: INFO:common: yaml file: /Users/kanayojustice/Documents/Data_scientist_projects/AutoPredict/config/config.yaml loaded successfully]
+[2024-05-30 15:31:42,034: INFO:common: yaml file: /Users/kanayojustice/Documents/Data_scientist_projects/AutoPredict/params.yaml loaded successfully]
+[2024-05-30 15:31:42,037: INFO:common: yaml file: /Users/kanayojustice/Documents/Data_scientist_projects/AutoPredict/schema.yaml loaded successfully]
+[2024-05-30 15:31:42,037: INFO:common: created directory at: artifacts]
+[2024-05-30 15:31:42,037: INFO:common: created directory at: artifacts/model_trainer]
+[2024-05-30 15:31:42,038: ERROR:main: "'ConfigBox' object has no attribute 'transformer_path'"]
+Traceback (most recent call last):
+  File "box/box.py", line 503, in box.box.Box.__getitem__
+KeyError: 'transformer_path'
+
+The above exception was the direct cause of the following exception:
+
+Traceback (most recent call last):
+  File "box/box.py", line 536, in box.box.Box.__getattr__
+  File "box/box.py", line 524, in box.box.Box.__getitem__
+box.exceptions.BoxKeyError: "'transformer_path'"
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "box/box.py", line 538, in box.box.Box.__getattr__
+AttributeError: 'ConfigBox' object has no attribute 'transformer_path'
+
+The above exception was the direct cause of the following exception:
+
+Traceback (most recent call last):
+  File "box/config_box.py", line 28, in box.config_box.ConfigBox.__getattr__
+  File "box/box.py", line 552, in box.box.Box.__getattr__
+box.exceptions.BoxKeyError: "'ConfigBox' object has no attribute 'transformer_path'"
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "box/box.py", line 503, in box.box.Box.__getitem__
+KeyError: 'transformer_path'
+
+The above exception was the direct cause of the following exception:
+
+Traceback (most recent call last):
+  File "box/box.py", line 536, in box.box.Box.__getattr__
+  File "box/box.py", line 524, in box.box.Box.__getitem__
+box.exceptions.BoxKeyError: "'transformer_path'"
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "box/box.py", line 538, in box.box.Box.__getattr__
+AttributeError: 'ConfigBox' object has no attribute 'transformer_path'
+
+The above exception was the direct cause of the following exception:
+
+Traceback (most recent call last):
+  File "main.py", line 50, in <module>
+    obj.main()
+  File "/Users/kanayojustice/Documents/Data_scientist_projects/AutoPredict/Autopredictor/src/pipeline/stage_04_model_trainer.py", line 16, in main
+    model_trainer_config = config_manager.get_model_trainer_config()
+  File "/Users/kanayojustice/Documents/Data_scientist_projects/AutoPredict/Autopredictor/src/config/configuration.py", line 76, in get_model_trainer_config
+    transformer_path=config.transformer_path,
+  File "box/config_box.py", line 30, in box.config_box.ConfigBox.__getattr__
+  File "box/box.py", line 552, in box.box.Box.__getattr__
+box.exceptions.BoxKeyError: "'ConfigBox' object has no attribute 'transformer_path'"
+[2024-05-30 15:39:34,852: INFO:main: >>>> stage Data ingestion stage started <<<<<]
+[2024-05-30 15:39:34,858: INFO:common: yaml file: /Users/kanayojustice/Documents/Data_scientist_projects/AutoPredict/config/config.yaml loaded successfully]
+[2024-05-30 15:39:34,860: INFO:common: yaml file: /Users/kanayojustice/Documents/Data_scientist_projects/AutoPredict/params.yaml loaded successfully]
+[2024-05-30 15:39:34,863: INFO:common: yaml file: /Users/kanayojustice/Documents/Data_scientist_projects/AutoPredict/schema.yaml loaded successfully]
+[2024-05-30 15:39:34,864: INFO:common: created directory at: artifacts]
+[2024-05-30 15:39:34,864: INFO:common: created directory at: artifacts/data_ingestion]
+[2024-05-30 15:39:37,205: INFO:data_ingestion: artifacts/data_ingestion/autopredict_cleaned_data.zip Download! with the following info: 
+Connection: close
+Content-Length: 1268268
+Cache-Control: max-age=300
+Content-Security-Policy: default-src 'none'; style-src 'unsafe-inline'; sandbox
+Content-Type: application/zip
+ETag: "5d493dbc444db2fa89e3a3d034d18ca7eb909fbdea2a0399f3081049b971949a"
+Strict-Transport-Security: max-age=31536000
+X-Content-Type-Options: nosniff
+X-Frame-Options: deny
+X-XSS-Protection: 1; mode=block
+X-GitHub-Request-Id: 55A8:381497:3121F5:3B4FAA:66588FA8
+Accept-Ranges: bytes
+Date: Thu, 30 May 2024 14:39:36 GMT
+Via: 1.1 varnish
+X-Served-By: cache-lhr-egll1980072-LHR
+X-Cache: MISS
+X-Cache-Hits: 0
+X-Timer: S1717079977.519392,VS0,VE242
+Vary: Authorization,Accept-Encoding,Origin
+Access-Control-Allow-Origin: *
+Cross-Origin-Resource-Policy: cross-origin
+X-Fastly-Request-ID: 41e97fd8540de82462848eb5e740d3360a437141
+Expires: Thu, 30 May 2024 14:44:36 GMT
+Source-Age: 0
+
+]
+[2024-05-30 15:39:37,247: INFO:main: >>>> stage Data ingestion stage completed <<<<<]
+[2024-05-30 15:39:37,247: INFO:main: >>>>>> stage Data validation stage started <<<<<<]
+[2024-05-30 15:39:37,253: INFO:common: yaml file: /Users/kanayojustice/Documents/Data_scientist_projects/AutoPredict/config/config.yaml loaded successfully]
+[2024-05-30 15:39:37,256: INFO:common: yaml file: /Users/kanayojustice/Documents/Data_scientist_projects/AutoPredict/params.yaml loaded successfully]
+[2024-05-30 15:39:37,259: INFO:common: yaml file: /Users/kanayojustice/Documents/Data_scientist_projects/AutoPredict/schema.yaml loaded successfully]
+[2024-05-30 15:39:37,260: INFO:common: created directory at: artifacts]
+[2024-05-30 15:39:37,260: INFO:common: created directory at: artifacts/data_validation]
+[2024-05-30 15:39:37,437: INFO:main: >>>>>> stage Data validation stage completed <<<<<<
+
+x==========x]
+[2024-05-30 15:39:37,437: INFO:main: >>>>>> stage Data transformation stage started <<<<<<]
+[2024-05-30 15:39:37,442: INFO:common: yaml file: /Users/kanayojustice/Documents/Data_scientist_projects/AutoPredict/config/config.yaml loaded successfully]
+[2024-05-30 15:39:37,444: INFO:common: yaml file: /Users/kanayojustice/Documents/Data_scientist_projects/AutoPredict/params.yaml loaded successfully]
+[2024-05-30 15:39:37,446: INFO:common: yaml file: /Users/kanayojustice/Documents/Data_scientist_projects/AutoPredict/schema.yaml loaded successfully]
+[2024-05-30 15:39:37,446: INFO:common: created directory at: artifacts]
+[2024-05-30 15:39:37,447: INFO:common: created directory at: artifacts/data_transformation]
+[2024-05-30 15:39:38,141: INFO:data_transformation: Split data into training and test sets]
+[2024-05-30 15:39:38,142: INFO:data_transformation: (73284, 11)]
+[2024-05-30 15:39:38,142: INFO:data_transformation: (24428, 11)]
+[2024-05-30 15:39:58,286: INFO:main: >>>>>> stage Data transformation stage completed <<<<<<
+
+x==========x]
+[2024-05-30 15:39:58,287: INFO:main: >>>>>> stage model trainer stage started <<<<<<]
+[2024-05-30 15:39:58,292: INFO:common: yaml file: /Users/kanayojustice/Documents/Data_scientist_projects/AutoPredict/config/config.yaml loaded successfully]
+[2024-05-30 15:39:58,294: INFO:common: yaml file: /Users/kanayojustice/Documents/Data_scientist_projects/AutoPredict/params.yaml loaded successfully]
+[2024-05-30 15:39:58,297: INFO:common: yaml file: /Users/kanayojustice/Documents/Data_scientist_projects/AutoPredict/schema.yaml loaded successfully]
+[2024-05-30 15:39:58,297: INFO:common: created directory at: artifacts]
+[2024-05-30 15:39:58,297: INFO:common: created directory at: artifacts/model_trainer]
+[2024-05-30 15:40:24,754: ERROR:main: 'ModelTrainer' object has no attribute 'evaluate']
+Traceback (most recent call last):
+  File "main.py", line 50, in <module>
+    obj.main()
+  File "/Users/kanayojustice/Documents/Data_scientist_projects/AutoPredict/Autopredictor/src/pipeline/stage_04_model_trainer.py", line 20, in main
+    model_trainer.evaluate()
+AttributeError: 'ModelTrainer' object has no attribute 'evaluate'
+[2024-05-30 15:47:21,619: INFO:common: yaml file: /Users/kanayojustice/Documents/Data_scientist_projects/AutoPredict/config/config.yaml loaded successfully]
+[2024-05-30 15:47:21,626: INFO:common: yaml file: /Users/kanayojustice/Documents/Data_scientist_projects/AutoPredict/params.yaml loaded successfully]
+[2024-05-30 15:47:21,635: INFO:common: yaml file: /Users/kanayojustice/Documents/Data_scientist_projects/AutoPredict/schema.yaml loaded successfully]
+[2024-05-30 15:47:21,639: INFO:common: created directory at: artifacts]
+[2024-05-30 15:47:21,640: INFO:common: created directory at: artifacts/model_trainer]
+[2024-05-30 15:49:23,219: INFO:main: >>>> stage Data ingestion stage started <<<<<]
+[2024-05-30 15:49:23,225: INFO:common: yaml file: /Users/kanayojustice/Documents/Data_scientist_projects/AutoPredict/config/config.yaml loaded successfully]
+[2024-05-30 15:49:23,226: INFO:common: yaml file: /Users/kanayojustice/Documents/Data_scientist_projects/AutoPredict/params.yaml loaded successfully]
+[2024-05-30 15:49:23,228: INFO:common: yaml file: /Users/kanayojustice/Documents/Data_scientist_projects/AutoPredict/schema.yaml loaded successfully]
+[2024-05-30 15:49:23,229: INFO:common: created directory at: artifacts]
+[2024-05-30 15:49:23,229: INFO:common: created directory at: artifacts/data_ingestion]
+[2024-05-30 15:49:23,229: INFO:data_ingestion: file already exists of size: ~ 1239 KB]
+[2024-05-30 15:49:23,269: INFO:main: >>>> stage Data ingestion stage completed <<<<<]
+[2024-05-30 15:49:23,270: INFO:main: >>>>>> stage Data validation stage started <<<<<<]
+[2024-05-30 15:49:23,274: INFO:common: yaml file: /Users/kanayojustice/Documents/Data_scientist_projects/AutoPredict/config/config.yaml loaded successfully]
+[2024-05-30 15:49:23,276: INFO:common: yaml file: /Users/kanayojustice/Documents/Data_scientist_projects/AutoPredict/params.yaml loaded successfully]
+[2024-05-30 15:49:23,279: INFO:common: yaml file: /Users/kanayojustice/Documents/Data_scientist_projects/AutoPredict/schema.yaml loaded successfully]
+[2024-05-30 15:49:23,279: INFO:common: created directory at: artifacts]
+[2024-05-30 15:49:23,279: INFO:common: created directory at: artifacts/data_validation]
+[2024-05-30 15:49:23,451: INFO:main: >>>>>> stage Data validation stage completed <<<<<<
+
+x==========x]
+[2024-05-30 15:49:23,451: INFO:main: >>>>>> stage Data transformation stage started <<<<<<]
+[2024-05-30 15:49:23,456: INFO:common: yaml file: /Users/kanayojustice/Documents/Data_scientist_projects/AutoPredict/config/config.yaml loaded successfully]
+[2024-05-30 15:49:23,457: INFO:common: yaml file: /Users/kanayojustice/Documents/Data_scientist_projects/AutoPredict/params.yaml loaded successfully]
+[2024-05-30 15:49:23,460: INFO:common: yaml file: /Users/kanayojustice/Documents/Data_scientist_projects/AutoPredict/schema.yaml loaded successfully]
+[2024-05-30 15:49:23,460: INFO:common: created directory at: artifacts]
+[2024-05-30 15:49:23,460: INFO:common: created directory at: artifacts/data_transformation]
+[2024-05-30 15:49:24,180: INFO:data_transformation: Split data into training and test sets]
+[2024-05-30 15:49:24,180: INFO:data_transformation: (73284, 11)]
+[2024-05-30 15:49:24,180: INFO:data_transformation: (24428, 11)]
+[2024-05-30 15:49:42,280: INFO:main: >>>> stage Data ingestion stage started <<<<<]
+[2024-05-30 15:49:42,285: INFO:common: yaml file: /Users/kanayojustice/Documents/Data_scientist_projects/AutoPredict/config/config.yaml loaded successfully]
+[2024-05-30 15:49:42,287: INFO:common: yaml file: /Users/kanayojustice/Documents/Data_scientist_projects/AutoPredict/params.yaml loaded successfully]
+[2024-05-30 15:49:42,290: INFO:common: yaml file: /Users/kanayojustice/Documents/Data_scientist_projects/AutoPredict/schema.yaml loaded successfully]
+[2024-05-30 15:49:42,290: INFO:common: created directory at: artifacts]
+[2024-05-30 15:49:42,290: INFO:common: created directory at: artifacts/data_ingestion]
+[2024-05-30 15:49:44,533: INFO:data_ingestion: artifacts/data_ingestion/autopredict_cleaned_data.zip Download! with the following info: 
+Connection: close
+Content-Length: 1268268
+Cache-Control: max-age=300
+Content-Security-Policy: default-src 'none'; style-src 'unsafe-inline'; sandbox
+Content-Type: application/zip
+ETag: "5d493dbc444db2fa89e3a3d034d18ca7eb909fbdea2a0399f3081049b971949a"
+Strict-Transport-Security: max-age=31536000
+X-Content-Type-Options: nosniff
+X-Frame-Options: deny
+X-XSS-Protection: 1; mode=block
+X-GitHub-Request-Id: 55A8:381497:3121F5:3B4FAA:66588FA8
+Accept-Ranges: bytes
+Date: Thu, 30 May 2024 14:49:43 GMT
+Via: 1.1 varnish
+X-Served-By: cache-lhr-egll1980074-LHR
+X-Cache: HIT
+X-Cache-Hits: 0
+X-Timer: S1717080584.510553,VS0,VE160
+Vary: Authorization,Accept-Encoding,Origin
+Access-Control-Allow-Origin: *
+Cross-Origin-Resource-Policy: cross-origin
+X-Fastly-Request-ID: c8c151357ba3c7f37c048b8c296b520753e0abbe
+Expires: Thu, 30 May 2024 14:54:43 GMT
+Source-Age: 0
+
+]
+[2024-05-30 15:49:44,577: INFO:main: >>>> stage Data ingestion stage completed <<<<<]
+[2024-05-30 15:49:44,577: INFO:main: >>>>>> stage Data validation stage started <<<<<<]
+[2024-05-30 15:49:44,583: INFO:common: yaml file: /Users/kanayojustice/Documents/Data_scientist_projects/AutoPredict/config/config.yaml loaded successfully]
+[2024-05-30 15:49:44,585: INFO:common: yaml file: /Users/kanayojustice/Documents/Data_scientist_projects/AutoPredict/params.yaml loaded successfully]
+[2024-05-30 15:49:44,588: INFO:common: yaml file: /Users/kanayojustice/Documents/Data_scientist_projects/AutoPredict/schema.yaml loaded successfully]
+[2024-05-30 15:49:44,588: INFO:common: created directory at: artifacts]
+[2024-05-30 15:49:44,589: INFO:common: created directory at: artifacts/data_validation]
+[2024-05-30 15:49:44,770: INFO:main: >>>>>> stage Data validation stage completed <<<<<<
+
+x==========x]
+[2024-05-30 15:49:44,770: INFO:main: >>>>>> stage Data transformation stage started <<<<<<]
+[2024-05-30 15:49:44,775: INFO:common: yaml file: /Users/kanayojustice/Documents/Data_scientist_projects/AutoPredict/config/config.yaml loaded successfully]
+[2024-05-30 15:49:44,778: INFO:common: yaml file: /Users/kanayojustice/Documents/Data_scientist_projects/AutoPredict/params.yaml loaded successfully]
+[2024-05-30 15:49:44,781: INFO:common: yaml file: /Users/kanayojustice/Documents/Data_scientist_projects/AutoPredict/schema.yaml loaded successfully]
+[2024-05-30 15:49:44,781: INFO:common: created directory at: artifacts]
+[2024-05-30 15:49:44,783: INFO:common: created directory at: artifacts/data_transformation]
+[2024-05-30 15:49:45,637: INFO:data_transformation: Split data into training and test sets]
+[2024-05-30 15:49:45,637: INFO:data_transformation: (73284, 11)]
+[2024-05-30 15:49:45,638: INFO:data_transformation: (24428, 11)]
+[2024-05-30 15:50:06,441: INFO:main: >>>>>> stage Data transformation stage completed <<<<<<
+
+x==========x]
+[2024-05-30 15:50:06,441: INFO:main: >>>>>> stage model trainer stage started <<<<<<]
+[2024-05-30 15:50:06,441: INFO:stage_04_model_trainer: >>>>>> stage model trainer stage started <<<<<<]
+[2024-05-30 15:50:06,446: INFO:common: yaml file: /Users/kanayojustice/Documents/Data_scientist_projects/AutoPredict/config/config.yaml loaded successfully]
+[2024-05-30 15:50:06,448: INFO:common: yaml file: /Users/kanayojustice/Documents/Data_scientist_projects/AutoPredict/params.yaml loaded successfully]
+[2024-05-30 15:50:06,450: INFO:common: yaml file: /Users/kanayojustice/Documents/Data_scientist_projects/AutoPredict/schema.yaml loaded successfully]
+[2024-05-30 15:50:06,450: INFO:common: created directory at: artifacts]
+[2024-05-30 15:50:06,451: INFO:common: created directory at: artifacts/model_trainer]
+[2024-05-30 15:50:33,028: INFO:stage_04_model_trainer: >>>>>> stage model trainer stage completed <<<<<<
+
+x==========x]
+[2024-05-30 15:50:33,028: INFO:main: >>>>>> stage model trainer stage completed <<<<<<
+
+x==========x]
+[2024-05-30 15:50:33,028: INFO:main: >>>>>> stage model evaluation stage started <<<<<<]
+[2024-05-30 15:50:33,033: INFO:common: yaml file: /Users/kanayojustice/Documents/Data_scientist_projects/AutoPredict/config/config.yaml loaded successfully]
+[2024-05-30 15:50:33,035: INFO:common: yaml file: /Users/kanayojustice/Documents/Data_scientist_projects/AutoPredict/params.yaml loaded successfully]
+[2024-05-30 15:50:33,039: INFO:common: yaml file: /Users/kanayojustice/Documents/Data_scientist_projects/AutoPredict/schema.yaml loaded successfully]
+[2024-05-30 15:50:33,039: INFO:common: created directory at: artifacts]
+[2024-05-30 15:50:33,039: INFO:common: created directory at: artifacts/model_evaluation]
+[2024-05-30 15:50:33,460: ERROR:main: pos_label=1 is not a valid label. It should be one of ['no', 'yes']]
+Traceback (most recent call last):
+  File "main.py", line 61, in <module>
+    obj.main()
+  File "/Users/kanayojustice/Documents/Data_scientist_projects/AutoPredict/Autopredictor/src/pipeline/stage_05_model_evaluation.py", line 20, in main
+    model_evaluation.save_results()
+  File "/Users/kanayojustice/Documents/Data_scientist_projects/AutoPredict/Autopredictor/src/components/model_evaluation.py", line 42, in save_results
+    (conf_matrix, accuracy, precision, recall, f1, roc_auc) = self.eval_metrics(test_y, predicted_labels, predicted_probabilities)
+  File "/Users/kanayojustice/Documents/Data_scientist_projects/AutoPredict/Autopredictor/src/components/model_evaluation.py", line 26, in eval_metrics
+    precision = precision_score(actual, pred)
+  File "/Users/kanayojustice/Documents/Data_scientist_projects/AutoPredict/venv/lib/python3.8/site-packages/sklearn/utils/_param_validation.py", line 214, in wrapper
+    return func(*args, **kwargs)
+  File "/Users/kanayojustice/Documents/Data_scientist_projects/AutoPredict/venv/lib/python3.8/site-packages/sklearn/metrics/_classification.py", line 2131, in precision_score
+    p, _, _, _ = precision_recall_fscore_support(
+  File "/Users/kanayojustice/Documents/Data_scientist_projects/AutoPredict/venv/lib/python3.8/site-packages/sklearn/utils/_param_validation.py", line 187, in wrapper
+    return func(*args, **kwargs)
+  File "/Users/kanayojustice/Documents/Data_scientist_projects/AutoPredict/venv/lib/python3.8/site-packages/sklearn/metrics/_classification.py", line 1724, in precision_recall_fscore_support
+    labels = _check_set_wise_labels(y_true, y_pred, average, labels, pos_label)
+  File "/Users/kanayojustice/Documents/Data_scientist_projects/AutoPredict/venv/lib/python3.8/site-packages/sklearn/metrics/_classification.py", line 1509, in _check_set_wise_labels
+    raise ValueError(
+ValueError: pos_label=1 is not a valid label. It should be one of ['no', 'yes']
+[2024-05-30 15:53:19,178: INFO:main: >>>> stage Data ingestion stage started <<<<<]
+[2024-05-30 15:53:19,185: INFO:common: yaml file: /Users/kanayojustice/Documents/Data_scientist_projects/AutoPredict/config/config.yaml loaded successfully]
+[2024-05-30 15:53:19,187: INFO:common: yaml file: /Users/kanayojustice/Documents/Data_scientist_projects/AutoPredict/params.yaml loaded successfully]
+[2024-05-30 15:53:19,189: INFO:common: yaml file: /Users/kanayojustice/Documents/Data_scientist_projects/AutoPredict/schema.yaml loaded successfully]
+[2024-05-30 15:53:19,190: INFO:common: created directory at: artifacts]
+[2024-05-30 15:53:19,190: INFO:common: created directory at: artifacts/data_ingestion]
+[2024-05-30 15:53:19,190: INFO:data_ingestion: file already exists of size: ~ 1239 KB]
+[2024-05-30 15:53:19,247: INFO:main: >>>> stage Data ingestion stage completed <<<<<]
+[2024-05-30 15:53:19,247: INFO:main: >>>>>> stage Data validation stage started <<<<<<]
+[2024-05-30 15:53:19,254: INFO:common: yaml file: /Users/kanayojustice/Documents/Data_scientist_projects/AutoPredict/config/config.yaml loaded successfully]
+[2024-05-30 15:53:19,256: INFO:common: yaml file: /Users/kanayojustice/Documents/Data_scientist_projects/AutoPredict/params.yaml loaded successfully]
+[2024-05-30 15:53:19,259: INFO:common: yaml file: /Users/kanayojustice/Documents/Data_scientist_projects/AutoPredict/schema.yaml loaded successfully]
+[2024-05-30 15:53:19,260: INFO:common: created directory at: artifacts]
+[2024-05-30 15:53:19,260: INFO:common: created directory at: artifacts/data_validation]
+[2024-05-30 15:53:19,475: INFO:main: >>>>>> stage Data validation stage completed <<<<<<
+
+x==========x]
+[2024-05-30 15:53:19,475: INFO:main: >>>>>> stage Data transformation stage started <<<<<<]
+[2024-05-30 15:53:19,483: INFO:common: yaml file: /Users/kanayojustice/Documents/Data_scientist_projects/AutoPredict/config/config.yaml loaded successfully]
+[2024-05-30 15:53:19,485: INFO:common: yaml file: /Users/kanayojustice/Documents/Data_scientist_projects/AutoPredict/params.yaml loaded successfully]
+[2024-05-30 15:53:19,487: INFO:common: yaml file: /Users/kanayojustice/Documents/Data_scientist_projects/AutoPredict/schema.yaml loaded successfully]
+[2024-05-30 15:53:19,487: INFO:common: created directory at: artifacts]
+[2024-05-30 15:53:19,487: INFO:common: created directory at: artifacts/data_transformation]
+[2024-05-30 15:53:20,251: INFO:data_transformation: Split data into training and test sets]
+[2024-05-30 15:53:20,251: INFO:data_transformation: (73284, 11)]
+[2024-05-30 15:53:20,251: INFO:data_transformation: (24428, 11)]
+[2024-05-30 15:53:40,287: INFO:main: >>>>>> stage Data transformation stage completed <<<<<<
+
+x==========x]
+[2024-05-30 15:53:40,287: INFO:main: >>>>>> stage model trainer stage started <<<<<<]
+[2024-05-30 15:53:40,287: INFO:stage_04_model_trainer: >>>>>> stage model trainer stage started <<<<<<]
+[2024-05-30 15:53:40,292: INFO:common: yaml file: /Users/kanayojustice/Documents/Data_scientist_projects/AutoPredict/config/config.yaml loaded successfully]
+[2024-05-30 15:53:40,294: INFO:common: yaml file: /Users/kanayojustice/Documents/Data_scientist_projects/AutoPredict/params.yaml loaded successfully]
+[2024-05-30 15:53:40,296: INFO:common: yaml file: /Users/kanayojustice/Documents/Data_scientist_projects/AutoPredict/schema.yaml loaded successfully]
+[2024-05-30 15:53:40,297: INFO:common: created directory at: artifacts]
+[2024-05-30 15:53:40,297: ERROR:stage_04_model_trainer: 'ConfigurationManager' object has no attribute 'get_model_trainer_config']
+Traceback (most recent call last):
+  File "/Users/kanayojustice/Documents/Data_scientist_projects/AutoPredict/Autopredictor/src/pipeline/stage_04_model_trainer.py", line 15, in main
+    model_trainer_config = config_manager.get_model_trainer_config()
+AttributeError: 'ConfigurationManager' object has no attribute 'get_model_trainer_config'
+[2024-05-30 15:53:40,297: ERROR:main: 'ConfigurationManager' object has no attribute 'get_model_trainer_config']
+Traceback (most recent call last):
+  File "main.py", line 50, in <module>
+    obj.main()
+  File "/Users/kanayojustice/Documents/Data_scientist_projects/AutoPredict/Autopredictor/src/pipeline/stage_04_model_trainer.py", line 23, in main
+    raise e
+  File "/Users/kanayojustice/Documents/Data_scientist_projects/AutoPredict/Autopredictor/src/pipeline/stage_04_model_trainer.py", line 15, in main
+    model_trainer_config = config_manager.get_model_trainer_config()
+AttributeError: 'ConfigurationManager' object has no attribute 'get_model_trainer_config'
+[2024-05-30 15:54:03,986: INFO:main: >>>> stage Data ingestion stage started <<<<<]
+[2024-05-30 15:54:03,992: INFO:common: yaml file: /Users/kanayojustice/Documents/Data_scientist_projects/AutoPredict/config/config.yaml loaded successfully]
+[2024-05-30 15:54:03,993: INFO:common: yaml file: /Users/kanayojustice/Documents/Data_scientist_projects/AutoPredict/params.yaml loaded successfully]
+[2024-05-30 15:54:03,996: INFO:common: yaml file: /Users/kanayojustice/Documents/Data_scientist_projects/AutoPredict/schema.yaml loaded successfully]
+[2024-05-30 15:54:03,996: INFO:common: created directory at: artifacts]
+[2024-05-30 15:54:03,997: INFO:common: created directory at: artifacts/data_ingestion]
+[2024-05-30 15:54:05,210: INFO:data_ingestion: artifacts/data_ingestion/autopredict_cleaned_data.zip Download! with the following info: 
+Connection: close
+Content-Length: 1268268
+Cache-Control: max-age=300
+Content-Security-Policy: default-src 'none'; style-src 'unsafe-inline'; sandbox
+Content-Type: application/zip
+ETag: "5d493dbc444db2fa89e3a3d034d18ca7eb909fbdea2a0399f3081049b971949a"
+Strict-Transport-Security: max-age=31536000
+X-Content-Type-Options: nosniff
+X-Frame-Options: deny
+X-XSS-Protection: 1; mode=block
+X-GitHub-Request-Id: 55A8:381497:3121F5:3B4FAA:66588FA8
+Accept-Ranges: bytes
+Date: Thu, 30 May 2024 14:54:05 GMT
+Via: 1.1 varnish
+X-Served-By: cache-lhr-egll1980029-LHR
+X-Cache: HIT
+X-Cache-Hits: 0
+X-Timer: S1717080845.000310,VS0,VE1
+Vary: Authorization,Accept-Encoding,Origin
+Access-Control-Allow-Origin: *
+Cross-Origin-Resource-Policy: cross-origin
+X-Fastly-Request-ID: 0e60704697a7bd7993cb969d7561355df88d02cb
+Expires: Thu, 30 May 2024 14:59:05 GMT
+Source-Age: 261
+
+]
+[2024-05-30 15:54:05,249: INFO:main: >>>> stage Data ingestion stage completed <<<<<]
+[2024-05-30 15:54:05,249: INFO:main: >>>>>> stage Data validation stage started <<<<<<]
+[2024-05-30 15:54:05,255: INFO:common: yaml file: /Users/kanayojustice/Documents/Data_scientist_projects/AutoPredict/config/config.yaml loaded successfully]
+[2024-05-30 15:54:05,256: INFO:common: yaml file: /Users/kanayojustice/Documents/Data_scientist_projects/AutoPredict/params.yaml loaded successfully]
+[2024-05-30 15:54:05,259: INFO:common: yaml file: /Users/kanayojustice/Documents/Data_scientist_projects/AutoPredict/schema.yaml loaded successfully]
+[2024-05-30 15:54:05,259: INFO:common: created directory at: artifacts]
+[2024-05-30 15:54:05,260: INFO:common: created directory at: artifacts/data_validation]
+[2024-05-30 15:54:05,578: INFO:main: >>>>>> stage Data validation stage completed <<<<<<
+
+x==========x]
+[2024-05-30 15:54:05,578: INFO:main: >>>>>> stage Data transformation stage started <<<<<<]
+[2024-05-30 15:54:05,585: INFO:common: yaml file: /Users/kanayojustice/Documents/Data_scientist_projects/AutoPredict/config/config.yaml loaded successfully]
+[2024-05-30 15:54:05,588: INFO:common: yaml file: /Users/kanayojustice/Documents/Data_scientist_projects/AutoPredict/params.yaml loaded successfully]
+[2024-05-30 15:54:05,592: INFO:common: yaml file: /Users/kanayojustice/Documents/Data_scientist_projects/AutoPredict/schema.yaml loaded successfully]
+[2024-05-30 15:54:05,593: INFO:common: created directory at: artifacts]
+[2024-05-30 15:54:05,593: INFO:common: created directory at: artifacts/data_transformation]
+[2024-05-30 15:54:06,367: INFO:data_transformation: Split data into training and test sets]
+[2024-05-30 15:54:06,368: INFO:data_transformation: (73284, 11)]
+[2024-05-30 15:54:06,368: INFO:data_transformation: (24428, 11)]
+[2024-05-30 15:54:26,291: INFO:main: >>>>>> stage Data transformation stage completed <<<<<<
+
+x==========x]
+[2024-05-30 15:54:26,291: INFO:main: >>>>>> stage model trainer stage started <<<<<<]
+[2024-05-30 15:54:26,291: INFO:stage_04_model_trainer: >>>>>> stage model trainer stage started <<<<<<]
+[2024-05-30 15:54:26,297: INFO:common: yaml file: /Users/kanayojustice/Documents/Data_scientist_projects/AutoPredict/config/config.yaml loaded successfully]
+[2024-05-30 15:54:26,299: INFO:common: yaml file: /Users/kanayojustice/Documents/Data_scientist_projects/AutoPredict/params.yaml loaded successfully]
+[2024-05-30 15:54:26,302: INFO:common: yaml file: /Users/kanayojustice/Documents/Data_scientist_projects/AutoPredict/schema.yaml loaded successfully]
+[2024-05-30 15:54:26,302: INFO:common: created directory at: artifacts]
+[2024-05-30 15:54:26,302: ERROR:stage_04_model_trainer: 'ConfigurationManager' object has no attribute 'get_model_trainer_config']
+Traceback (most recent call last):
+  File "/Users/kanayojustice/Documents/Data_scientist_projects/AutoPredict/Autopredictor/src/pipeline/stage_04_model_trainer.py", line 15, in main
+    model_trainer_config = config_manager.get_model_trainer_config()
+AttributeError: 'ConfigurationManager' object has no attribute 'get_model_trainer_config'
+[2024-05-30 15:54:26,303: ERROR:main: 'ConfigurationManager' object has no attribute 'get_model_trainer_config']
+Traceback (most recent call last):
+  File "main.py", line 50, in <module>
+    obj.main()
+  File "/Users/kanayojustice/Documents/Data_scientist_projects/AutoPredict/Autopredictor/src/pipeline/stage_04_model_trainer.py", line 23, in main
+    raise e
+  File "/Users/kanayojustice/Documents/Data_scientist_projects/AutoPredict/Autopredictor/src/pipeline/stage_04_model_trainer.py", line 15, in main
+    model_trainer_config = config_manager.get_model_trainer_config()
+AttributeError: 'ConfigurationManager' object has no attribute 'get_model_trainer_config'
+[2024-05-30 15:56:30,293: INFO:main: >>>> stage Data ingestion stage started <<<<<]
+[2024-05-30 15:56:30,299: INFO:common: yaml file: /Users/kanayojustice/Documents/Data_scientist_projects/AutoPredict/config/config.yaml loaded successfully]
+[2024-05-30 15:56:30,300: INFO:common: yaml file: /Users/kanayojustice/Documents/Data_scientist_projects/AutoPredict/params.yaml loaded successfully]
+[2024-05-30 15:56:30,304: INFO:common: yaml file: /Users/kanayojustice/Documents/Data_scientist_projects/AutoPredict/schema.yaml loaded successfully]
+[2024-05-30 15:56:30,305: INFO:common: created directory at: artifacts]
+[2024-05-30 15:56:30,305: INFO:common: created directory at: artifacts/data_ingestion]
+[2024-05-30 15:56:32,857: INFO:data_ingestion: artifacts/data_ingestion/autopredict_cleaned_data.zip Download! with the following info: 
+Connection: close
+Content-Length: 1268268
+Cache-Control: max-age=300
+Content-Security-Policy: default-src 'none'; style-src 'unsafe-inline'; sandbox
+Content-Type: application/zip
+ETag: "5d493dbc444db2fa89e3a3d034d18ca7eb909fbdea2a0399f3081049b971949a"
+Strict-Transport-Security: max-age=31536000
+X-Content-Type-Options: nosniff
+X-Frame-Options: deny
+X-XSS-Protection: 1; mode=block
+X-GitHub-Request-Id: 61B2:2749DA:527835:66905D:6658939D
+Accept-Ranges: bytes
+Date: Thu, 30 May 2024 14:56:31 GMT
+Via: 1.1 varnish
+X-Served-By: cache-lcy-eglc8600053-LCY
+X-Cache: MISS
+X-Cache-Hits: 0
+X-Timer: S1717080992.830914,VS0,VE153
+Vary: Authorization,Accept-Encoding,Origin
+Access-Control-Allow-Origin: *
+Cross-Origin-Resource-Policy: cross-origin
+X-Fastly-Request-ID: bf21068b10b8068d01ab36fe94068c1d2f7a865a
+Expires: Thu, 30 May 2024 15:01:31 GMT
+Source-Age: 0
+
+]
+[2024-05-30 15:56:32,901: INFO:main: >>>> stage Data ingestion stage completed <<<<<]
+[2024-05-30 15:56:32,901: INFO:main: >>>>>> stage Data validation stage started <<<<<<]
+[2024-05-30 15:56:32,908: INFO:common: yaml file: /Users/kanayojustice/Documents/Data_scientist_projects/AutoPredict/config/config.yaml loaded successfully]
+[2024-05-30 15:56:32,909: INFO:common: yaml file: /Users/kanayojustice/Documents/Data_scientist_projects/AutoPredict/params.yaml loaded successfully]
+[2024-05-30 15:56:32,930: INFO:common: yaml file: /Users/kanayojustice/Documents/Data_scientist_projects/AutoPredict/schema.yaml loaded successfully]
+[2024-05-30 15:56:32,931: INFO:common: created directory at: artifacts]
+[2024-05-30 15:56:32,932: INFO:common: created directory at: artifacts/data_validation]
+[2024-05-30 15:56:33,219: INFO:main: >>>>>> stage Data validation stage completed <<<<<<
+
+x==========x]
+[2024-05-30 15:56:33,219: INFO:main: >>>>>> stage Data transformation stage started <<<<<<]
+[2024-05-30 15:56:33,226: INFO:common: yaml file: /Users/kanayojustice/Documents/Data_scientist_projects/AutoPredict/config/config.yaml loaded successfully]
+[2024-05-30 15:56:33,228: INFO:common: yaml file: /Users/kanayojustice/Documents/Data_scientist_projects/AutoPredict/params.yaml loaded successfully]
+[2024-05-30 15:56:33,231: INFO:common: yaml file: /Users/kanayojustice/Documents/Data_scientist_projects/AutoPredict/schema.yaml loaded successfully]
+[2024-05-30 15:56:33,231: INFO:common: created directory at: artifacts]
+[2024-05-30 15:56:33,231: INFO:common: created directory at: artifacts/data_transformation]
+[2024-05-30 15:56:33,937: INFO:data_transformation: Split data into training and test sets]
+[2024-05-30 15:56:33,938: INFO:data_transformation: (73284, 11)]
+[2024-05-30 15:56:33,938: INFO:data_transformation: (24428, 11)]
+[2024-05-30 15:56:53,902: INFO:main: >>>>>> stage Data transformation stage completed <<<<<<
+
+x==========x]
+[2024-05-30 15:56:53,903: INFO:main: >>>>>> stage model trainer stage started <<<<<<]
+[2024-05-30 15:56:53,903: INFO:stage_04_model_trainer: >>>>>> stage model trainer stage started <<<<<<]
+[2024-05-30 15:56:53,908: INFO:common: yaml file: /Users/kanayojustice/Documents/Data_scientist_projects/AutoPredict/config/config.yaml loaded successfully]
+[2024-05-30 15:56:53,910: INFO:common: yaml file: /Users/kanayojustice/Documents/Data_scientist_projects/AutoPredict/params.yaml loaded successfully]
+[2024-05-30 15:56:53,912: INFO:common: yaml file: /Users/kanayojustice/Documents/Data_scientist_projects/AutoPredict/schema.yaml loaded successfully]
+[2024-05-30 15:56:53,912: INFO:common: created directory at: artifacts]
+[2024-05-30 15:56:53,913: INFO:common: created directory at: artifacts/model_trainer]
+[2024-05-30 15:57:19,496: INFO:stage_04_model_trainer: >>>>>> stage model trainer stage completed <<<<<<
+
+x==========x]
+[2024-05-30 15:57:19,497: INFO:main: >>>>>> stage model trainer stage completed <<<<<<
+
+x==========x]
+[2024-05-30 15:57:19,497: INFO:main: >>>>>> stage model evaluation stage started <<<<<<]
+[2024-05-30 15:57:19,504: INFO:common: yaml file: /Users/kanayojustice/Documents/Data_scientist_projects/AutoPredict/config/config.yaml loaded successfully]
+[2024-05-30 15:57:19,505: INFO:common: yaml file: /Users/kanayojustice/Documents/Data_scientist_projects/AutoPredict/params.yaml loaded successfully]
+[2024-05-30 15:57:19,507: INFO:common: yaml file: /Users/kanayojustice/Documents/Data_scientist_projects/AutoPredict/schema.yaml loaded successfully]
+[2024-05-30 15:57:19,508: INFO:common: created directory at: artifacts]
+[2024-05-30 15:57:19,508: INFO:common: created directory at: artifacts/model_evaluation]
+[2024-05-30 15:57:20,577: INFO:common: json file saved at: artifacts/model_evaluation/metrics.json]
+[2024-05-30 15:57:20,578: INFO:main: >>>>>> stage model evaluation stage completed <<<<<<
+
+x==========x]
+[2024-05-30 15:59:16,789: INFO:main: >>>> stage Data ingestion stage started <<<<<]
+[2024-05-30 15:59:16,794: INFO:common: yaml file: /Users/kanayojustice/Documents/Data_scientist_projects/AutoPredict/config/config.yaml loaded successfully]
+[2024-05-30 15:59:16,796: INFO:common: yaml file: /Users/kanayojustice/Documents/Data_scientist_projects/AutoPredict/params.yaml loaded successfully]
+[2024-05-30 15:59:16,798: INFO:common: yaml file: /Users/kanayojustice/Documents/Data_scientist_projects/AutoPredict/schema.yaml loaded successfully]
+[2024-05-30 15:59:16,799: INFO:common: created directory at: artifacts]
+[2024-05-30 15:59:16,799: INFO:common: created directory at: artifacts/data_ingestion]
+[2024-05-30 15:59:20,701: INFO:data_ingestion: artifacts/data_ingestion/autopredict_cleaned_data.zip Download! with the following info: 
+Connection: close
+Content-Length: 1268268
+Cache-Control: max-age=300
+Content-Security-Policy: default-src 'none'; style-src 'unsafe-inline'; sandbox
+Content-Type: application/zip
+ETag: "5d493dbc444db2fa89e3a3d034d18ca7eb909fbdea2a0399f3081049b971949a"
+Strict-Transport-Security: max-age=31536000
+X-Content-Type-Options: nosniff
+X-Frame-Options: deny
+X-XSS-Protection: 1; mode=block
+X-GitHub-Request-Id: 55A8:381497:3121F5:3B4FAA:66588FA8
+Accept-Ranges: bytes
+Date: Thu, 30 May 2024 14:59:18 GMT
+Via: 1.1 varnish
+X-Served-By: cache-lhr-egll1980074-LHR
+X-Cache: HIT
+X-Cache-Hits: 0
+X-Timer: S1717081158.950522,VS0,VE139
+Vary: Authorization,Accept-Encoding,Origin
+Access-Control-Allow-Origin: *
+Cross-Origin-Resource-Policy: cross-origin
+X-Fastly-Request-ID: 27f4fb5725d3643b40d7bc4221649b71eef30c56
+Expires: Thu, 30 May 2024 15:04:18 GMT
+Source-Age: 0
+
+]
+[2024-05-30 15:59:20,749: INFO:main: >>>> stage Data ingestion stage completed <<<<<]
+[2024-05-30 15:59:20,749: INFO:main: >>>>>> stage Data validation stage started <<<<<<]
+[2024-05-30 15:59:20,757: INFO:common: yaml file: /Users/kanayojustice/Documents/Data_scientist_projects/AutoPredict/config/config.yaml loaded successfully]
+[2024-05-30 15:59:20,759: INFO:common: yaml file: /Users/kanayojustice/Documents/Data_scientist_projects/AutoPredict/params.yaml loaded successfully]
+[2024-05-30 15:59:20,761: INFO:common: yaml file: /Users/kanayojustice/Documents/Data_scientist_projects/AutoPredict/schema.yaml loaded successfully]
+[2024-05-30 15:59:20,762: INFO:common: created directory at: artifacts]
+[2024-05-30 15:59:20,762: INFO:common: created directory at: artifacts/data_validation]
+[2024-05-30 15:59:20,942: INFO:main: >>>>>> stage Data validation stage completed <<<<<<
+
+x==========x]
+[2024-05-30 15:59:20,942: INFO:main: >>>>>> stage Data transformation stage started <<<<<<]
+[2024-05-30 15:59:20,948: INFO:common: yaml file: /Users/kanayojustice/Documents/Data_scientist_projects/AutoPredict/config/config.yaml loaded successfully]
+[2024-05-30 15:59:20,950: INFO:common: yaml file: /Users/kanayojustice/Documents/Data_scientist_projects/AutoPredict/params.yaml loaded successfully]
+[2024-05-30 15:59:20,952: INFO:common: yaml file: /Users/kanayojustice/Documents/Data_scientist_projects/AutoPredict/schema.yaml loaded successfully]
+[2024-05-30 15:59:20,953: INFO:common: created directory at: artifacts]
+[2024-05-30 15:59:20,953: INFO:common: created directory at: artifacts/data_transformation]
+[2024-05-30 15:59:21,698: INFO:data_transformation: Split data into training and test sets]
+[2024-05-30 15:59:21,698: INFO:data_transformation: (73284, 11)]
+[2024-05-30 15:59:21,698: INFO:data_transformation: (24428, 11)]
+[2024-05-30 15:59:41,845: INFO:main: >>>>>> stage Data transformation stage completed <<<<<<
+
+x==========x]
+[2024-05-30 15:59:41,846: INFO:main: >>>>>> stage model trainer stage started <<<<<<]
+[2024-05-30 15:59:41,846: INFO:stage_04_model_trainer: >>>>>> stage model trainer stage started <<<<<<]
+[2024-05-30 15:59:41,851: INFO:common: yaml file: /Users/kanayojustice/Documents/Data_scientist_projects/AutoPredict/config/config.yaml loaded successfully]
+[2024-05-30 15:59:41,853: INFO:common: yaml file: /Users/kanayojustice/Documents/Data_scientist_projects/AutoPredict/params.yaml loaded successfully]
+[2024-05-30 15:59:41,855: INFO:common: yaml file: /Users/kanayojustice/Documents/Data_scientist_projects/AutoPredict/schema.yaml loaded successfully]
+[2024-05-30 15:59:41,855: INFO:common: created directory at: artifacts]
+[2024-05-30 15:59:41,855: INFO:common: created directory at: artifacts/model_trainer]
+[2024-05-30 16:00:32,817: INFO:stage_04_model_trainer: >>>>>> stage model trainer stage completed <<<<<<
+
+x==========x]
+[2024-05-30 16:00:32,818: INFO:main: >>>>>> stage model trainer stage completed <<<<<<
+
+x==========x]
+[2024-05-30 16:00:32,818: INFO:main: >>>>>> stage model evaluation stage started <<<<<<]
+[2024-05-30 16:00:32,824: INFO:common: yaml file: /Users/kanayojustice/Documents/Data_scientist_projects/AutoPredict/config/config.yaml loaded successfully]
+[2024-05-30 16:00:32,826: INFO:common: yaml file: /Users/kanayojustice/Documents/Data_scientist_projects/AutoPredict/params.yaml loaded successfully]
+[2024-05-30 16:00:32,828: INFO:common: yaml file: /Users/kanayojustice/Documents/Data_scientist_projects/AutoPredict/schema.yaml loaded successfully]
+[2024-05-30 16:00:32,829: INFO:common: created directory at: artifacts]
+[2024-05-30 16:00:32,829: INFO:common: created directory at: artifacts/model_evaluation]
+[2024-05-30 16:00:33,895: INFO:common: json file saved at: artifacts/model_evaluation/metrics.json]
+[2024-05-30 16:00:33,896: INFO:main: >>>>>> stage model evaluation stage completed <<<<<<
+
+x==========x]
+[2024-05-30 16:22:24,942: INFO:main: >>>> stage Data ingestion stage started <<<<<]
+[2024-05-30 16:22:24,951: INFO:common: yaml file: /Users/kanayojustice/Documents/Data_scientist_projects/AutoPredict/config/config.yaml loaded successfully]
+[2024-05-30 16:22:24,953: INFO:common: yaml file: /Users/kanayojustice/Documents/Data_scientist_projects/AutoPredict/params.yaml loaded successfully]
+[2024-05-30 16:22:24,957: INFO:common: yaml file: /Users/kanayojustice/Documents/Data_scientist_projects/AutoPredict/schema.yaml loaded successfully]
+[2024-05-30 16:22:24,958: INFO:common: created directory at: artifacts]
+[2024-05-30 16:22:24,959: INFO:common: created directory at: artifacts/data_ingestion]
+[2024-05-30 16:22:27,122: INFO:data_ingestion: artifacts/data_ingestion/autopredict_cleaned_data.zip Download! with the following info: 
+Connection: close
+Content-Length: 1268268
+Cache-Control: max-age=300
+Content-Security-Policy: default-src 'none'; style-src 'unsafe-inline'; sandbox
+Content-Type: application/zip
+ETag: "5d493dbc444db2fa89e3a3d034d18ca7eb909fbdea2a0399f3081049b971949a"
+Strict-Transport-Security: max-age=31536000
+X-Content-Type-Options: nosniff
+X-Frame-Options: deny
+X-XSS-Protection: 1; mode=block
+X-GitHub-Request-Id: 55A8:381497:3121F5:3B4FAA:66588FA8
+Accept-Ranges: bytes
+Date: Thu, 30 May 2024 15:22:26 GMT
+Via: 1.1 varnish
+X-Served-By: cache-lhr-egll1980026-LHR
+X-Cache: HIT
+X-Cache-Hits: 0
+X-Timer: S1717082547.745043,VS0,VE139
+Vary: Authorization,Accept-Encoding,Origin
+Access-Control-Allow-Origin: *
+Cross-Origin-Resource-Policy: cross-origin
+X-Fastly-Request-ID: cd1b5da662e0d64ddc8a0c6d83b29233a2a26762
+Expires: Thu, 30 May 2024 15:27:26 GMT
+Source-Age: 0
+
+]
+[2024-05-30 16:22:27,189: INFO:main: >>>> stage Data ingestion stage completed <<<<<]
+[2024-05-30 16:22:27,189: INFO:main: >>>>>> stage Data validation stage started <<<<<<]
+[2024-05-30 16:22:27,196: INFO:common: yaml file: /Users/kanayojustice/Documents/Data_scientist_projects/AutoPredict/config/config.yaml loaded successfully]
+[2024-05-30 16:22:27,200: INFO:common: yaml file: /Users/kanayojustice/Documents/Data_scientist_projects/AutoPredict/params.yaml loaded successfully]
+[2024-05-30 16:22:27,205: INFO:common: yaml file: /Users/kanayojustice/Documents/Data_scientist_projects/AutoPredict/schema.yaml loaded successfully]
+[2024-05-30 16:22:27,205: INFO:common: created directory at: artifacts]
+[2024-05-30 16:22:27,206: INFO:common: created directory at: artifacts/data_validation]
+[2024-05-30 16:22:27,506: INFO:main: >>>>>> stage Data validation stage completed <<<<<<
+
+x==========x]
+[2024-05-30 16:22:27,506: INFO:main: >>>>>> stage Data transformation stage started <<<<<<]
+[2024-05-30 16:22:27,516: INFO:common: yaml file: /Users/kanayojustice/Documents/Data_scientist_projects/AutoPredict/config/config.yaml loaded successfully]
+[2024-05-30 16:22:27,519: INFO:common: yaml file: /Users/kanayojustice/Documents/Data_scientist_projects/AutoPredict/params.yaml loaded successfully]
+[2024-05-30 16:22:27,523: INFO:common: yaml file: /Users/kanayojustice/Documents/Data_scientist_projects/AutoPredict/schema.yaml loaded successfully]
+[2024-05-30 16:22:27,523: INFO:common: created directory at: artifacts]
+[2024-05-30 16:22:27,524: INFO:common: created directory at: artifacts/data_transformation]
+[2024-05-30 16:22:29,231: INFO:data_transformation: Split data into training and test sets]
+[2024-05-30 16:22:29,232: INFO:data_transformation: (73284, 11)]
+[2024-05-30 16:22:29,232: INFO:data_transformation: (24428, 11)]
+[2024-05-30 16:23:05,330: INFO:main: >>>>>> stage Data transformation stage completed <<<<<<
+
+x==========x]
+[2024-05-30 16:23:05,331: INFO:main: >>>>>> stage model trainer stage started <<<<<<]
+[2024-05-30 16:23:05,331: INFO:stage_04_model_trainer: >>>>>> stage model trainer stage started <<<<<<]
+[2024-05-30 16:23:05,340: INFO:common: yaml file: /Users/kanayojustice/Documents/Data_scientist_projects/AutoPredict/config/config.yaml loaded successfully]
+[2024-05-30 16:23:05,344: INFO:common: yaml file: /Users/kanayojustice/Documents/Data_scientist_projects/AutoPredict/params.yaml loaded successfully]
+[2024-05-30 16:23:05,347: INFO:common: yaml file: /Users/kanayojustice/Documents/Data_scientist_projects/AutoPredict/schema.yaml loaded successfully]
+[2024-05-30 16:23:05,347: INFO:common: created directory at: artifacts]
+[2024-05-30 16:23:05,348: INFO:common: created directory at: artifacts/model_trainer]
+[2024-05-30 16:24:11,748: INFO:stage_04_model_trainer: >>>>>> stage model trainer stage completed <<<<<<
+
+x==========x]
+[2024-05-30 16:24:11,749: INFO:main: >>>>>> stage model trainer stage completed <<<<<<
+
+x==========x]
+[2024-05-30 16:24:11,749: INFO:main: >>>>>> stage model evaluation stage started <<<<<<]
+[2024-05-30 16:24:11,759: INFO:common: yaml file: /Users/kanayojustice/Documents/Data_scientist_projects/AutoPredict/config/config.yaml loaded successfully]
+[2024-05-30 16:24:11,761: INFO:common: yaml file: /Users/kanayojustice/Documents/Data_scientist_projects/AutoPredict/params.yaml loaded successfully]
+[2024-05-30 16:24:11,764: INFO:common: yaml file: /Users/kanayojustice/Documents/Data_scientist_projects/AutoPredict/schema.yaml loaded successfully]
+[2024-05-30 16:24:11,765: INFO:common: created directory at: artifacts]
+[2024-05-30 16:24:11,766: INFO:common: created directory at: artifacts/model_evaluation]
+[2024-05-30 16:24:13,687: INFO:common: json file saved at: artifacts/model_evaluation/metrics.json]
+[2024-05-30 16:24:13,689: INFO:main: >>>>>> stage model evaluation stage completed <<<<<<
+
+x==========x]

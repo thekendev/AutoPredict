@@ -13,10 +13,11 @@ class ModelEvaluationTrainingPipeline:
         pass
 
     def main(self):
-        config = ConfigurationManager()
-        model_evaluation_config = config.get_model_evaluation_config()
-        model_evaluation_config = ModelEvaluation(config=model_evaluation_config)
-        model_evaluation_config.save_results()
+        config_manager = ConfigurationManager()
+        model_evaluation_config = config_manager.get_model_evaluation_config()
+
+        model_evaluation = ModelEvaluation(config=model_evaluation_config)
+        model_evaluation.save_results()
 
 
 

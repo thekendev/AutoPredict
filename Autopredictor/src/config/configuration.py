@@ -54,59 +54,55 @@ class ConfigurationManager:
 
 
 
+
     def get_data_transformation_config(self) -> DataTransformationConfig:
-        config = self.config.data_transformation
-
-        create_directories([config.root_dir])
-
+        config = self.config['data_transformation']
+        create_directories([config['root_dir']])
         data_transformation_config = DataTransformationConfig(
-            root_dir=config.root_dir,
-            data_path=config.data_path,
+            root_dir=Path(config['root_dir']),
+            data_path=Path(config['data_path']),
+            transformer_path=Path(config['transformer_path'])
         )
-
         return data_transformation_config
     
 
 
-
-
     def get_model_trainer_config(self) -> ModelTrainerConfig:
         config = self.config.model_trainer
-        params = self.params.LogisticRegression
-        schema =  self.schema.TARGET_COLUMN
+        params = self.params.LogisticRegression  # Adjust based on the model used
+        schema = self.schema.TARGET_COLUMN
 
         create_directories([config.root_dir])
 
         model_trainer_config = ModelTrainerConfig(
-            root_dir=config.root_dir,
-            train_data_path = config.train_data_path,
-            test_data_path = config.test_data_path,
-            model_name = config.model_name,
-            target_column = schema.name,
-            
-            
+            root_dir=Path(config.root_dir),
+            train_data_path=Path(config.train_data_path),
+            test_data_path=Path(config.test_data_path),
+            model_name=config.model_name,
+            classifier__C=params.classifier__C,
+            classifier__max_iter=params.classifier__max_iter,
+            classifier__penalty=params.classifier__penalty,
+            preprocessor__num__imputer__strategy=params.preprocessor__num__imputer__strategy,
+            target_column=schema.name
         )
 
         return model_trainer_config
+
     
 
 
 
 
     def get_model_evaluation_config(self) -> ModelEvaluationConfig:
-        config = self.config.model_evaluation
-        params = self.params.LogisticRegression
-        schema =  self.schema.TARGET_COLUMN
-
-        create_directories([config.root_dir])
+        config_data = self.config['model_evaluation']
+        create_directories([config_data['root_dir']])
 
         model_evaluation_config = ModelEvaluationConfig(
-            root_dir=config.root_dir,
-            test_data_path=config.test_data_path,
-            model_path = config.model_path,
-            metric_file_name = config.metric_file_name,
-            target_column = schema.name
-           
+            root_dir=Path(config_data['root_dir']),
+            test_data_path=Path(config_data['test_data_path']),
+            model_path=Path(config_data['model_path']),
+            metric_file_name=Path(config_data['metric_file_name']),
+            target_column=self.schema['TARGET_COLUMN']['name']
         )
 
         return model_evaluation_config

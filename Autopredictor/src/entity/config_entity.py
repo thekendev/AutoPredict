@@ -25,6 +25,7 @@ class DataValidationConfig:
 class DataTransformationConfig:
     root_dir: Path
     data_path: Path
+    transformer_path: Path
 
 
 
@@ -34,8 +35,11 @@ class ModelTrainerConfig:
     train_data_path: Path
     test_data_path: Path
     model_name: str
+    classifier__C: float
+    classifier__max_iter: int
+    classifier__penalty: str
+    preprocessor__num__imputer__strategy: str
     target_column: str
-
 
 
 @dataclass(frozen=True)
