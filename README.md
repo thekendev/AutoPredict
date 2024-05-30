@@ -33,6 +33,7 @@ End to End Predictive Maintenance for Automotive Components: Leveraging Historic
 
 ``` pip install -r requirements.txt ```
 
+``` python main.py ```
 
 ``` python app.py ```
 
