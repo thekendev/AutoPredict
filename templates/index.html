@@ -18,7 +18,7 @@
     <!-- Header -->
     <header>
       <nav class="container flex items-center py-4 mt-4 sm:mt-12">
-        <div class="py-1"><img src="/static/images/logo-bookmark.svg" alt="" /></div>
+        <div class="py-1"><img src="/static/images/Auto_predictor_logo.png" alt="" /></div>
         <ul class="hidden sm:flex flex-1 justify-end items-center gap-12 text-bookmark-blue uppercase text-xs">
           <li class="cursor-pointer">Features</li>
           <li class="cursor-pointer">Pricing</li>
@@ -108,62 +108,284 @@
 
   <div class="w-full">
     <form action="/predict" method="POST" class="space-y-6">
-      <div>
-        <label for="model" class="block text-gray-700">Model:</label>
-        <input type="text" id="model" name="Model" placeholder="Enter the model of the car" class="w-full px-3 py-2 border border-gray-300 rounded-md" required>
+        <div>
+            <label for="model" class="block text-gray-700">Model:</label>
+            <select id="model" name="Model" class="w-full px-3 py-2 border border-gray-300 rounded-md" required>
+                <option value="Fiesta">Fiesta</option>
+                <option value="Golf">Golf</option>
+                <option value="Focus">Focus</option>
+                <option value="C Class">C Class</option>
+                <option value="Corsa">Corsa</option>
+                <option value="Polo">Polo</option>
+                <option value="Astra">Astra</option>
+                <option value="A Class">A Class</option>
+                <option value="3 Series">3 Series</option>
+                <option value="Kuga">Kuga</option>
+                <option value="Yaris">Yaris</option>
+                <option value="Mokka X">Mokka X</option>
+                <option value="1 Series">1 Series</option>
+                <option value="Aygo">Aygo</option>
+                <option value="E Class">E Class</option>
+                <option value="A3">A3</option>
+                <option value="Tiguan">Tiguan</option>
+                <option value="Fabia">Fabia</option>
+                <option value="Octavia">Octavia</option>
+                <option value="Q3">Q3</option>
+                <option value="A4">A4</option>
+                <option value="A1">A1</option>
+                <option value="Tucson">Tucson</option>
+                <option value="2 Series">2 Series</option>
+                <option value="EcoSport">EcoSport</option>
+                <option value="I10">I10</option>
+                <option value="5 Series">5 Series</option>
+                <option value="Insignia">Insignia</option>
+                <option value="4 Series">4 Series</option>
+                <option value="GLC Class">GLC Class</option>
+                <option value="Passat">Passat</option>
+                <option value="A5">A5</option>
+                <option value="Q5">Q5</option>
+                <option value="Up">Up</option>
+                <option value="GLA Class">GLA Class</option>
+                <option value="Q2">Q2</option>
+                <option value="Mokka">Mokka</option>
+                <option value="X1">X1</option>
+                <option value="Superb">Superb</option>
+                <option value="A6">A6</option>
+                <option value="T-Roc">T-Roc</option>
+                <option value="Auris">Auris</option>
+                <option value="Crossland X">Crossland X</option>
+                <option value="Zafira">Zafira</option>
+                <option value="B Class">B Class</option>
+                <option value="Grandland X">Grandland X</option>
+                <option value="X3">X3</option>
+                <option value="C-MAX">C-MAX</option>
+                <option value="I30">I30</option>
+                <option value="Ka+">Ka+</option>
+                <option value="Mondeo">Mondeo</option>
+                <option value="CL Class">CL Class</option>
+                <option value="I20">I20</option>
+                <option value="C-HR">C-HR</option>
+                <option value="Kodiaq">Kodiaq</option>
+                <option value="RAV4">RAV4</option>
+                <option value="Citigo">Citigo</option>
+                <option value="X5">X5</option>
+                <option value="Adam">Adam</option>
+                <option value="GLE Class">GLE Class</option>
+                <option value="Yeti Outdoor">Yeti Outdoor</option>
+                <option value="Viva">Viva</option>
+                <option value="Q7">Q7</option>
+                <option value="Karoq">Karoq</option>
+                <option value="B-MAX">B-MAX</option>
+                <option value="Touran">Touran</option>
+                <option value="Touareg">Touareg</option>
+                <option value="TT">TT</option>
+                <option value="Kona">Kona</option>
+                <option value="S-MAX">S-MAX</option>
+                <option value="T-Cross">T-Cross</option>
+                <option value="Ioniq">Ioniq</option>
+                <option value="Corolla">Corolla</option>
+                <option value="Golf SV">Golf SV</option>
+                <option value="X2">X2</option>
+                <option value="SL CLASS">SL CLASS</option>
+                <option value="Sharan">Sharan</option>
+                <option value="Meriva">Meriva</option>
+                <option value="Grand C-MAX">Grand C-MAX</option>
+                <option value="Santa Fe">Santa Fe</option>
+                <option value="Arteon">Arteon</option>
+                <option value="Scirocco">Scirocco</option>
+                <option value="CLS Class">CLS Class</option>
+                <option value="Prius">Prius</option>
+                <option value="Galaxy">Galaxy</option>
+                <option value="Edge">Edge</option>
+                <option value="V Class">V Class</option>
+                <option value="IX20">IX20</option>
+                <option value="KA">KA</option>
+                <option value="S Class">S Class</option>
+                <option value="Scala">Scala</option>
+                <option value="X4">X4</option>
+                <option value="Combo Life">Combo Life</option>
+                <option value="Rapid">Rapid</option>
+                <option value="Kamiq">Kamiq</option>
+                <option value="Yeti">Yeti</option>
+                <option value="M4">M4</option>
+                <option value="A7">A7</option>
+                <option value="GL Class">GL Class</option>
+                <option value="I40">I40</option>
+                <option value="A8">A8</option>
+                <option value="IX35">IX35</option>
+                <option value="I800">I800</option>
+                <option value="Verso">Verso</option>
+                <option value="Avensis">Avensis</option>
+                <option value="Amarok">Amarok</option>
+                <option value="6 Series">6 Series</option>
+                <option value="Z4">Z4</option>
+                <option value="X6">X6</option>
+                <option value="7 Series">7 Series</option>
+                <option value="GTC">GTC</option>
+                <option value="Caravelle">Caravelle</option>
+                <option value="SLK">SLK</option>
+                <option value="CC">CC</option>
+                <option value="Tiguan Allspace">Tiguan Allspace</option>
+                <option value="CLA Class">CLA Class</option>
+                <option value="Hilux">Hilux</option>
+                <option value="Beetle">Beetle</option>
+                <option value="Puma">Puma</option>
+                <option value="M Class">M Class</option>
+                <option value="GLS Class">GLS Class</option>
+                <option value="X-CLASS">X-CLASS</option>
+                <option value="GT86">GT86</option>
+                <option value="Q8">Q8</option>
+                <option value="Tourneo Custom">Tourneo Custom</option>
+                <option value="Shuttle">Shuttle</option>
+                <option value="Caddy Maxi Life">Caddy Maxi Life</option>
+                <option value="Zafira Tourer">Zafira Tourer</option>
+                <option value="Grand Tourneo Connect">Grand Tourneo Connect</option>
+                <option value="Mustang">Mustang</option>
+                <option value="X7">X7</option>
+                <option value="Land Cruiser">Land Cruiser</option>
+                <option value="i3">i3</option>
+                <option value="RS6">RS6</option>
+                <option value="8 Series">8 Series</option>
+                <option value="RS3">RS3</option>
+                <option value="Jetta">Jetta</option>
+                <option value="Tourneo Connect">Tourneo Connect</option>
+                <option value="RS4">RS4</option>
+                <option value="M5">M5</option>
+                <option value="R8">R8</option>
+                <option value="RS5">RS5</option>
+                <option value="Antara">Antara</option>
+                <option value="M3">M3</option>
+                <option value="Agila">Agila</option>
+                <option value="Vivaro">Vivaro</option>
+                <option value="M2">M2</option>
+                <option value="S3">S3</option>
+                <option value="GLB Class">GLB Class</option>
+                <option value="Roomster">Roomster</option>
+                <option value="i8">i8</option>
+                <option value="SQ5">SQ5</option>
+                <option value="Fusion">Fusion</option>
+                <option value="California">California</option>
+                <option value="PROACE VERSO">PROACE VERSO</option>
+                <option value="G Class">G Class</option>
+                <option value="Supra">Supra</option>
+                <option value="S4">S4</option>
+                <option value="Camry">Camry</option>
+                <option value="IQ">IQ</option>
+                <option value="Caddy Life">Caddy Life</option>
+                <option value="M6">M6</option>
+                <option value="SQ7">SQ7</option>
+                <option value="Eos">Eos</option>
+                <option value="Z3">Z3</option>
+                <option value="CLK">CLK</option>
+                <option value="Getz">Getz</option>
+                <option value="Caddy">Caddy</option>
+                <option value="Fox">Fox</option>
+                <option value="Cascada">Cascada</option>
+                <option value="Vectra">Vectra</option>
+                <option value="Urban Cruiser">Urban Cruiser</option>
+                <option value="S8">S8</option>
+                <option value="Caddy Maxi">Caddy Maxi</option>
+                <option value="CLC Class">CLC Class</option>
+                <option value="Tigra">Tigra</option>
+                <option value="Verso-S">Verso-S</option>
+                <option value="Kadjar">Kadjar</option>
+                <option value="S5">S5</option>
+                <option value="Veloster">Veloster</option>
+                <option value="Ampera">Ampera</option>
+                <option value="R Class">R Class</option>
+                <option value="Terracan">Terracan</option>
+                <option value="Streetka">Streetka</option>
+                <option value="Accent">Accent</option>
+                <option value="RS7">RS7</option>
+                <option value="Amica">Amica</option>
+                <option value="A2">A2</option>
+                <option value="230">230</option>
+                <option value="Escort">Escort</option>
+                <option value="Transit Tourneo">Transit Tourneo</option>
+                <option value="E Class">E Class</option>
+                <option value="200">200</option>
+                <option value="Ranger">Ranger</option>
+                <option value="180">180</option>
+                <option value="220">220</option>
+            </select>
+        </div>
+        <div>
+          <label for="year" class="block text-gray-700">Year:</label>
+          <input type="number" id="year" name="Year" placeholder="Enter the manufacturing year of the car" class="w-full px-3 py-2 border border-gray-300 rounded-md" required>
       </div>
-      
-      <div>
-        <label for="year" class="block text-gray-700">Year:</label>
-        <input type="number" id="year" name="Year" placeholder="Enter the manufacturing year of the car" class="w-full px-3 py-2 border border-gray-300 rounded-md" required>
-      </div>
-
       <div>
         <label for="price" class="block text-gray-700">Price:</label>
         <input type="number" id="price" name="Price" placeholder="Enter the price of the car" class="w-full px-3 py-2 border border-gray-300 rounded-md" required>
-      </div>
+    </div>
 
-      <div>
+    <div>
         <label for="transmission" class="block text-gray-700">Transmission:</label>
-        <input type="text" id="transmission" name="Transmission" placeholder="Enter the type of transmission used in the car" class="w-full px-3 py-2 border border-gray-300 rounded-md" required>
-      </div>
+        <select id="transmission" name="Transmission" class="w-full px-3 py-2 border border-gray-300 rounded-md" required>
+            <option value="" disabled selected>Select transmission type</option>
+            <option value="Manual">Manual</option>
+            <option value="Semi-Auto">Semi-Auto</option>
+            <option value="Automatic">Automatic</option>
+            <option value="Other">Other</option>
+        </select>
+    </div>
 
-      <div>
+    <div>
         <label for="mileage" class="block text-gray-700">Mileage:</label>
         <input type="number" id="mileage" name="Mileage" placeholder="Enter the mileage of the car" class="w-full px-3 py-2 border border-gray-300 rounded-md" required>
-      </div>
+    </div>
 
-      <div>
+    <div>
         <label for="fuelType" class="block text-gray-700">Fuel Type:</label>
-        <input type="text" id="fuelType" name="FuelType" placeholder="Enter the type of fuel used by the car" class="w-full px-3 py-2 border border-gray-300 rounded-md" required>
-      </div>
+        <select id="fuelType" name="FuelType" class="w-full px-3 py-2 border border-gray-300 rounded-md" required>
+            <option value="" disabled selected>Select fuel type</option>
+            <option value="Petrol">Petrol</option>
+            <option value="Diesel">Diesel</option>
+            <option value="Hybrid">Hybrid</option>
+            <option value="Other">Other</option>
+            <option value="Electric">Electric</option>
+        </select>
+    </div>
 
-      <div>
+    <div>
         <label for="tax" class="block text-gray-700">Tax:</label>
         <input type="number" id="tax" name="Tax" placeholder="Enter the tax rate applicable to the car" class="w-full px-3 py-2 border border-gray-300 rounded-md" required>
-      </div>
+    </div>
 
-      <div>
+    <div>
         <label for="mpg" class="block text-gray-700">MPG:</label>
         <input type="number" id="mpg" name="MPG" placeholder="Enter the miles per gallon efficiency of the car" class="w-full px-3 py-2 border border-gray-300 rounded-md" required>
-      </div>
+    </div>
 
-      <div>
+    <div>
         <label for="engineSize" class="block text-gray-700">Engine Size:</label>
         <input type="number" id="engineSize" name="EngineSize" placeholder="Enter the size of the car's engine" class="w-full px-3 py-2 border border-gray-300 rounded-md" required>
-      </div>
+    </div>
 
-      <div>
+    <div>
         <label for="manufacturer" class="block text-gray-700">Manufacturer:</label>
-        <input type="text" id="manufacturer" name="Manufacturer" placeholder="Enter the manufacturer of the car" class="w-full px-3 py-2 border border-gray-300 rounded-md" required>
-      </div>
+        <select id="manufacturer" name="Manufacturer" class="w-full px-3 py-2 border border-gray-300 rounded-md" required>
+            <option value="" disabled selected>Select manufacturer</option>
+            <option value="ford">Ford</option>
+            <option value="volkswagen">Volkswagen</option>
+            <option value="vauxhall">Vauxhall</option>
+            <option value="merc">Mercedes-Benz</option>
+            <option value="BMW">BMW</option>
+            <option value="Audi">Audi</option>
+            <option value="toyota">Toyota</option>
+            <option value="skoda">Skoda</option>
+            <option value="hyundi">Hyundai</option>
+        </select>
+    </div>
 
-      <div class="flex justify-center">
-        <button type="submit" class="bg-blue-500 text-white px-4 py-2 rounded-md hover:bg-blue-700">predict</button>
-      </div>
-    </form>
-  </div>
+    <div class="flex justify-center">
+        <button type="submit" class="bg-blue-500 text-white px-4 py-2 rounded-md hover:bg-blue-700">Predict</button>
+    </div>
+</form>
 </div>
+
+
+
+
 
     </section>
 
