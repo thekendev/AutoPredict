@@ -40,6 +40,9 @@ End to End Predictive Maintenance for Automotive Components: Leveraging Historic
 
 ``` Now open up your local host 0.0.0.0:8080 ```
 
-https://github.com/thekendev/AutoPredict/assets/68587114/6a6c5faf-9e1e-4b8b-b669-b78368c2e006
+
+
+https://github.com/thekendev/AutoPredict/assets/68587114/fb0bd168-6b3c-4965-8cca-d674c5b86511
+
 
 
